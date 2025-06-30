@@ -24,7 +24,6 @@ export class HeaderComponent implements OnInit,OnDestroy {
 
   public showMenu() {
     this.menu = !this.menu;
-    console.log(this.menu)
   }
 
   ngOnDestroy(): void {

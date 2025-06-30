@@ -1,34 +1,35 @@
-<nav class="navbar bg-lime-800 py-4 px-0 relative z-[100]">
-      <div class="container flex justify-between items-center">
-          <div class="logo flex ml-5 w-12 h-10 text-2xl font-bold duration-300 ease-in-out hover:w-15 hover:h-13 hover:cursor-pointer" (click)="this.goRoutes('/')">
-              <img src="img/white-lg-33.PNG" alt="">
-          </div>
-          <div class="lift flex mt-[5px] text-white text-3xl font-semibold">
-              <h3>Lift Energy Group</h3>
-          </div>
-          <div class="nav-links flex sm:hidden lg:flex hover:cursor-pointer">
-              <a class="nav-link ml-8 text-white transition-colors duration-300 ease-in-out hover:text-lime-600" (click)="this.goRoutes('/')">Welcome</a>
-              <a class="nav-link ml-8 text-white transition-colors duration-300 ease-in-out hover:text-lime-600" (click)="this.goRoutes('/')">Services</a>
-              <a class="nav-link ml-8 text-white transition-colors duration-300 ease-in-out hover:text-lime-600" (click)="this.goRoutes('/projects')">Projects</a>
-              <a class="nav-link ml-8 text-white transition-colors duration-300 ease-in-out hover:text-lime-600" (click)="this.goRoutes('/aboutus')">About Us</a>
-              <a class="nav-link ml-8 text-white transition-colors duration-300 ease-in-out hover:text-lime-600" (click)="this.goRoutes('/contact')">Contact</a>
-          </div>
-          <div class="mobile-menu-btn lg:hidden " (click)="this.showMenu()">
-            <div class="transition-transform duration-300 ease-in-out hover:cursor-pointer" [ngClass]="this.menu ? 'hidden':'flex'">
-              <i class="fas fa-bars" id="menu-icon"></i>
-            </div>
-              <div class="hover:cursor-pointer" [ngClass]="this.menu ? 'flex':'hidden'">
-                <i class="fas fa-times" id="close-icon"></i>
-              </div>
-          </div>
-      </div>
-  </nav>
+<!-- Navbar -->
+<nav class="bg-lime-800 py-4 px-4 sm:px-6 relative z-[100]">
+  <div class="container mx-auto flex justify-between items-center">
+    
+    <!-- Logo -->
+    <div class="flex items-center gap-3 cursor-pointer" (click)="this.goRoutes('/')">
+      <img src="img/white-lg-33.PNG" alt="Logo" class="w-10 h-10 object-contain">
+      <h3 class="text-white text-xl sm:text-2xl font-bold">Lift Energy Group</h3>
+    </div>
 
-  <!-- Menú móvil -->
-  <div class="mobile-menu  transition-all duration-1000 ease-out absolute top-16 left-0 right-0 bg-lime-800 p-4 z-[99] flex flex-col" [ngClass]="this.menu ? 'flex' : 'hidden'">
-      <a class="mobile-link py-3 px-0 text-white transition-colors duration-300 ease-in-out" (click)="this.goRoutes('/')">Welcome</a>
-      <a class="mobile-link py-3 px-0 text-white transition-colors duration-300 ease-in-out" (click)="this.goRoutes('/')">Services</a>
-      <a class="mobile-link py-3 px-0 text-white transition-colors duration-300 ease-in-out" (click)="this.goRoutes('/projects')">Projects</a>
-      <a class="mobile-link py-3 px-0 text-white transition-colors duration-300 ease-in-out" (click)="this.goRoutes('/aboutus')">About Us</a>
-      <a class="mobile-link py-3 px-0 text-white transition-colors duration-300 ease-in-out" (click)="this.goRoutes('/contact')">Contact</a>
+    <!-- Enlaces - Escritorio -->
+    <div class="hidden md:flex gap-6 text-white font-medium cursor-pointer">
+      <a class="hover:text-lime-400 transition" (click)="this.goRoutes('/')">Welcome</a>
+      <a class="hover:text-lime-400 transition" (click)="this.goRoutes('/')">Services</a>
+      <a class="hover:text-lime-400 transition" (click)="this.goRoutes('/projects')">Projects</a>
+      <a class="hover:text-lime-400 transition" (click)="this.goRoutes('/aboutus')">About Us</a>
+      <a class="hover:text-lime-400 transition" (click)="this.goRoutes('/contact')">Contact</a>
+    </div>
+
+    <!-- Botón Menú - Móvil -->
+    <div class="md:hidden cursor-pointer text-white text-2xl" (click)="this.showMenu()">
+      <i class="fas" [ngClass]="menu ? 'fa-times' : 'fa-bars'"></i>
+    </div>
   </div>
+</nav>
+
+<!-- Menú móvil -->
+<div class="lg:hidden transition-all duration-500 ease-in-out bg-lime-800 w-full px-4 py-4 flex flex-col gap-4 z-[99]"
+     [ngClass]="menu ? 'flex' : 'hidden'">
+  <a class="text-white text-lg hover:text-lime-400 transition" (click)="this.goRoutes('/')">Welcome</a>
+  <a class="text-white text-lg hover:text-lime-400 transition" (click)="this.goRoutes('/')">Services</a>
+  <a class="text-white text-lg hover:text-lime-400 transition" (click)="this.goRoutes('/projects')">Projects</a>
+  <a class="text-white text-lg hover:text-lime-400 transition" (click)="this.goRoutes('/aboutus')">About Us</a>
+  <a class="text-white text-lg hover:text-lime-400 transition" (click)="this.goRoutes('/contact')">Contact</a>
+</div>
