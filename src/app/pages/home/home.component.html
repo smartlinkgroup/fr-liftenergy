@@ -8,10 +8,12 @@
         Committed to innovation and efficiency for the companies of the future.
       </p>
       <div class="hero-buttons flex flex-col sm:flex-row gap-4">
-        <button class="py-3 px-6 text-base font-semibold rounded-md bg-lime-600 text-white hover:bg-lime-700 cursor-pointer">
+        <button class="py-3 px-6 text-base font-semibold rounded-md bg-lime-600 text-white hover:bg-lime-700 cursor-pointer" 
+         (click)="this.navigateTo('/contact')"> 
           Get started
         </button>
-        <button class="py-3 px-6 text-base font-semibold rounded-md bg-transparent text-lime-300 border border-lime-500 hover:bg-lime-700 cursor-pointer">
+        <button class="py-3 px-6 text-base font-semibold rounded-md bg-transparent text-lime-300 border border-lime-500 hover:bg-lime-700 cursor-pointer"
+        (click)="this.navigateTo('/aboutus')">
           Learn more <i class="fas fa-arrow-right ml-2"></i>
         </button>
       </div>

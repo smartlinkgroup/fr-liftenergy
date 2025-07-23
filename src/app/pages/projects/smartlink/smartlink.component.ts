@@ -2,14 +2,13 @@ import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-projects',
+  selector: 'app-smartlink',
   imports: [],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+  templateUrl: './smartlink.component.html',
+  styleUrl: './smartlink.component.css'
 })
-export class ProjectsComponent {
-
-  private router = inject(Router)
+export class SmartlinkComponent {
+ private router = inject(Router)
 
   navigateTo(ruta:string){
     this.router.navigate([ruta]);
