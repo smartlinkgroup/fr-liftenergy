@@ -8,18 +8,18 @@
         Committed to innovation and efficiency for the companies of the future.
       </p>
       <div class="hero-buttons flex flex-col sm:flex-row gap-4">
-        <button class="py-3 px-6 text-lg font-semibold rounded-md bg-lime-700 text-white hover: cursor-pointer " 
+        <button class="py-3 px-6 text-lg font-semibold rounded-md transition-all ease-in-out bg-lime-700 text-white hover:cursor-pointer hover:bg-lime-600" 
          (click)="this.navigateTo('/contact')"> 
           Get started
         </button>
-        <button class="py-3 px-6 text-base font-semibold rounded-md bg-transparent text-lime-300 border border-lime-500 hover:bg-lime-700 cursor-pointer"
+        <button class="py-3 px-6 text-base font-semibold rounded-md bg-transparent transition-all ease-in-out text-lime-300 border border-lime-500 hover:bg-lime-700 cursor-pointer hover:text-white"
         (click)="this.navigateTo('/aboutus')">
           Learn more <i class="fas fa-arrow-right ml-2"></i>
         </button>
       </div>
     </div>
     <div class="hero-image w-full max-w-md mx-auto lg:mx-0 rounded-xl overflow-hidden">
-      <img src="img/petro.jpg" alt="Tecnología automatizada" class="w-full h-auto object-cover">
+      <img src="img/petro.webp" alt="Tecnología automatizada" class="w-full h-auto object-cover" width="1200" height="800">
     </div>
   </div>
 </section>
@@ -29,22 +29,28 @@
     <h2 class="text-3xl sm:text-4xl font-bold mb-16 text-white">Our automated services</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
        <div class="feature-card bg-lime-900 p-6 rounded-xl transition-colors duration-300 ease-in-out hover:bg-lime-800">
-              <div class="feature-icon size-14 bg-lime-700 rounded-full flex items-center justify-center mb-3">
-                  <i class="fas fa-check-circle text-3xl text-lime-300"></i>
-              </div>
+        <div class="feature-icon size-14 bg-lime-700 rounded-full flex items-center justify-center mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10  text-lime-300">
+            <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+          </svg>
+        </div>
               <h3 class="feature-title text-xl font-bold mb-3 text-white text-left">Automation Consulting</h3>
               <p class="feature-description text-white text-left">Expert advice for implementing automated solutions that improve your business's efficiency.</p>
           </div>
           <div class="feature-card bg-lime-900 p-6 rounded-xl transition-colors duration-300 ease-in-out hover:bg-lime-800">
-              <div class="feature-icon size-14 bg-lime-700 rounded-full flex items-center justify-center mb-3">
-                  <i class="fas fa-check-circle text-3xl text-lime-300"></i>
-              </div>
+            <div class="feature-icon size-14 bg-lime-700 rounded-full flex items-center justify-center mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10  text-lime-300">
+                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+              </svg>
+            </div>
               <h3 class="feature-title text-xl font-bold mb-3 text-white text-left">Intelligent Systems</h3>
               <p class="feature-description text-white text-left">Soluciones de automatización inteligente para hogares y empresas, reduciendo costos y aumentando la productividad.</p>
           </div>
           <div class="feature-card bg-lime-900 p-6 rounded-xl transition-colors duration-300 ease-in-out hover:bg-lime-800">
               <div class="feature-icon size-14 bg-lime-700 rounded-full flex items-center justify-center mb-3">
-                  <i class="fas fa-check-circle text-3xl text-lime-300"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10  text-lime-300">
+                  <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                </svg>
               </div>
               <h3 class="feature-title text-xl font-bold mb-3 text-white text-left">Technological Products</h3>
               <p class="feature-description text-white text-left">Wide range of innovative products and technological solutions for everyday and business use.</p>
