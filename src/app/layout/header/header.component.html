@@ -1,35 +1,31 @@
 <!-- Navbar -->
 <nav class="bg-lime-800 py-4 px-4 sm:px-6 relative z-[100]">
   <div class="container mx-auto flex justify-between items-center">
-    
     <!-- Logo -->
     <div class="flex items-center gap-3 cursor-pointer" (click)="this.goRoutes('/')">
       <img src="img/white-lg-33.PNG" alt="Logo" class="w-10 h-10 object-contain">
       <h3 class="text-white text-xl sm:text-2xl font-bold">Lift Energy Group</h3>
     </div>
-
     <!-- Enlaces - Escritorio -->
-    <div class="hidden md:flex gap-6 text-white font-medium cursor-pointer">
-      <a class="hover:text-lime-400 transition" (click)="this.goRoutes('/')">Welcome</a>
-      <a class="hover:text-lime-400 transition" (click)="this.goRoutes('/services')">Services</a>
-      <a class="hover:text-lime-400 transition" (click)="this.goRoutes('/projects')">Projects</a>
-      <a class="hover:text-lime-400 transition" (click)="this.goRoutes('/aboutus')">About Us</a>
-      <a class="hover:text-lime-400 transition" (click)="this.goRoutes('/contact')">Contact</a>
+    <div class="hidden md:flex gap-6 text-white font-medium ">
+      <button class="hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/')">Welcome</button>
+      <button class="hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/services')">Services</button>
+      <button class="hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/projects')">Projects</button>
+      <button class="hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/aboutus')">About Us</button>
+      <button class="hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/contact')">Contact</button>
     </div>
-
     <!-- Botón Menú - Móvil -->
-    <div class="md:hidden cursor-pointer text-white text-2xl" (click)="this.showMenu()">
+    <div class="md:hidden cursor-pointer text-white text-2xl transition-all ease-out duration-500" (click)="this.showMenu()">
       <i class="fas" [ngClass]="menu ? 'fa-times' : 'fa-bars'"></i>
     </div>
   </div>
 </nav>
-
 <!-- Menú móvil -->
-<div class="lg:hidden transition-all duration-500 ease-in-out bg-lime-800 w-full px-4 py-4 flex flex-col gap-4 z-[99]"
-     [ngClass]="menu ? 'flex' : 'hidden'">
-  <a class="text-white text-lg hover:text-lime-400 transition" (click)="this.goRoutes('/')">Welcome</a>
-  <a class="text-white text-lg hover:text-lime-400 transition" (click)="this.goRoutes('/')">Services</a>
-  <a class="text-white text-lg hover:text-lime-400 transition" (click)="this.goRoutes('/projects')">Projects</a>
-  <a class="text-white text-lg hover:text-lime-400 transition" (click)="this.goRoutes('/aboutus')">About Us</a>
-  <a class="text-white text-lg hover:text-lime-400 transition" (click)="this.goRoutes('/contact')">Contact</a>
+<div class="md:overflow-hidden transition-all duration-500 ease-in-out bg-lime-800 w-full  flex flex-col z-[99] "
+     [ngClass]="menu ? 'max-h-screen py-4 gap-4' : 'overflow-hidden max-h-0 py-0 gap-0'">
+     <button class="text-white text-lg hover:text-lime-400 transition" (click)="this.goRoutes('/')">Welcome</button>
+     <button class="text-white text-lg hover:text-lime-400 transition" (click)="this.goRoutes('/services')">Services</button>
+     <button class="text-white text-lg hover:text-lime-400 transition" (click)="this.goRoutes('/projects')">Projects</button>
+     <button class="text-white text-lg hover:text-lime-400 transition" (click)="this.goRoutes('/aboutus')">About Us</button>
+     <button class="text-white text-lg hover:text-lime-400 transition" (click)="this.goRoutes('/contact')">Contact</button>
 </div>

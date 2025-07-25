@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,16 +7,16 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
-
+export class HomeComponent implements OnInit, OnDestroy {
 
   private router=inject(Router);
+
+  ngOnInit(): void {}
   
-navigateTo(ruta:string){
+  navigateTo(ruta:string){
+      this.router.navigate([ruta]);
+  }
 
-    this.router.navigate([ruta]);
-    
-}
-
+  ngOnDestroy(): void {}
 
 }

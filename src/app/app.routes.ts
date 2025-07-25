@@ -9,31 +9,38 @@ import { ServicesComponent } from './pages/services/services.component';
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    data: { animation: 'home' }
   },
   {
     path: 'welcome',
-    component: HomeComponent
+    component: HomeComponent,
+    data: { animation: 'welcome' }
   },
   {
     path: 'aboutus',
-    component: AboutUsComponent
+    component: AboutUsComponent,
+    data: { animation: 'aboutus' }
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: ContactComponent,
+    data: { animation: 'contact' }
   },
   {
     path: 'projects',
-    component: ProjectsComponent
+    component: ProjectsComponent,
+    data: { animation: 'projects' }
   },
   {
     path: 'services',
-    component: ServicesComponent
+    component: ServicesComponent,
+    data: { animation: 'services' }
   },
   {
     path: 'smartlink',
-    component: SmartlinkComponent
+    component: SmartlinkComponent,
+    data: { animation: 'smartlink' }
   },
 
 
