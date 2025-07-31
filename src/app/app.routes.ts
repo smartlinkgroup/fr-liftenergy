@@ -1,12 +1,10 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
-import { SmartlinkComponent } from './pages/projects/smartlink/smartlink.component';
-import { ServicesComponent } from './pages/services/services.component';
+
+
 
 export const routes: Routes = [
+  
   {
     path: '',
     component: HomeComponent,
@@ -17,32 +15,32 @@ export const routes: Routes = [
     component: HomeComponent,
     data: { animation: 'welcome' }
   },
+
+  // --- Rutas con Lazy Loading ---
   {
     path: 'aboutus',
-    component: AboutUsComponent,
+    // Se cambia 'component' por 'loadComponent' usando import() dinámico
+    loadComponent: () => import('./pages/about-us/about-us.component').then(m => m.AboutUsComponent),
     data: { animation: 'aboutus' }
   },
   {
     path: 'contact',
-    component: ContactComponent,
+    loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent),
     data: { animation: 'contact' }
   },
   {
     path: 'projects',
-    component: ProjectsComponent,
+    loadComponent: () => import('./pages/projects/projects.component').then(m => m.ProjectsComponent),
     data: { animation: 'projects' }
   },
   {
     path: 'services',
-    component: ServicesComponent,
+    loadComponent: () => import('./pages/services/services.component').then(m => m.ServicesComponent),
     data: { animation: 'services' }
   },
   {
     path: 'smartlink',
-    component: SmartlinkComponent,
+    loadComponent: () => import('./pages/projects/smartlink/smartlink.component').then(m => m.SmartlinkComponent),
     data: { animation: 'smartlink' }
   },
-
-
-
 ];
