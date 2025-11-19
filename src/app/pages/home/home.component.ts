@@ -1,9 +1,10 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

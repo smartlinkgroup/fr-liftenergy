@@ -1,46 +1,20 @@
-import {
-    animate,
-    group,
-    query,
-    style,
-    transition,
-    trigger
-} from '@angular/animations';
-
-const resetRoute = [
-    style({ position: 'relative' }),
-    query(
-        ':enter, :leave',
-	    [
-        	style({
-                position: 'absolute',
-                opacity: 0,
-            }),
-    	],
-	    { optional: true }
-    ),
-];
+import { trigger, transition, query, style, animate } from '@angular/animations';
 
 export const slideInAnimation = trigger('routeAnimations', [
-    transition('* => *', [
-        ...resetRoute,
-        query(':enter', [style({ opacity: 0 })], {
-        	optional: true,
+  transition('* => *', [
+    query(':enter', 
+      [
+        style({ 
+          position: 'relative',
+          opacity: 0, 
+          transform: 'translateX(50px)' // Empieza 50px a la derecha
         }),
-        group([
-            query(
-                ':leave',
-                [style({ opacity: 1 }), animate('0.5s', style({ opacity: 0 }))],
-                { optional: true }
-            ),
-            query(
-                ':enter',
-                [style({ opacity: 0 }), animate('0.8s', style({ opacity: 1 }))],
-                { optional: true }
-            ),
-        ]),
-    ]),
-    transition('welcome => aboutus', [
-        style({ backgroundColor: 'red' })
-    ])
+        animate('400ms ease-out', style({ 
+          opacity: 1, 
+          transform: 'translateX(0)' // Termina en su posición original
+        }))
+      ], 
+      { optional: true }
+    )
+  ])
 ]);
