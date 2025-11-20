@@ -1,6 +1,17 @@
 <app-header></app-header>
-<div [@routeAnimations]="getRouteAnimationData()">
-    <router-outlet />
-    <app-footer></app-footer>
 
+<div class="fixed top-0 left-0 w-full h-full z-[9999] pointer-events-none bg-transparent">
+  <ng-particles
+    [id]="'tsparticles'"
+    [options]="snowConfig"
+    [particlesInit]="particlesInit"
+    class="w-full h-full block"
+  ></ng-particles>
+
+</div>
+
+
+<div [@routeAnimations]="getRouteAnimationData()" class="z-2">
+  <router-outlet />
+  <app-footer></app-footer>
 </div>
