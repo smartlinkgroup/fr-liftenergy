@@ -2,8 +2,6 @@ import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common';
 import {IParticlesProps, NgParticlesModule} from 'ng-particles';
-import * as sweetalert2 from 'sweetalert2';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-home',
@@ -90,7 +88,8 @@ export class HomeComponent implements OnInit, OnDestroy {
         </video>
     `;
 
-  openVideo(){
+  async openVideo(){
+    const { default: Swal } = await import('sweetalert2');
     Swal.fire({
       html:this.videoHtml,
       allowOutsideClick: false,
