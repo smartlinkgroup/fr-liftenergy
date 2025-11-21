@@ -93,9 +93,23 @@ export class HomeComponent implements OnInit, OnDestroy {
     Swal.fire({
       html:this.videoHtml,
       allowOutsideClick: false,
-      showCloseButton:true,
+      showCloseButton:false,
       showConfirmButton:false,
       width: 500,
+      didOpen: () => {
+        // 1. Obtenemos la referencia al elemento de video
+        const videoElement = document.getElementById('alerta-video') as HTMLVideoElement;
+
+        if (videoElement) {
+          videoElement.addEventListener('ended', () => {
+            Swal.close();
+          });
+
+          videoElement.play().catch(error => {
+            console.warn('La reproducción automática fue bloqueada o falló:', error);
+          })
+        }
+      }
     }).then(result => {
       sessionStorage.setItem("isOpenVideo","true");
     })
