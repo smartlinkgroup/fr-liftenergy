@@ -1,13 +1,13 @@
 <!-- Navbar -->
-<nav class="bg-lime-800 py-4 px-4 sm:px-6 relative z-[100]">
+<nav class="bg-lime-800 py-2 px-4 sm:px-6 relative z-[100]">
   <div class="container mx-auto flex justify-between items-center">
     <!-- Logo -->
-    <div class="flex items-center gap-3 cursor-pointer" (click)="this.goRoutes('/')">
-      <img src="img/white-lg-33.webp" 
+    <div class="flex items-center gap-3  cursor-pointer" (click)="this.goRoutes('/')">
+      <img src="img/christmas/logo_christmas.webp"
            alt="Logo de Lift Energy Group"
-           class="w-10 h-10 object-contain" 
-           width="40" 
-           height="34"> 
+           class="w-15 h-15 mb-2 object-contain"
+           width="40"
+           height="34">
       <h3 class="text-white text-xl sm:text-2xl font-bold">Lift Energy Group</h3>
     </div>
 
@@ -20,10 +20,10 @@
       <button class="hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/contact')">Contact</button>
     </div>
 
- 
+
     <!-- Botón Menú - Móvil -->
     <div class="md:hidden cursor-pointer text-white" (click)="this.showMenu()">
-      
+
       @if (menu) {
         <!-- Ícono de 'X' para cerrar  -->
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
@@ -37,7 +37,7 @@
       }
 
     </div>
-    
+
   </div>
 </nav>
 
