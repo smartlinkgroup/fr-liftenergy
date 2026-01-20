@@ -14,10 +14,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   private router=inject(Router);
 
   ngOnInit(): void {
-    const isOpen: string | null =  sessionStorage.getItem('isOpenVideo');
-    if(!isOpen) {
-      this.openVideo()
-    }
+    // const isOpen: string | null =  sessionStorage.getItem('isOpenVideo');
+    // if(!isOpen) {
+    //   this.openVideo()
+    // }
 
   }
 
@@ -60,60 +60,60 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
-  rutaVideo():string{
-     var num = Math.floor(Math.random() * (2 + 1));
-     if(num == 0){
-       return 'video/christmas/IMG_7966.MP4';
-     }
-     else if(num == 1){
-       return 'video/christmas/IMG_7965.MP4';
-     }
-     else{
-       return 'video/christmas/IMG_7967.MP4';
-     }
-  }
+  // rutaVideo():string{
+  //    var num = Math.floor(Math.random() * (2 + 1));
+  //    if(num == 0){
+  //      return 'video/christmas/IMG_7966.MP4';
+  //    }
+  //    else if(num == 1){
+  //      return 'video/christmas/IMG_7965.MP4';
+  //    }
+  //    else{
+  //      return 'video/christmas/IMG_7967.MP4';
+  //    }
+  // }
 
-  public videoHtml = `
-        <video
-            id="alerta-video"
-            width="100%"
-            controls
-            autoplay
-            muted
-            playsinline
-            style="max-width: 100%; margin-top: 20px; border-radius: 8px;"
-        >
-            <source src="${this.rutaVideo()}" type="video/mp4">
-            Tu navegador no soporta el tag de video.
-        </video>
-    `;
+  // public videoHtml = `
+  //       <video
+  //           id="alerta-video"
+  //           width="100%"
+  //           controls
+  //           autoplay
+  //           muted
+  //           playsinline
+  //           style="max-width: 100%; margin-top: 20px; border-radius: 8px;"
+  //       >
+  //           <source src="${this.rutaVideo()}" type="video/mp4">
+  //           Tu navegador no soporta el tag de video.
+  //       </video>
+  //   `;
 
-  async openVideo(){
-    const { default: Swal } = await import('sweetalert2');
-    Swal.fire({
-      html:this.videoHtml,
-      allowOutsideClick: false,
-      showCloseButton:false,
-      showConfirmButton:false,
-      width: 500,
-      didOpen: () => {
-        // 1. Obtenemos la referencia al elemento de video
-        const videoElement = document.getElementById('alerta-video') as HTMLVideoElement;
-
-        if (videoElement) {
-          videoElement.addEventListener('ended', () => {
-            Swal.close();
-          });
-
-          videoElement.play().catch(error => {
-            console.warn('La reproducción automática fue bloqueada o falló:', error);
-          })
-        }
-      }
-    }).then(result => {
-      sessionStorage.setItem("isOpenVideo","true");
-    })
-  }
+  // async openVideo(){
+  //   const { default: Swal } = await import('sweetalert2');
+  //   Swal.fire({
+  //     html:this.videoHtml,
+  //     allowOutsideClick: false,
+  //     showCloseButton:false,
+  //     showConfirmButton:false,
+  //     width: 500,
+  //     didOpen: () => {
+  //       // 1. Obtenemos la referencia al elemento de video
+  //       const videoElement = document.getElementById('alerta-video') as HTMLVideoElement;
+  //
+  //       if (videoElement) {
+  //         videoElement.addEventListener('ended', () => {
+  //           Swal.close();
+  //         });
+  //
+  //         videoElement.play().catch(error => {
+  //           console.warn('La reproducción automática fue bloqueada o falló:', error);
+  //         })
+  //       }
+  //     }
+  //   }).then(result => {
+  //     sessionStorage.setItem("isOpenVideo","true");
+  //   })
+  // }
 
   ngOnDestroy(): void {}
 

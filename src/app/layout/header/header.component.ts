@@ -1,10 +1,10 @@
-import { NgClass } from '@angular/common';
+import {NgClass, NgOptimizedImage} from '@angular/common';
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [NgClass],
+  imports: [NgClass, NgOptimizedImage],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
