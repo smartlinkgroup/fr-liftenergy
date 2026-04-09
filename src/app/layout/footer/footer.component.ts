@@ -1,32 +1,20 @@
-import { Component, inject, OnDestroy, OnInit, signal, Signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
+  standalone: true,
   imports: [],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
-export class FooterComponent implements OnInit,OnDestroy {
+export class FooterComponent {
 
-  private router = inject(Router);
+  // Inyectamos el router de forma sencilla
+  constructor(private router: Router) {}
 
-  year = signal(0);
-
-
-  ngOnInit(): void {
-    let fecha = new Date;
-
-    this.year.set(fecha.getFullYear());
+  // Esta función es la que tus botones del HTML van a llamar
+  navigateTo(path: string) {
+    this.router.navigate([path]);
   }
-
-  goRoutes(ruta:string){
-    this.router.navigate([ruta]);
-  }
-
-
-  ngOnDestroy(): void {
-
-  }
-
 }

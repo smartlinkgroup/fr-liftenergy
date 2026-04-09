@@ -1,51 +1,50 @@
-<!-- Navbar -->
-<nav class="bg-lime-800 py-2 px-4 sm:px-6 relative z-[100]">
+<nav class="absolute top-0 left-0 w-full z-[100] bg-transparent py-4 px-4 sm:px-6">
   <div class="container mx-auto flex justify-between items-center">
-    <!-- Logo -->
-    <div class="flex items-center gap-3  cursor-pointer" (click)="this.goRoutes('/')">
+    
+    <div class="flex items-center gap-3 cursor-pointer" (click)="this.goRoutes('/')">
       <img ngSrc="/img/white-lg-33.webp"
            alt="Logo de Lift Energy Group"
-           class="w-10 h-10 mb-2 object-contain"
+           class="w-10 h-10 object-contain"
            width="40"
-           height="34">
-      <h3 class="text-white text-xl sm:text-2xl font-bold">Lift Energy Group</h3>
+           height="34"
+           priority>
+      <h3 class="text-white text-lg sm:text-xl font-medium tracking-[0.1em] uppercase">Lift Energy Group</h3>
     </div>
 
-    <!-- Enlaces - Escritorio -->
-    <div class="hidden md:flex gap-6 text-white font-medium ">
-      <button class="hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/')">Welcome</button>
-      <button class="hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/services')">Services</button>
-      <button class="hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/projects')">Projects</button>
-      <button class="hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/aboutus')">About Us</button>
-      <button class="hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/contact')">Contact</button>
+    <div class="hidden md:flex gap-10 text-white items-center">
+      <button class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]" (click)="this.goRoutes('/')">Welcome</button>
+      <button class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]" (click)="this.goRoutes('/services')">Services</button>
+      <button class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]" (click)="this.goRoutes('/projects')">Projects</button>
+      <button class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]" (click)="this.goRoutes('/aboutus')">About Us</button>
+      
+      <button class="border border-white/20 hover:border-lime-400 hover:text-lime-400 px-6 py-2 rounded-full transition-all cursor-pointer text-[11px] font-medium uppercase tracking-[0.3em] backdrop-blur-sm" 
+              (click)="this.goRoutes('/contact')">
+        Contact
+      </button>
     </div>
 
-
-    <!-- Botón Menú - Móvil -->
     <div class="md:hidden cursor-pointer text-white" (click)="this.showMenu()">
       @if (menu) {
-        <!-- Ícono de 'X' para cerrar  -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
       } @else {
-        <!-- Ícono de Hamburguesa  -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
       }
-
     </div>
-
   </div>
 </nav>
 
-<!-- El menú móvil se queda exactamente como estaba -->
-<div class="md:overflow-hidden transition-all duration-500 ease-in-out bg-lime-800 w-full flex flex-col z-[99]"
-     [ngClass]="menu ? 'max-h-screen py-4 gap-4' : 'overflow-hidden max-h-0 py-0 gap-0'">
-       <button class="text-white text-lg hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/')">Welcome</button>
-     <button class="text-white text-lg hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/services')">Services</button>
-     <button class="text-white text-lg hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/projects')">Projects</button>
-     <button class="text-white text-lg hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/aboutus')">About Us</button>
-     <button class="text-white text-lg hover:text-lime-400 transition hover:cursor-pointer" (click)="this.goRoutes('/contact')">Contact</button>
+<div class="fixed top-0 left-0 w-full transition-all duration-500 ease-in-out bg-black/98 backdrop-blur-xl flex flex-col z-[90] md:hidden"
+     [ngClass]="menu ? 'max-h-screen py-32 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'">
+    
+    <div class="flex flex-col items-center gap-10">
+      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400" (click)="this.goRoutes('/')">Welcome</button>
+      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400" (click)="this.goRoutes('/services')">Services</button>
+      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400" (click)="this.goRoutes('/projects')">Projects</button>
+      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400" (click)="this.goRoutes('/aboutus')">About Us</button>
+      <button class="text-lime-400 text-sm font-bold uppercase tracking-[0.4em] border border-lime-400/30 px-8 py-2 rounded-full" (click)="this.goRoutes('/contact')">Contact</button>
+    </div>
 </div>

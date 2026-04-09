@@ -1,68 +1,53 @@
-<section class="hero py-20 px-4 sm:px-6 bg-gradient-to-b from-lime-900 to-black">
-  <div class="container mx-auto grid lg:grid-cols-2 md:grid-cols-1 gap-6 items-center">
-    <div class="hero-content text-left mb-10 px-4 sm:px-6">
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-        <span class="text-lime-400">Automated</span> Solutions for a Better Future
+<section class="relative h-screen w-full flex items-center overflow-hidden bg-black py-24 px-6 md:px-16">
+  
+  <div class="absolute inset-0 z-0">
+    <video 
+      autoplay 
+      muted 
+      loop 
+      playsinline 
+      preload="auto"
+      class="w-full h-full object-cover opacity-80">
+     <source src="video.MP4" type="video/MP4">
+    </video>
+    
+    <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/90"></div>
+  </div>
+
+  <div class="container mx-auto relative z-10 text-left">
+    <div class="max-w-6xl space-y-10">
+      
+      <h1 class="text-7xl md:text-[10rem] font-black text-white leading-[0.85] tracking-tighter">
+        <span class="text-lime-400">Automated</span><br>
+        Solutions<br>
+        <span class="text-4xl md:text-6xl font-normal opacity-80">for a Better Future</span>
       </h1>
-      <p class="text-base sm:text-lg lg:text-xl text-lime-100 mb-8 max-w-[600px]">
-        Committed to innovation and efficiency for the companies of the future.
+      
+      <p class="text-xl md:text-2xl text-gray-200 max-w-2xl font-light leading-relaxed border-l-2 border-lime-500/30 pl-6">
+        Commitment to innovation and efficiency for the companies of the future through <span class="text-white font-medium">high-level industrial technology</span>.
       </p>
-      <div class="hero-buttons flex flex-col sm:flex-row gap-4">
-        <button class="py-3 px-6 text-lg font-semibold rounded-md transition-all ease-in-out bg-lime-700 text-white hover:cursor-pointer hover:bg-lime-600"
-         (click)="this.navigateTo('/contact')">
+
+      <div class="flex flex-wrap gap-6 items-center pt-6">
+        <button (click)="navigateTo('/contact')" 
+          class="px-10 py-4 bg-lime-500 hover:bg-lime-400 text-black font-bold rounded-full transition-all hover:scale-105 shadow-lg">
           Get started
         </button>
-        <button class="py-3 px-6 text-base font-semibold rounded-md bg-transparent transition-all ease-in-out text-lime-300 border border-lime-500 hover:bg-lime-700 cursor-pointer hover:text-white"
-        (click)="this.navigateTo('/aboutus')">
-          Learn more <i class="fas fa-arrow-right ml-2"></i>
+        
+        <button (click)="navigateTo('/aboutus')" 
+          class="group flex items-center gap-3 px-10 py-4 border border-white/20 hover:bg-white/10 text-white font-medium rounded-full transition-all backdrop-blur-sm">
+          <span>Our story</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 group-hover:translate-x-2 transition-transform">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
         </button>
       </div>
+
     </div>
-   <div class="hero-image w-full max-w-md mx-auto lg:mx-0 rounded-xl overflow-hidden">
-  <img
-    ngSrc="img/petro.webp"
-    ngSrcset="480w, 900w"
-    alt="Tecnología automatizada"
-    class="w-full h-auto object-cover"
-    width="900"
-    height="506"
-    priority="high">
-</div>
   </div>
-</section>
 
-<section class="features py-20 px-4 sm:px-6 bg-black">
-  <div class="container mx-auto text-center">
-    <h2 class="text-3xl sm:text-4xl font-bold mb-16 text-white">Our automated services</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-       <div class="feature-card bg-lime-900 p-6 rounded-xl transition-colors duration-300 ease-in-out hover:bg-lime-800">
-        <div class="feature-icon size-14 bg-lime-700 rounded-full flex items-center justify-center mb-3">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10  text-lime-300">
-            <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
-          </svg>
-        </div>
-              <h3 class="feature-title text-xl font-bold mb-3 text-white text-left">Automation Consulting</h3>
-              <p class="feature-description text-white text-left">Expert advice for implementing automated solutions that improve your business's efficiency.</p>
-          </div>
-          <div class="feature-card bg-lime-900 p-6 rounded-xl transition-colors duration-300 ease-in-out hover:bg-lime-800">
-            <div class="feature-icon size-14 bg-lime-700 rounded-full flex items-center justify-center mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10  text-lime-300">
-                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
-              </svg>
-            </div>
-              <h3 class="feature-title text-xl font-bold mb-3 text-white text-left">Intelligent Systems</h3>
-              <p class="feature-description text-white text-left">Soluciones de automatización inteligente para hogares y empresas, reduciendo costos y aumentando la productividad.</p>
-          </div>
-          <div class="feature-card bg-lime-900 p-6 rounded-xl transition-colors duration-300 ease-in-out hover:bg-lime-800">
-              <div class="feature-icon size-14 bg-lime-700 rounded-full flex items-center justify-center mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-10  text-lime-300">
-                  <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
-                </svg>
-              </div>
-              <h3 class="feature-title text-xl font-bold mb-3 text-white text-left">Technological Products</h3>
-              <p class="feature-description text-white text-left">Wide range of innovative products and technological solutions for everyday and business use.</p>
-          </div>
-      </div>
-    </div>
-</section>
+  <div class="absolute bottom-10 left-10 z-10 opacity-30 animate-pulse">
+    <div class="w-[1px] h-16 bg-gradient-to-b from-white to-transparent"></div>
+    <span class="text-[9px] text-white uppercase tracking-widest mt-2 block">Scroll</span>
+  </div>
 
+</section>
