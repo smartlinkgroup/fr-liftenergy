@@ -1,14 +1,31 @@
 @import "tailwindcss";
 
-canvas {
-  display: block !important;
+/* EFECTO DE SCROLL SUAVE GLOBAL */
+html {
+  scroll-behavior: smooth;
+  background-color: black;
 }
 
-#tsparticles {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999 !important; /* O el z-index que prefieras */
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+/* Personaliza la barra de scroll lateral */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a3e635; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bef264;
 }

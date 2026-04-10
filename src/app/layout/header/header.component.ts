@@ -1,34 +1,39 @@
-import {NgClass, NgOptimizedImage} from '@angular/common';
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [NgClass, NgOptimizedImage],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent implements OnInit,OnDestroy {
-
-  public menu:boolean = false;
-
+export class HeaderComponent {
+  public menu: boolean = false;
   private router = inject(Router);
 
-  ngOnInit(): void {
-
-  }
-
-  goRoutes(ruta:string){
-    this.router.navigate([ruta]);
-  }
-
-  public showMenu() {
+  showMenu() {
     this.menu = !this.menu;
   }
 
-  ngOnDestroy(): void {
-
+  scrollToSection(sectionId: string) {
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']).then(() => {
+        this.executeScroll(sectionId);
+      });
+    } else {
+      this.executeScroll(sectionId);
+    }
+    this.menu = false; 
   }
 
-
+  private executeScroll(id: string) {
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  }
 }
