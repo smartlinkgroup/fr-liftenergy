@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  background-color: #000000 !important; /* Forzamos negro puro */
+  width: 100%;
+}
+
+.visible {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+
+.stroke-text {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+  color: transparent;
+}
+
+/* Animaciones base para que no arranquen invisibles si hay error */
+.reveal, .reveal-left, .reveal-right {
+  opacity: 0;
+  /* Añadimos un poco más de duración a la salida */
+  transition: opacity 0.8s ease-out, transform 1.2s cubic-bezier(0.17, 0.55, 0.55, 1);
+  will-change: transform, opacity; /* Ayuda al navegador a procesar mejor la animación */
+}
+.reveal { transform: translateY(100px); }
+.reveal-left { transform: translateX(-100px); }
+.reveal-right { transform: translateX(100px); }

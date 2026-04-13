@@ -1,77 +1,85 @@
 <div class="relative bg-black text-white pb-32 overflow-hidden">
   
-  <div class="absolute left-10 top-0 w-px h-full bg-gradient-to-b from-lime-500/50 via-lime-500/10 to-transparent opacity-20 hidden lg:block"></div>
+  <div class="absolute left-10 top-0 w-px h-full bg-lime-500/20 hidden lg:block"></div>
 
-  <header class="relative py-24 px-6 text-center">
-    <div class="relative z-10 space-y-4">
-      <h2 class="text-lime-400 text-[10px] uppercase tracking-[0.8em] font-medium">Enterprise Identity</h2>
-      <h1 class="text-5xl md:text-8xl font-light tracking-tighter">About <span class="italic font-normal text-gray-500">Us</span></h1>
-      <p class="text-lime-200/50 max-w-xl mx-auto font-light text-lg">Learn about our history, mission, and values</p>
-      <div class="w-px h-24 bg-gradient-to-b from-lime-500 to-transparent mx-auto mt-10"></div>
+  <header class="relative min-h-[60vh] flex flex-col justify-center items-center px-6 text-center">
+    <div class="space-y-6 reveal">
+      <h2 class="text-lime-400 text-[10px] uppercase tracking-[1em] font-medium opacity-70">Enterprise Identity</h2>
+      <h1 class="text-6xl md:text-9xl font-black tracking-tighter leading-none text-white uppercase">
+        ABOUT <span class="stroke-text italic font-light">US</span>
+      </h1>
+      <p class="text-gray-500 max-w-lg mx-auto font-light text-xl italic mt-6">"Commitment to innovation and efficiency"</p>
     </div>
   </header>
 
-  <section class="max-w-7xl mx-auto px-6 mb-56 relative">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+  <section class="max-w-7xl mx-auto px-6 mb-64 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start">
       
-      <div class="lg:col-span-4 sticky top-32 space-y-6">
-        <h2 class="text-4xl font-bold italic text-lime-400 tracking-tight">Our History</h2>
-        <div class="h-[2px] w-20 bg-lime-500"></div>
+      <div class="lg:col-span-4 reveal-left">
+        <div class="sticky top-40 space-y-4">
+          <h3 class="text-5xl font-black italic text-lime-500 tracking-tighter uppercase">Our <br> History</h3>
+          <div class="w-20 h-1 bg-lime-500 shadow-[0_0_15px_rgba(163,230,53,0.5)]"></div>
+        </div>
       </div>
 
-      <div class="lg:col-span-8 space-y-10">
-        <div class="prose prose-invert prose-lg max-w-none text-gray-300 font-light leading-relaxed text-justify">
-          <p>
-            We are a company dedicated to the research and development of <span class="text-white">new technologies</span> with an emphasis on cutting-edge applications and equipment for the <span class="text-white">Oil and Gas industry</span>. Our development is made up of powerful software created with <span class="text-white italic">Artificial Intelligence</span> (technology based on training data to learn and improve the accuracy of the acquired data) that, in symmetry with high-tech hardware, makes a first-class tool for real-time satellite monitoring of wells operated with a rocker arm system.
-          </p>
-
-          <div class="py-12">
-            <div class="h-px w-full bg-gradient-to-r from-lime-500/30 via-transparent to-transparent"></div>
-          </div>
-
-          <p>
-            Our software, based, among other things, on the acquisition of dynamic charts and essential parameters for field monitoring, is specifically designed to help obtain maximum performance from mechanical pumping systems. By leveraging advanced data analysis capabilities and intelligent automation, our software offers many benefits such as monitoring, analysis, and early detection of faults, issuing real-time alerts, as well as decision-making in the solution of any faults that may occur.
-          </p>
-
-          <p>
-            In addition to this development, we are working on innovative steam injection equipment for oil wells. Our corporation is comprised of a team of top-level engineers and technicians in various areas whose goal is to produce products with the highest quality standards.
+      <div class="lg:col-span-8 space-y-12 reveal-right text-justify">
+        
+        <div class="p-10 bg-black border border-white/10 rounded-[2rem] backdrop-blur-xl">
+          <p class="text-gray-300 text-xl font-light leading-relaxed">
+            We are a company dedicated to the research and development of <span class="text-white font-medium underline decoration-lime-500/40">new technologies</span> with an emphasis on cutting-edge applications and equipment for the <span class="text-white">Oil and Gas industry</span>. Our development is made up of powerful software created with <span class="text-white italic">Artificial Intelligence</span> (technology based on training data to learn and improve the accuracy of the acquired data) that, in symmetry with high-tech hardware, makes a first-class tool for real-time satellite monitoring of wells operated with a rocker arm system.
           </p>
         </div>
+
+        <div class="p-10 bg-black border border-white/5 rounded-[2rem] md:translate-x-10">
+          <p class="text-gray-400 text-lg leading-relaxed italic font-light">
+            "Our software, based, among other things, on the acquisition of dynamic charts and essential parameters for field monitoring, is specifically designed to help obtain maximum performance from mechanical pumping systems."
+          </p>
+        </div>
+
+        <div class="p-10 bg-black border border-white/10 rounded-[2rem]">
+          <p class="text-gray-300 text-lg font-light leading-relaxed">
+            By leveraging advanced data analysis and intelligent automation, our software offers benefits such as monitoring, analysis, and early detection of faults, issuing real-time alerts, as well as decision-making in the solution of any faults that may occur. In addition to this development, we are working on innovative steam injection equipment for oil wells. Our corporation is comprised of a team of top-level engineers and technicians in various areas whose goal is to produce products with the highest quality standards.
+          </p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <div class="flex justify-center mb-24">
+  <div class="flex justify-center mb-24 reveal">
     <div class="w-px h-32 bg-gradient-to-b from-lime-500/50 to-transparent"></div>
   </div>
 
-  <section class="max-w-7xl mx-auto px-6 mb-56">
-    <h2 class="text-3xl font-bold italic text-lime-400 text-center mb-16 border-b border-white/10 pb-6 inline-block w-full">Our Core Identity</h2>
+  <section class="max-w-7xl mx-auto px-6 mb-56 reveal">
+    <h2 class="text-3xl font-bold italic text-lime-400 text-center mb-16 border-b border-white/10 pb-6 inline-block w-full uppercase tracking-widest">Our Core Identity</h2>
     
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10 rounded-[40px] overflow-hidden bg-zinc-950/30">
-      <div class="p-12 border-r border-white/10 hover:bg-lime-500/5 transition-colors">
-        <h4 class="text-2xl font-bold mb-6 italic text-white">Mission</h4>
-        <p class="text-gray-400 text-sm leading-relaxed">Our mission is to provide our clients with innovative solutions that drive efficiency, sustainability, and profitability. With our expertise in artificial intelligence and energy systems development, we provide a comprehensive suite of services designed to meet the unique needs of the energy sector.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10 rounded-[40px] overflow-hidden bg-black">
+      <div class="p-12 border-r border-white/10 hover:bg-lime-500/5 transition-colors group">
+        <h4 class="text-2xl font-bold mb-6 italic text-white group-hover:text-lime-400 transition-colors">Mission</h4>
+        <p class="text-gray-400 text-sm leading-relaxed font-light">Our mission is to provide our clients with innovative solutions that drive efficiency, sustainability, and profitability. With our expertise in artificial intelligence and energy systems development, we provide a comprehensive suite of services designed to meet the unique needs of the energy sector.</p>
       </div>
 
-      <div class="p-12 border-r border-white/10 hover:bg-lime-500/5 transition-colors">
-        <h4 class="text-2xl font-bold mb-6 italic text-white">Vision</h4>
-        <p class="text-gray-400 text-sm leading-relaxed">To be recognized globally as a leader in automation solutions, setting new standards for innovation and excellence in the industry, and contributing to a more efficient and productive future.</p>
+      <div class="p-12 border-r border-white/10 hover:bg-lime-500/5 transition-colors group">
+        <h4 class="text-2xl font-bold mb-6 italic text-white group-hover:text-lime-400 transition-colors">Vision</h4>
+        <p class="text-gray-400 text-sm leading-relaxed font-light">To be recognized globally as a leader in automation solutions, setting new standards for innovation and excellence in the industry, and contributing to a more efficient and productive future.</p>
       </div>
 
-      <div class="p-12 hover:bg-lime-500/5 transition-colors">
-        <h4 class="text-2xl font-bold mb-6 italic text-white">Values</h4>
-        <p class="text-gray-400 text-sm leading-relaxed mb-6">Nuestros valores fundamentales guían cada decisión y acción que tomamos, definiendo nuestra cultura empresarial.</p>
+      <div class="p-12 hover:bg-lime-500/5 transition-colors group">
+        <h4 class="text-2xl font-bold mb-6 italic text-white group-hover:text-lime-400 transition-colors">Values</h4>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6 font-light">Nuestros valores fundamentales guían cada decisión y acción que tomamos, definiendo nuestra cultura empresarial.</p>
         <div class="flex flex-wrap gap-2 text-[9px] text-lime-400 font-mono uppercase">
-            <span>• Innovation</span> <span>• Integrity</span> <span>• Excellence</span> <span>• Teamwork</span>
+            <span class="px-2 py-1 border border-lime-500/20 rounded">Innovation</span> 
+            <span class="px-2 py-1 border border-lime-500/20 rounded">Integrity</span> 
+            <span class="px-2 py-1 border border-lime-500/20 rounded">Excellence</span> 
+            <span class="px-2 py-1 border border-lime-500/20 rounded">Teamwork</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="max-w-7xl mx-auto px-6">
+  <section class="max-w-7xl mx-auto px-6 reveal">
     <div class="text-center mb-32 space-y-4">
-      <h2 class="text-5xl font-light italic tracking-tighter">Our <span class="text-lime-400">Staff</span></h2>
+      <h2 class="text-5xl font-light italic tracking-tighter uppercase">Our <span class="text-lime-400">Staff</span></h2>
       <p class="text-gray-500 font-light text-sm max-w-2xl mx-auto">We have a team of passionate and highly qualified professionals committed to excellence and innovation.</p>
     </div>
 
@@ -101,7 +109,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="pb-20">
       <div class="flex items-center gap-6 mb-16">
         <span class="text-[10px] text-lime-400 uppercase tracking-[0.6em] font-medium font-mono">Electronics Engineering</span>
         <div class="h-px bg-gradient-to-r from-lime-500/30 to-transparent flex-grow"></div>
