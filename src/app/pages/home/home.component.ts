@@ -1,5 +1,6 @@
 import { Component, inject, ViewChild, ElementRef, AfterViewInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common'; // Importante para el botón de "Back to Top"
 
 // IMPORTAMOS LAS SECCIONES
 import { AboutUsComponent } from '../about-us/about-us.component';
@@ -7,14 +8,19 @@ import { ContactComponent } from '../contact/contact.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ServicesComponent } from '../services/services.component';
 
+// IMPORTAMOS EL NUEVO COMPONENTE DE LA LÍNEA
+import { ScrollGuideComponent } from '../../components/scroll-guide/scroll-guide';
+
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
+    CommonModule,
     AboutUsComponent, 
     ContactComponent, 
     ProjectsComponent, 
-    ServicesComponent
+    ServicesComponent,
+    ScrollGuideComponent // <--- AGREGADO AQUÍ
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
