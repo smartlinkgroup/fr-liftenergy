@@ -73,3 +73,15 @@
     <app-contact></app-contact>
   </div>
 </section>
+<button 
+  (click)="scrollToTop()" 
+  [class.opacity-100]="showScrollButton" 
+  [class.opacity-0]="!showScrollButton"
+  class="fixed bottom-8 right-8 z-50 p-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md text-white shadow-2xl transition-all duration-500 hover:bg-lime-500/20 hover:border-lime-500/40 group overflow-hidden">
+  
+  <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6 relative z-10 group-hover:-translate-y-1 transition-transform">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+  </svg>
+</button>
