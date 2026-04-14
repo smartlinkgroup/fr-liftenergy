@@ -1,35 +1,34 @@
 <section class="relative h-[60vh] flex items-center justify-center overflow-hidden bg-black" (mousemove)="onMouseMove($event)">
   
   <div 
-    class="absolute inset-0 transition-all duration-700"
-    [ngClass]="isExplored ? 'opacity-100 scale-125 saturate-150' : 'opacity-50 scale-110'"
+    class="absolute inset-0 opacity-60 bg-cover bg-center transition-transform duration-75"
     [style.backgroundImage]="'url(/img/fondito.webp)'"
-    [style.backgroundSize]="'cover'"
-    [style.backgroundPosition]="'center'"
-    [style.transform]="'translate(' + mouseX + 'px, ' + mouseY + 'px)'">
+    [style.transform]="'translate(' + mouseX + 'px, ' + mouseY + 'px) scale(1.1)'">
   </div>
 
   <div 
-    class="relative z-10 p-10 rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl shadow-2xl max-w-xl text-center transform-gpu transition-all duration-500"
-    [style.transform]="'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)'"
-    [class.border-lime-400]="isExplored">
+    class="absolute inset-0 z-1 transition-transform duration-100 opacity-80"
+    [style.transform]="'translate(' + (mouseX * -0.5) + 'px, ' + (mouseY * -0.5) + 'px)'">
+    <app-energy-grid></app-energy-grid>
+  </div>
+  <div 
+    class="relative z-10 p-10 rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] max-w-xl text-center transform-gpu transition-transform duration-200"
+    [style.transform]="'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)'">
     
-    <div *ngIf="!isExplored" class="animate-in fade-in duration-500">
-      <h2 class="text-5xl font-black text-white mb-6">Innovación <br> <span class="text-lime-400">Sin Límites</span></h2>
-      <p class="text-gray-200 text-lg font-light">Elevamos la energía a una nueva dimensión digital.</p>
-      <button 
-        (click)="exploreFuture()"
-        class="mt-8 px-8 py-3 border border-lime-400 text-lime-400 rounded-full hover:bg-lime-400 hover:text-black transition-all font-bold uppercase tracking-wider">
-        Explorar el Futuro
-      </button>
+    <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-lime-500 text-black text-xs font-bold px-4 py-1 rounded-full uppercase tracking-widest">
+      Next Gen
     </div>
 
-    <div *ngIf="isExplored" class="animate-pulse">
-      <h2 class="text-6xl font-black text-lime-400 mb-2 tracking-tighter">LIFT ENERGY</h2>
-      <div class="h-1 w-20 bg-white mx-auto mb-6"></div>
-      <p class="text-white text-2xl font-bold uppercase tracking-[0.3em]">Bienvenido al mañana</p>
-      <p class="text-gray-400 mt-4 italic">Potenciando el rendimiento industrial de la nueva era....</p>
-    </div>
-
+    <h2 class="text-5xl font-black text-white mb-6 leading-none">
+      Innovación <br> <span class="text-lime-400">Sin Límites</span>
+    </h2>
+    
+    <p class="text-gray-200 text-lg font-light leading-relaxed">
+      Elevamos la energía a una nueva dimensión digital. Diseño fluido y tecnología de vanguardia para las empresas del mañana.
+    </p>
+    
+    <button class="mt-8 px-8 py-3 border border-lime-400 text-lime-400 rounded-full hover:bg-lime-400 hover:text-black transition-all duration-300 font-bold uppercase text-sm tracking-wider">
+      Explorar el Futuro
+    </button>
   </div>
 </section>

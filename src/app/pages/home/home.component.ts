@@ -8,9 +8,10 @@ import { ContactComponent } from '../contact/contact.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ServicesComponent } from '../services/services.component';
 
-// IMPORTAMOS LOS COMPONENTES NUEVOS (Línea y Pozo)
+// IMPORTAMOS LOS COMPONENTES (Línea, Pozo y ahora Energía)
 import { ScrollGuideComponent } from '../../components/scroll-guide/scroll-guide';
 import { InnovationWellComponent } from '../../components/innovation-well/innovation-well';
+import { EnergyGridComponent } from '../../components/energy-grid/energy-grid'; // <--- AGREGADO
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,8 @@ import { InnovationWellComponent } from '../../components/innovation-well/innova
     ProjectsComponent, 
     ServicesComponent,
     ScrollGuideComponent,
-    InnovationWellComponent // <--- IMPORTANTE: Agregado para que funcione
+    InnovationWellComponent,
+    EnergyGridComponent // <--- AGREGADO PARA QUE FUNCIONE
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

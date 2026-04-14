@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Asegúrate de tener esto
+import { CommonModule } from '@angular/common'; 
+import { EnergyGridComponent } from '../energy-grid/energy-grid';
 
 @Component({
   selector: 'app-innovation-well',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './innovation-well.html'
+  imports: [
+    CommonModule,
+    EnergyGridComponent 
+  ], 
+  templateUrl: './innovation-well.html',
+  styleUrl: './innovation-well.css'
 })
 export class InnovationWellComponent {
   mouseX = 0;

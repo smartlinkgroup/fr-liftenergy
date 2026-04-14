@@ -1,0 +1,51 @@
+:host {
+  display: block;
+  /* Quitamos el fondo negro fijo para que sea versátil */
+  background: transparent; 
+  /* Por defecto mantenemos el alto pequeño para el Home */
+  height: 100px; 
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Contenedor para asegurar que las partículas se vean */
+.particle-container {
+  position: absolute;
+  inset: 0;
+}
+
+.particle {
+  position: absolute;
+  bottom: -20px;
+  /* Verde intenso y puro */
+  background: #22c55e; 
+  border-radius: 50%;
+  opacity: 0.7;
+  filter: blur(1px);
+  animation: floatUp linear infinite;
+  /* Efecto neón */
+  box-shadow: 0 0 12px #22c55e; 
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  100% {
+    /* Aumentamos el recorrido para que cubra secciones más altas */
+    transform: translateY(-600px);
+    opacity: 0;
+  }
+}
+
+/* Configuraciones de velocidad y posición */
+.p1 { width: 3px; height: 3px; left: 10%; animation-duration: 3s; }
+.p2 { width: 5px; height: 5px; left: 30%; animation-duration: 5s; animation-delay: 1s; }
+.p3 { width: 2px; height: 2px; left: 50%; animation-duration: 4s; animation-delay: 0.5s; }
+.p4 { width: 4px; height: 4px; left: 70%; animation-duration: 6s; animation-delay: 2s; }
+.p5 { width: 3px; height: 3px; left: 90%; animation-duration: 3.5s; animation-delay: 0.2s; }
