@@ -1,0 +1,65 @@
+/* Contenedor principal de la tarjeta */
+.service-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.03); /* Fondo tipo cristal oscuro */
+  border: 1px solid rgba(163, 230, 53, 0.1); /* Borde neón tenue */
+  backdrop-filter: blur(12px); /* El efecto de desenfoque */
+  transition: all 0.4s ease;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto al pasar el mouse */
+.service-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(163, 230, 53, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+              0 0 20px rgba(163, 230, 53, 0.1);
+}
+
+/* Estilo de los Iconos */
+.icon-container {
+  width: 56px;
+  height: 56px;
+  background: #a3e635; /* Tu verde lima */
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 15px rgba(163, 230, 53, 0.3);
+}
+
+/* Botones dentro de las tarjetas */
+.service-btn {
+  margin-top: auto;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid rgba(163, 230, 53, 0.5);
+  color: #a3e635;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.service-btn:hover {
+  background: #a3e635;
+  color: #000;
+  box-shadow: 0 0 20px rgba(163, 230, 53, 0.4);
+}
+
+/* Ajuste para los checks (palomitas) */
+.flex.items-start.text-sm span {
+  color: #a3e635;
+  font-weight: bold;
+}

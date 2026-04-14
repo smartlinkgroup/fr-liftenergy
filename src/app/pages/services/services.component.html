@@ -1,162 +1,147 @@
+<section class="py-24 bg-black relative overflow-hidden">
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-lime-500/5 blur-[120px] rounded-full pointer-events-none"></div>
 
-    <!-- Servicios Principales -->
-    <section class="py-20 bg-gradient-to-t from-black to-lime-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-gray-100">
-                Core Services
-            </h2>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Servicio 1 -->
-                <div class="bg-gradient-to-br bg-gray-900 rounded-xl p-8 shadow-2xl hover:bg-lime-900 transition">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-lime-700 rounded-full flex items-center justify-center mr-4">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-cog-icon lucide-monitor-cog"><path d="M12 17v4"/><path d="m14.305 7.53.923-.382"/><path d="m15.228 4.852-.923-.383"/><path d="m16.852 3.228-.383-.924"/><path d="m16.852 8.772-.383.923"/><path d="m19.148 3.228.383-.924"/><path d="m19.53 9.696-.382-.924"/><path d="m20.772 4.852.924-.383"/><path d="m20.772 7.148.924.383"/><path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M8 21h8"/><circle cx="18" cy="6" r="3"/></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white">Automation Consulting</h3>
-                    </div>
-                    <p class="text-lime-100 mb-6">
-                        We analyze your current processes and design customized automation strategies that perfectly fit your company's specific needs.
-                    </p>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center text-lime-100">
-                            <i class="fas fa-check-circle text-lime-400 mr-3"></i>
-                            Detailed analysis of existing processes
-                        </li>
-                        <li class="flex items-center text-lime-100">
-                            <i class="fas fa-check-circle text-lime-400 mr-3"></i>
-                            Identification of opportunities for improvement
-                        </li>
-                        <li class="flex items-center text-lime-100">
-                            <i class="fas fa-check-circle text-lime-400 mr-3"></i>
-                            Design of implementation strategies
-                        </li>
-                        <li class="flex items-center text-lime-100">
-                            <i class="fas fa-check-circle text-lime-400 mr-3"></i>
-                            ROI and cost-benefit analysis
-                        </li>
-                    </ul>
-                    <button class="inline-block bg-black text-lime-300 px-6 py-3 rounded-lg hover:bg-gray-900 transition font-semibold hover:cursor-pointer" (click)="this.goToRoutes('/contact')">
-                        Request Consultation
-                    </button>
-                </div>
-                <!-- Servicio 2 -->
-                <div class="bg-gradient-to-br bg-gray-900 rounded-xl p-8 shadow-2xl hover:bg-lime-900 transition">
-                    <div class="flex items-center mb-6"> 
-                        <div class="w-16 h-16 bg-lime-800 rounded-full flex items-center justify-center mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw-icon lucide-refresh-cw"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-white ">Systems Integration</h3>
-                    </div>
-                    <p class="text-lime-100 mb-4">
-                        Seamless integration of new systems with your existing technology infrastructure.
-                    </p>
-                    <ul class="text-shadow-md text-lime-100 space-y-1">
-                        <li>
-                            <i class="fas fa-check-circle text-lime-400 mr-3"></i> 
-                            Compatibility analysis
-                        </li>
-                        <li> 
-                            <i class="fas fa-check-circle text-lime-400 mr-3"></i>
-                            Custom APIs and connectors
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle text-lime-400 mr-3"></i>
-                            Secure data migration
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle text-lime-400 mr-3"></i>
-                            Extensive integration testing
-                        </li>
-                    </ul>
-                </div>
-                <!-- Servicio 3 -->
-                <div class="bg-gradient-to-br bg-gray-900 rounded-xl p-8 shadow-2xl hover:bg-lime-900 transition">
-                    <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-lime-700 rounded-full flex items-center justify-center mr-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-factory-icon lucide-factory"><path d="M12 16h.01"/><path d="M16 16h.01"/><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M8 16h.01"/></svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white">Intelligent Systems</h3>
-                    </div>
-                    <p class="text-lime-100 mb-6">
-                        We implement intelligent and automated control systems to optimize production, reduce errors, and increase operational efficiency.
-                    </p>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center text-lime-100">
-                            <i class="fas fa-check-circle text-lime-400 mr-3"></i>
-                            Automation of production lines
-                        </li>
-                        <li class="flex items-center text-lime-100">
-                            <i class="fas fa-check-circle text-lime-400 mr-3"></i>
-                            Control and monitoring systems
-                        </li>
-                        <li class="flex items-center text-lime-100">
-                            <i class="fas fa-check-circle text-lime-400 mr-3"></i>
-                            Integration of intelligent industrial systems
-                        </li>
-                        <li class="flex items-center text-lime-100">
-                            <i class="fas fa-check-circle text-lime-400 mr-3"></i>
-                            SCADA and HMI systems
-                        </li>
-                    </ul>
-                    <button class="inline-block bg-black text-lime-300 px-6 py-3 rounded-lg hover:bg-gray-900 transition font-semibold hover:cursor-pointer" (click)="this.goToRoutes('/contact')">
-                        More Information
-                    </button>
-                </div>
-            </div>
+  <div class="container mx-auto px-6 relative z-10">
+    <h2 class="text-5xl md:text-7xl font-black text-center mb-20 text-white tracking-tighter">
+      Core <span class="text-lime-400">Services</span>
+    </h2>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <div class="service-card group">
+        <div class="flex items-center mb-6">
+          <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-cog"><path d="M12 17v4"/><path d="m14.305 7.53.923-.382"/><path d="m15.228 4.852-.923-.383"/><path d="m16.852 3.228-.383-.924"/><path d="m16.852 8.772-.383.923"/><path d="m19.148 3.228.383-.924"/><path d="m19.53 9.696-.382-.924"/><path d="m20.772 4.852.924-.383"/><path d="m20.772 7.148.924.383"/><path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"/><path d="M8 21h8"/><circle cx="18" cy="6" r="3"/></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white ml-4 group-hover:text-lime-400 transition-colors">Automation Consulting</h3>
         </div>
-    </section>
-    <!-- Proceso de Trabajo -->
-    <section class="py-20 bg-gradient-to-b from-black to-lime-900">
-        <div class="container mx-auto px-4 mt-5">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-gray-100">
-                Our Workflow
-            </h2>
-            
-            <div class="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
-                <!-- Paso 1 -->
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-lime-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl font-bold text-white">1</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-lime-400 mb-3">Initial Analysis</h3>
-                    <p class="text-gray-300">
-                        We evaluate your current needs and future goals to design the perfect solution.
-                    </p>
-                </div>
+        
+        <p class="text-gray-400 mb-6 leading-relaxed">
+          We analyze your current processes and design customized automation strategies that perfectly fit your company's specific needs.
+        </p>
 
-                <!-- Paso 2 -->
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-lime-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl font-bold text-white">2</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-lime-400 mb-3">Design and Planning</h3>
-                    <p class="text-gray-300">
-                        We create a detailed plan with timelines, necessary resources, and technical specifications.
-                    </p>
-                </div>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start text-sm text-gray-300">
+            <span class="mr-3 text-lime-400 font-bold">✔</span> Detailed analysis of existing processes
+          </li>
+          <li class="flex items-start text-sm text-gray-300">
+            <span class="mr-3 text-lime-400 font-bold">✔</span> Identification of opportunities for improvement
+          </li>
+          <li class="flex items-start text-sm text-gray-300">
+            <span class="mr-3 text-lime-400 font-bold">✔</span> Design of implementation strategies
+          </li>
+          <li class="flex items-start text-sm text-gray-300">
+            <span class="mr-3 text-lime-400 font-bold">✔</span> ROI and cost-benefit analysis
+          </li>
+        </ul>
 
-                <!-- Paso 3 -->
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-lime-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl font-bold text-white">3</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-lime-400 mb-3">Implementation</h3>
-                    <p class="text-gray-300">
-                        We carry out the installation and configuration of systems with minimal operational disruption.
-                    </p>
-                </div>
+        <button (click)="goToRoutes('/contact')" class="service-btn">
+          Request Consultation
+        </button>
+      </div>
 
-                <!-- Paso 4 -->
-                <div class="text-center">
-                    <div class="w-20 h-20 bg-lime-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl font-bold text-white">4</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-lime-400 mb-3">Ongoing Support</h3>
-                    <p class="text-gray-300">
-                        We provide maintenance, updates, and technical support to ensure optimal performance.
-                    </p>
-                </div>
-            </div>
+      <div class="service-card group">
+        <div class="flex items-center mb-6">
+          <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white ml-4 group-hover:text-lime-400 transition-colors">Systems Integration</h3>
         </div>
-    </section>
+        
+        <p class="text-gray-400 mb-6 leading-relaxed">
+          Seamless integration of new systems with your existing technology infrastructure.
+        </p>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start text-sm text-gray-300">
+            <span class="mr-3 text-lime-400 font-bold">✔</span> Compatibility analysis
+          </li>
+          <li class="flex items-start text-sm text-gray-300">
+            <span class="mr-3 text-lime-400 font-bold">✔</span> Custom APIs and connectors
+          </li>
+          <li class="flex items-start text-sm text-gray-300">
+            <span class="mr-3 text-lime-400 font-bold">✔</span> Secure data migration
+          </li>
+          <li class="flex items-start text-sm text-gray-300">
+            <span class="mr-3 text-lime-400 font-bold">✔</span> Extensive integration testing
+          </li>
+        </ul>
+
+        <button (click)="goToRoutes('/contact')" class="service-btn">
+          Integration Info
+        </button>
+      </div>
+
+      <div class="service-card group">
+        <div class="flex items-center mb-6">
+          <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-factory"><path d="M12 16h.01"/><path d="M16 16h.01"/><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M8 16h.01"/></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white ml-4 group-hover:text-lime-400 transition-colors">Intelligent Systems</h3>
+        </div>
+        
+        <p class="text-gray-400 mb-6 leading-relaxed">
+          We implement intelligent and automated control systems to optimize production, reduce errors, and increase operational efficiency.
+        </p>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start text-sm text-gray-300">
+            <span class="mr-3 text-lime-400 font-bold">✔</span> Automation of production lines
+          </li>
+          <li class="flex items-start text-sm text-gray-300">
+            <span class="mr-3 text-lime-400 font-bold">✔</span> Control and monitoring systems
+          </li>
+          <li class="flex items-start text-sm text-gray-300">
+            <span class="mr-3 text-lime-400 font-bold">✔</span> Integration of intelligent industrial systems
+          </li>
+          <li class="flex items-start text-sm text-gray-300">
+            <span class="mr-3 text-lime-400 font-bold">✔</span> SCADA and HMI systems
+          </li>
+        </ul>
+
+        <button (click)="goToRoutes('/contact')" class="service-btn">
+          More Information
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-24 bg-black border-t border-white/5">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-black text-center mb-20 text-white tracking-[0.2em] uppercase opacity-40">
+      Our Workflow
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div class="relative group">
+        <div class="text-7xl font-black text-lime-500/10 absolute -top-12 left-0 group-hover:text-lime-500/30 transition-all duration-500">01</div>
+        <h3 class="text-xl font-bold text-lime-400 mb-4 relative z-10">Initial Analysis</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">We evaluate your current needs and future goals to design the perfect solution.</p>
+        <div class="h-1 w-12 bg-lime-500 mt-6 group-hover:w-full transition-all duration-700"></div>
+      </div>
+
+      <div class="relative group">
+        <div class="text-7xl font-black text-lime-500/10 absolute -top-12 left-0 group-hover:text-lime-500/30 transition-all duration-500">02</div>
+        <h3 class="text-xl font-bold text-lime-400 mb-4 relative z-10">Design and Planning</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">We create a detailed plan with timelines, necessary resources, and technical specifications.</p>
+        <div class="h-1 w-12 bg-lime-500 mt-6 group-hover:w-full transition-all duration-700"></div>
+      </div>
+
+      <div class="relative group">
+        <div class="text-7xl font-black text-lime-500/10 absolute -top-12 left-0 group-hover:text-lime-500/30 transition-all duration-500">03</div>
+        <h3 class="text-xl font-bold text-lime-400 mb-4 relative z-10">Implementation</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">We carry out the installation and configuration of systems with minimal operational disruption.</p>
+        <div class="h-1 w-12 bg-lime-500 mt-6 group-hover:w-full transition-all duration-700"></div>
+      </div>
+
+      <div class="relative group">
+        <div class="text-7xl font-black text-lime-500/10 absolute -top-12 left-0 group-hover:text-lime-500/30 transition-all duration-500">04</div>
+        <h3 class="text-xl font-bold text-lime-400 mb-4 relative z-10">Ongoing Support</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">We provide maintenance, updates, and technical support to ensure optimal performance.</p>
+        <div class="h-1 w-12 bg-lime-500 mt-6 group-hover:w-full transition-all duration-700"></div>
+      </div>
+    </div>
+  </div>
+</section>
