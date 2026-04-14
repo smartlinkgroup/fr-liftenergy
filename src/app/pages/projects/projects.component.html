@@ -1,107 +1,70 @@
-<section class="py-20 bg-gradient-to-r from-lime-900 to-lime-800">
-  <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl md:text-5xl lg:text-5xl font-bold mb-4">Our Projects</h1>
-      <p class="text-xl text-lime-200 max-w-2xl mx-auto">
-        Explore how our automated solutions have driven business transformation and process optimization in various industries.
+<section class="relative pt-32 pb-20 overflow-hidden bg-black">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-full bg-lime-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+  <div class="container mx-auto px-6 relative z-10 text-center">
+      <span class="inline-block text-lime-400 text-[10px] uppercase tracking-[0.8em] font-medium mb-4 opacity-80">
+        Portfolio
+      </span>
+      <h1 class="text-6xl md:text-7xl font-black text-white uppercase tracking-tighter mb-6 italic">
+        Our <span class="text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.4)">Projects</span>
+      </h1>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+        Explore how our automated solutions have driven <span class="text-white font-normal">business transformation</span> and process optimization.
       </p>
   </div>
 </section>
 
-<!-- Filtros de Proyectos -->
-<section class="py-12 bg-black">
-  <div class="container mx-auto px-4">
-      <div class="flex flex-wrap justify-center gap-4 mb-12">
-          <button class="filter-btn active px-6 py-2 rounded-full bg-lime-700 text-white hover:bg-lime-600 transition cursor-pointer" data-filter="all">
+<section class="py-12 bg-black relative">
+  <div class="container mx-auto px-6">
+      
+      <div class="flex flex-wrap justify-center gap-4 mb-20">
+          <button class="px-8 py-2 rounded-full bg-lime-500 text-black font-bold text-[11px] uppercase tracking-widest shadow-[0_0_20px_rgba(163,230,53,0.4)] cursor-pointer transition-all">
               All
           </button>
-          <button class="filter-btn px-6 py-2 rounded-full bg-gray-800 text-white hover:bg-lime-700 transition cursor-pointer" data-filter="industrial">
+          <button class="px-8 py-2 rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-white hover:border-lime-500/50 transition-all cursor-pointer text-[11px] uppercase tracking-widest backdrop-blur-md">
               Industrial
           </button>
-          <button class="filter-btn px-6 py-2 rounded-full bg-gray-800 text-white hover:bg-lime-700 transition cursor-pointer" data-filter="tecnologico">
+          <button class="px-8 py-2 rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-white hover:border-lime-500/50 transition-all cursor-pointer text-[11px] uppercase tracking-widest backdrop-blur-md">
               Software
           </button>
       </div>
 
-      <!-- Proyectos Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Proyecto 1 -->
-          <div class="project-card" data-category="industrial">
-              <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition transform hover:-translate-y-2 hover:shadow-2xl">
-                  <div class="relative">
-                      <img src="img/smart-lg.webp" alt="Smart Link Control" class="w-full h-64 object-cover bg-gray-300 p-2"  width="1112" height="706" fetchpriority="high" loading="eager">
-                      <div class="absolute top-4 right-4 bg-lime-800 text-white text-xs font-bold px-3 py-1 rounded-full">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          
+          <div class="group relative max-w-sm mx-auto p-[1px] rounded-[2.5rem] bg-gradient-to-b from-white/20 to-transparent transition-all duration-500 hover:-translate-y-2">
+              
+              <div class="bg-black/60 backdrop-blur-2xl rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5">
+                  
+                  <div class="relative h-60 flex items-center justify-center bg-white/90 backdrop-blur-md overflow-hidden p-10">
+                      
+                      <div class="absolute w-32 h-32 bg-lime-500/10 blur-[40px] rounded-full"></div>
+
+                      <img src="img/smart-lg.webp" alt="SLC" 
+                           class="relative z-10 w-full h-full object-contain filter drop-shadow-sm transition-transform duration-700 group-hover:scale-105">
+
+                      <div class="absolute top-6 right-6 bg-black/80 backdrop-blur-md text-lime-400 text-[9px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest border border-white/10">
                           Software
                       </div>
                   </div>
-                  <div class="p-6">
-                      <h2 class="text-xl font-bold text-lime-400 mb-2">SLC - Intelligent Oil Pumping</h2>
-                      <p class="text-gray-300 mb-4">
-                         Integrated software solution for monitoring and controlling mechanical pumping in oil production
+
+                  <div class="p-10">
+                      <h2 class="text-2xl font-black text-white mb-1 uppercase tracking-tighter">
+                          SLC <span class="text-lime-400 font-light italic">Intelligent</span>
+                      </h2>
+                      <p class="text-[10px] font-medium text-gray-500 uppercase tracking-[0.2em] mb-6 italic">Oil Pumping Solutions</p>
+                      
+                      <p class="text-gray-400 font-light leading-relaxed mb-10 text-sm">
+                          Integrated software solution for monitoring and controlling mechanical pumping in oil production.
                       </p>
-                      <div class="flex justify-between items-center cursor-pointer">
-                           <span class="text-lime-300 text-sm"></span> 
-                          <button class="inline-block bg-black text-white px-6 py-3 rounded-lg hover:bg-lime-600 transition font-semibold hover:cursor-pointer" (click)="navigateTo('/smartlink')">
-                              View details <i class="fas fa-arrow-right ml-2"></i>
-                          </button>
-                      </div>
+                      
+                      <button (click)="navigateTo('/smartlink')" 
+                              class="w-full py-4 bg-white/5 border border-white/10 rounded-2xl text-white hover:text-lime-400 hover:border-lime-500/50 transition-all duration-500 cursor-pointer text-[10px] font-bold uppercase tracking-[0.3em]">
+                          View details
+                      </button>
                   </div>
               </div>
           </div>
 
-          <!-- Proyecto 2
-          <div class="project-card" data-category="comercial">
-              <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition transform hover:-translate-y-2 hover:shadow-2xl">
-                  <div class="relative">
-                      <img src="https://via.placeholder.com/600x400" alt="Sistema de Gestión para Retail" class="w-full h-64 object-cover">
-                      <div class="absolute top-4 right-4 bg-lime-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                          Comercial
-                      </div>
-                  </div>
-                  <div class="p-6">
-                      <h3 class="text-xl font-bold text-lime-400 mb-2">Sistema de Gestión para Retail</h3>
-                      <p class="text-gray-300 mb-4">
-                          Desarrollo e implementación de un sistema integrado para la gestión de inventario, ventas y atención al cliente en una cadena de tiendas.
-                      </p>
-                      <div class="flex justify-between items-center">
-                          <span class="text-lime-300 text-sm">Completado: Julio 2023</span>
-                          <a href="#" class="text-lime-400 hover:text-lime-300 flex items-center">
-                              Ver detalles <i class="fas fa-arrow-right ml-2"></i>
-                          </a>
-                      </div>
-                  </div>
-              </div>
           </div>
-
-         proyecto 3
-
-          <div class="project-card" data-category="residencial">
-              <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition transform hover:-translate-y-2 hover:shadow-2xl">
-                  <div class="relative">
-                      <img src="https://via.placeholder.com/600x400" alt="Domótica para Complejo Residencial" class="w-full h-64 object-cover">
-                      <div class="absolute top-4 right-4 bg-lime-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                          Residencial
-                      </div>
-                  </div>
-                  <div class="p-6">
-                      <h3 class="text-xl font-bold text-lime-400 mb-2">Domótica para Complejo Residencial</h3>
-                      <p class="text-gray-300 mb-4">
-                          Instalación de sistemas de domótica inteligente en un complejo de 50 viviendas, incluyendo control de iluminación, clima y seguridad.
-                      </p>
-                      <div class="flex justify-between items-center">
-                          <span class="text-lime-300 text-sm">Completado: Octubre 2023</span>
-                          <a href="#" class="text-lime-400 hover:text-lime-300 flex items-center">
-                              Ver detalles <i class="fas fa-arrow-right ml-2"></i>
-                          </a>
-                      </div>
-                  </div>
-              </div>
-          </div> -->
-        </div>
-      <!-- Botón Cargar Más
-      <div class="text-center mt-12">
-          <button class="px-8 py-3 bg-lime-700 text-white rounded-lg hover:bg-lime-600 transition">
-              Cargar Más Proyectos
-          </button>
-      </div> -->
   </div>
 </section>

@@ -1,0 +1,10 @@
+.stroke-text {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+  color: transparent;
+  font-style: italic;
+}
+
+/* Animación opcional para el título al hacer scroll */
+h2 {
+  transition: all 0.8s ease-out;
+}

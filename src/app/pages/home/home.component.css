@@ -1,0 +1,18 @@
+.project-card {
+  perspective: 1000px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* El conector de energía que baja por el lateral */
+.energy-connector-path {
+  position: absolute;
+  right: 10%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(163, 230, 53, 0.2), transparent);
+  z-index: 1;
+}

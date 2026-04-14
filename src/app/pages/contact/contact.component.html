@@ -1,128 +1,69 @@
-<!-- Sección principal con el fondo degradado -->
-<section class="py-20 px-4 bg-gradient-to-bl from-lime-900 to-black/50">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+<section class="relative min-h-screen bg-black flex items-center justify-center py-20 px-6 overflow-hidden">
+  
+  <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+    <app-energy-grid></app-energy-grid>
+  </div>
+
+  <div class="container max-w-5xl mx-auto relative z-10">
+    
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter italic">
+        Get in <span class="text-lime-400">Touch</span>
+      </h2>
+      <p class="text-gray-500 text-sm tracking-[0.3em] uppercase mt-2">Lift Energy Group</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
       
-      <!-- Columna de Información de Contacto (ESTILOS ACTUALIZADOS) -->
-      <!-- Se aplican los estilos del formulario (bg-gray-900, border) y se mantiene el centrado vertical -->
-      <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-800 lg:self-center">
-        <h2 class="text-3xl font-bold mb-4 text-lime-300">Contact Information</h2>
-        <!-- Color de texto ajustado para mejor contraste -->
-        <p class="text-gray-300 mb-8">We're available to answer your questions and help you with your automation needs.</p>
-
-        <!-- Se usa space-y-6 para un espaciado consistente entre elementos -->
-        <div class="space-y-6">
-          <!-- Dirección -->
-          <div class="flex items-start">
-            <!-- Fondo del icono ajustado para consistencia -->
-            <div class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin text-lime-300"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold mb-1 text-lime-300">Address</h3>
-              <p class="text-gray-400 text-sm">Calle 72 con Av. 20. CC Montielco Planta Alta Local, Maracaibo 4001, Zulia</p>
-            </div>
-          </div>
-
-          <!-- Teléfono -->
-          <div class="flex items-start">
-            <div class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone text-lime-300"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold mb-1 text-lime-300">Phone Number</h3>
-              <p class="text-gray-400 text-sm">+58 424-606-1052</p>
-            </div>
-          </div>
-
-          <!-- Email -->
-          <div class="flex items-start">
-            <div class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail text-lime-300"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold mb-1 text-lime-300">Email</h3>
-              <p class="text-gray-400 text-sm">{{"info@lift.energy"}}</p>
-            </div>
-          </div>
-
-          <!-- Horario -->
-          <div class="flex items-start">
-            <div class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-icon lucide-clock text-lime-300"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold mb-1 text-lime-300">Business hours</h3>
-              <p class="text-gray-400 text-sm">Monday to Friday: 8:30 AM - 4:30 PM</p>
-            </div>
-          </div>
+      <div class="lg:col-span-4 space-y-4">
+        <div class="bg-white/[0.03] border border-white/10 p-6 rounded-2xl backdrop-blur-md hover:border-lime-500/30 transition-all">
+          <h3 class="text-lime-500 text-[10px] font-black uppercase tracking-widest mb-2">Office</h3>
+          <p class="text-gray-300 text-sm font-light leading-relaxed">
+            Calle 72 con Av. 20. CC Montielco Planta Alta Local, Maracaibo, Zulia.
+          </p>
         </div>
 
-        <!-- Redes sociales (estilos actualizados) -->
-       <div class="mt-8">
-  <h3 class="text-xl font-semibold mb-3 text-lime-300">Follow us</h3>
-  <div class="flex gap-4">
-    
-    <!-- Facebook -->
-    <a href="#" 
-       aria-label="Síguenos en Facebook" 
-       class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-gray-700 hover:-translate-y-1 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-    </a>
-    
-    <!-- YouTube -->
-    <a href="#" 
-       aria-label="Visita nuestro canal de YouTube" 
-       class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-gray-700 hover:-translate-y-1 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
-    </a>
-    
-    <!-- Instagram -->
-    <a href="#" 
-       aria-label="Síguenos en Instagram" 
-       class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-gray-700 hover:-translate-y-1 transition">
-     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-    </a>
-    
-    <!-- LinkedIn -->
-    <a href="#" 
-       aria-label="Conecta con nosotros en LinkedIn" 
-       class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-gray-700 hover:-translate-y-1 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-    </a>
-    
-  </div>
-</div>
+        <div class="bg-white/[0.03] border border-white/10 p-6 rounded-2xl backdrop-blur-md hover:border-lime-500/30 transition-all">
+          <h3 class="text-lime-500 text-[10px] font-black uppercase tracking-widest mb-2">Contact</h3>
+          <p class="text-white text-base font-medium">info@lift.energy</p>
+          <p class="text-white text-base font-medium">+58 424-606-1052</p>
+        </div>
+
+        <div class="flex gap-3">
+          <a href="#" class="flex-1 bg-white/[0.03] border border-white/10 py-3 rounded-xl text-center text-xs text-white/60 hover:text-lime-400 hover:border-lime-500/50 transition-all uppercase font-bold tracking-tighter">LinkedIn</a>
+          <a href="#" class="flex-1 bg-white/[0.03] border border-white/10 py-3 rounded-xl text-center text-xs text-white/60 hover:text-lime-400 hover:border-lime-500/50 transition-all uppercase font-bold tracking-tighter">Instagram</a>
+        </div>
       </div>
 
-      <!-- Formulario (sin cambios de estilo, es nuestra referencia) -->
-      <div class="bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-800">
-        <h2 class="text-3xl font-bold mb-4 text-lime-300">Send us a message</h2>
-        <p class="text-gray-300 mb-6">Complete the form and we will contact you as soon as possible.</p>
+      <div class="lg:col-span-8">
+        <div class="bg-white/[0.02] border border-white/10 p-8 md:p-10 rounded-[2rem] backdrop-blur-xl shadow-2xl">
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label class="text-[10px] text-gray-500 font-bold uppercase tracking-widest ml-2">Full Name</label>
+                <input type="text" placeholder="Your name" 
+                  class="w-full bg-black/40 border border-white/5 rounded-xl py-3 px-5 text-white text-sm outline-none focus:border-lime-500/50 transition-all placeholder:text-white/10">
+              </div>
+              <div class="space-y-2">
+                <label class="text-[10px] text-gray-500 font-bold uppercase tracking-widest ml-2">Email Address</label>
+                <input type="email" placeholder="email@company.com" 
+                  class="w-full bg-black/40 border border-white/5 rounded-xl py-3 px-5 text-white text-sm outline-none focus:border-lime-500/50 transition-all placeholder:text-white/10">
+              </div>
+            </div>
 
-        <form class="grid grid-cols-1 gap-5">
-          <div>
-            <label class="block mb-1 font-medium text-gray-300">Full name</label>
-            <input class="w-full py-3 px-4 border border-gray-700 rounded-md bg-gray-800 text-white" placeholder="Full name" required>
-          </div>
-          <div>
-            <label class="block mb-1 font-medium text-gray-300">Email</label>
-            <input type="email" class="w-full py-3 px-4 border border-gray-700 rounded-md bg-gray-800 text-white" placeholder="Your Email" required>
-          </div>
-          <div>
-            <label class="block mb-1 font-medium text-gray-300">Phone number</label>
-            <input type="tel" class="w-full py-3 px-4 border border-gray-700 rounded-md bg-gray-800 text-white" placeholder="Your Phone Number">
-          </div>
-          <div>
-            <label class="block mb-1 font-medium text-gray-300">Message</label>
-            <textarea class="w-full py-3 px-4 border border-gray-700 rounded-md bg-gray-800 text-white" rows="5" placeholder="Write your message here..." required></textarea>
-          </div>
-          <button type="submit" class="bg-lime-700 text-white py-3 px-7 rounded-md font-semibold hover:bg-lime-600 hover:-translate-y-1 transition w-full cursor-pointer">
-            Send
-          </button>
-        </form>
+            <div class="space-y-2">
+              <label class="text-[10px] text-gray-500 font-bold uppercase tracking-widest ml-2">Message</label>
+              <textarea rows="4" placeholder="How can we help you?" 
+                class="w-full bg-black/40 border border-white/5 rounded-xl py-4 px-5 text-white text-sm outline-none focus:border-lime-500/50 transition-all placeholder:text-white/10 resize-none"></textarea>
+            </div>
+
+            <button class="w-full bg-lime-500 hover:bg-lime-400 text-black font-black uppercase text-[11px] tracking-[0.3em] py-4 rounded-xl shadow-[0_10px_20px_rgba(163,230,53,0.2)] hover:shadow-[0_15px_30px_rgba(163,230,53,0.4)] hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
-      
+
     </div>
   </div>
 </section>
