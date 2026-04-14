@@ -1,0 +1,94 @@
+.energy-line-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Ajusta el margen según dónde esté ubicada en tu diseño */
+}
+
+.energy-line {
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #a3e635, transparent);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(163, 230, 53, 0.3);
+}
+
+/* El efecto de corriente eléctrica que baja */
+.energy-line::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, transparent, #ffffff, transparent);
+  animation: electricity 1.5s infinite linear;
+  opacity: 0.8;
+}
+
+/* La bolita brillante del final */
+.energy-pulse-node {
+  width: 6px;
+  height: 6px;
+  background: #a3e635;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: -2px;
+  box-shadow: 0 0 15px #a3e635, 0 0 30px #a3e635;
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+@keyframes electricity {
+  0% { top: -100%; }
+  100% { top: 200%; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1); opacity: 1; filter: brightness(1); }
+  50% { transform: scale(1.4); opacity: 0.8; filter: brightness(1.5); }
+}
+.energy-connector {
+  width: 2px;
+  height: 128px; /* El h-32 que tenías antes */
+  background: linear-gradient(to bottom, #a3e635, transparent);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(163, 230, 53, 0.2);
+}
+
+/* El efecto de rayo láser bajando */
+.energy-connector::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to bottom, transparent, #ffffff, transparent);
+  animation: laser-flow 1.5s infinite linear;
+}
+
+/* La bolita de energía pulsante */
+.energy-node {
+  width: 6px;
+  height: 6px;
+  background: #a3e635;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: -2px;
+  box-shadow: 0 0 15px #a3e635, 0 0 30px rgba(163, 230, 53, 0.5);
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+@keyframes laser-flow {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.4); filter: brightness(1.5); }
+}

@@ -8,10 +8,10 @@ import { ContactComponent } from '../contact/contact.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ServicesComponent } from '../services/services.component';
 
-// IMPORTAMOS LOS COMPONENTES (Línea, Pozo y ahora Energía)
+// IMPORTAMOS LOS COMPONENTES
 import { ScrollGuideComponent } from '../../components/scroll-guide/scroll-guide';
 import { InnovationWellComponent } from '../../components/innovation-well/innovation-well';
-import { EnergyGridComponent } from '../../components/energy-grid/energy-grid'; // <--- AGREGADO
+import { EnergyGridComponent } from '../../components/energy-grid/energy-grid';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +24,7 @@ import { EnergyGridComponent } from '../../components/energy-grid/energy-grid'; 
     ServicesComponent,
     ScrollGuideComponent,
     InnovationWellComponent,
-    EnergyGridComponent // <--- AGREGADO PARA QUE FUNCIONE
+    EnergyGridComponent 
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
@@ -38,6 +38,7 @@ export class HomeComponent implements AfterViewInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
+    // Detectamos el scroll para mostrar/ocultar el botón "To Top"
     const yOffset = window.pageYOffset || document.documentElement.scrollTop;
     this.showScrollButton = yOffset > 500;
   }
@@ -50,6 +51,7 @@ export class HomeComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
+    // Forzamos la reproducción del video hero
     if (this.videoElement) {
       const video = this.videoElement.nativeElement;
       video.muted = true;
@@ -64,5 +66,13 @@ export class HomeComponent implements AfterViewInit {
 
   navigateTo(ruta: string) {
     this.router.navigate([ruta]);
+  }
+
+  // Método para el scroll suave a IDs específicos (Welcome, Services, etc)
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }
