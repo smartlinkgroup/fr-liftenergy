@@ -1,15 +1,16 @@
 import { Component, inject, ViewChild, ElementRef, AfterViewInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common'; // Importante para el botón de "Back to Top"
+import { CommonModule } from '@angular/common'; 
 
-// IMPORTAMOS LAS SECCIONES
+// IMPORTAMOS LAS SECCIONES EXISTENTES
 import { AboutUsComponent } from '../about-us/about-us.component';
 import { ContactComponent } from '../contact/contact.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ServicesComponent } from '../services/services.component';
 
-// IMPORTAMOS EL NUEVO COMPONENTE DE LA LÍNEA
+// IMPORTAMOS LOS COMPONENTES NUEVOS (Línea y Pozo)
 import { ScrollGuideComponent } from '../../components/scroll-guide/scroll-guide';
+import { InnovationWellComponent } from '../../components/innovation-well/innovation-well';
 
 @Component({
   selector: 'app-home',
@@ -20,7 +21,8 @@ import { ScrollGuideComponent } from '../../components/scroll-guide/scroll-guide
     ContactComponent, 
     ProjectsComponent, 
     ServicesComponent,
-    ScrollGuideComponent // <--- AGREGADO AQUÍ
+    ScrollGuideComponent,
+    InnovationWellComponent // <--- IMPORTANTE: Agregado para que funcione
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
@@ -28,21 +30,16 @@ import { ScrollGuideComponent } from '../../components/scroll-guide/scroll-guide
 export class HomeComponent implements AfterViewInit {
   private router = inject(Router);
   
-  // Variable para mostrar/ocultar el botón de "Back to Top"
   showScrollButton = false;
 
-  // Seleccionamos el video del HTML usando la referencia #bgVideo
   @ViewChild('bgVideo') videoElement!: ElementRef<HTMLVideoElement>;
 
-  // Escuchamos el evento de scroll en la ventana del navegador
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const yOffset = window.pageYOffset || document.documentElement.scrollTop;
-    // El botón aparecerá cuando el usuario baje más de 500 píxeles
     this.showScrollButton = yOffset > 500;
   }
 
-  // Función para volver al inicio suavemente
   scrollToTop() {
     window.scrollTo({
       top: 0,
@@ -50,12 +47,9 @@ export class HomeComponent implements AfterViewInit {
     });
   }
 
-  // Esta función se ejecuta justo cuando el diseño termina de cargar
   ngAfterViewInit() {
     if (this.videoElement) {
       const video = this.videoElement.nativeElement;
-      
-      // Aseguramos silencio total y autoplay
       video.muted = true;
       video.volume = 0;
       
@@ -66,7 +60,6 @@ export class HomeComponent implements AfterViewInit {
     }
   }
 
-  // Función para navegar entre páginas o secciones
   navigateTo(ruta: string) {
     this.router.navigate([ruta]);
   }

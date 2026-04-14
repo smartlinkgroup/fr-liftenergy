@@ -1,0 +1,35 @@
+<section class="relative h-[60vh] flex items-center justify-center overflow-hidden bg-black" (mousemove)="onMouseMove($event)">
+  
+  <div 
+    class="absolute inset-0 transition-all duration-700"
+    [ngClass]="isExplored ? 'opacity-100 scale-125 saturate-150' : 'opacity-50 scale-110'"
+    [style.backgroundImage]="'url(/img/fondito.webp)'"
+    [style.backgroundSize]="'cover'"
+    [style.backgroundPosition]="'center'"
+    [style.transform]="'translate(' + mouseX + 'px, ' + mouseY + 'px)'">
+  </div>
+
+  <div 
+    class="relative z-10 p-10 rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl shadow-2xl max-w-xl text-center transform-gpu transition-all duration-500"
+    [style.transform]="'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)'"
+    [class.border-lime-400]="isExplored">
+    
+    <div *ngIf="!isExplored" class="animate-in fade-in duration-500">
+      <h2 class="text-5xl font-black text-white mb-6">Innovación <br> <span class="text-lime-400">Sin Límites</span></h2>
+      <p class="text-gray-200 text-lg font-light">Elevamos la energía a una nueva dimensión digital.</p>
+      <button 
+        (click)="exploreFuture()"
+        class="mt-8 px-8 py-3 border border-lime-400 text-lime-400 rounded-full hover:bg-lime-400 hover:text-black transition-all font-bold uppercase tracking-wider">
+        Explorar el Futuro
+      </button>
+    </div>
+
+    <div *ngIf="isExplored" class="animate-pulse">
+      <h2 class="text-6xl font-black text-lime-400 mb-2 tracking-tighter">LIFT ENERGY</h2>
+      <div class="h-1 w-20 bg-white mx-auto mb-6"></div>
+      <p class="text-white text-2xl font-bold uppercase tracking-[0.3em]">Bienvenido al mañana</p>
+      <p class="text-gray-400 mt-4 italic">Potenciando el rendimiento industrial de la nueva era....</p>
+    </div>
+
+  </div>
+</section>
