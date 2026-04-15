@@ -1,11 +1,11 @@
 <section class="relative min-h-screen bg-black flex items-center justify-center py-20 px-6 overflow-hidden">
-  
+
   <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
     <app-energy-grid></app-energy-grid>
   </div>
 
   <div class="container max-w-5xl mx-auto relative z-10">
-    
+
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter italic">
         Get in <span class="text-lime-400">Touch</span>
@@ -14,7 +14,7 @@
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-      
+
       <div class="lg:col-span-4 space-y-4">
         <div class="bg-white/[0.03] border border-white/10 p-6 rounded-2xl backdrop-blur-md hover:border-lime-500/30 transition-all">
           <h3 class="text-lime-500 text-[10px] font-black uppercase tracking-widest mb-2">Office</h3>
@@ -25,8 +25,9 @@
 
         <div class="bg-white/[0.03] border border-white/10 p-6 rounded-2xl backdrop-blur-md hover:border-lime-500/30 transition-all">
           <h3 class="text-lime-500 text-[10px] font-black uppercase tracking-widest mb-2">Contact</h3>
-          <p class="text-white text-base font-medium">info@lift.energy</p>
+          <p class="text-white text-base font-medium">{{ "info@lift.energy" }}</p>
           <p class="text-white text-base font-medium">+58 424-606-1052</p>
+          <p class="text-white text-base font-medium">+1 (305)-744-6687</p>
         </div>
 
         <div class="flex gap-3">
@@ -41,19 +42,19 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div class="space-y-2">
                 <label class="text-[10px] text-gray-500 font-bold uppercase tracking-widest ml-2">Full Name</label>
-                <input type="text" placeholder="Your name" 
+                <input type="text" placeholder="Your name"
                   class="w-full bg-black/40 border border-white/5 rounded-xl py-3 px-5 text-white text-sm outline-none focus:border-lime-500/50 transition-all placeholder:text-white/10">
               </div>
               <div class="space-y-2">
                 <label class="text-[10px] text-gray-500 font-bold uppercase tracking-widest ml-2">Email Address</label>
-                <input type="email" placeholder="email@company.com" 
+                <input type="email" placeholder="email@company.com"
                   class="w-full bg-black/40 border border-white/5 rounded-xl py-3 px-5 text-white text-sm outline-none focus:border-lime-500/50 transition-all placeholder:text-white/10">
               </div>
             </div>
 
             <div class="space-y-2">
               <label class="text-[10px] text-gray-500 font-bold uppercase tracking-widest ml-2">Message</label>
-              <textarea rows="4" placeholder="How can we help you?" 
+              <textarea rows="4" placeholder="How can we help you?"
                 class="w-full bg-black/40 border border-white/5 rounded-xl py-4 px-5 text-white text-sm outline-none focus:border-lime-500/50 transition-all placeholder:text-white/10 resize-none"></textarea>
             </div>
 
