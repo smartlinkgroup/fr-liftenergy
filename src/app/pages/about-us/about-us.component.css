@@ -65,3 +65,19 @@ header, section, .reveal, .reveal-left, .reveal-right {
   backdrop-filter: blur(24px);
   background-color: rgba(0, 0, 0, 0.4);
 }
+/* Solo para pantallas de teléfonos (menos de 768px) */
+@media (max-width: 768px) {
+  /* Forzamos que los elementos con reveal se vean de inmediato */
+  .reveal, .reveal-left, .reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+
+  /* Aseguramos que el componente de la tarjeta ocupe el ancho correcto */
+  app-staff-card {
+    display: block;
+    width: 100%;
+    margin-bottom: 2.5rem; /* Espacio entre personas */
+  }
+}

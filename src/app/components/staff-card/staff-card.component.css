@@ -1,0 +1,27 @@
+/* Estado inicial: un poco abajo e invisibles */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* Estado cuando se hacen visibles */
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FIX PARA MÓVIL: Si el dispositivo es pequeño, 
+   forzamos que se vean por si el observer se traba */
+@media (max-width: 768px) {
+  .reveal {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  /* Ajuste de espacio para que no se peguen las tarjetas */
+  app-staff-card {
+    display: block;
+    margin-bottom: 2rem;
+  }
+}
