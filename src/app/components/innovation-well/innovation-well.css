@@ -1,0 +1,10 @@
+.main-content {
+  /* 1. Definimos un borde sólido de 2 píxeles de grosor y color gris claro */
+  border: 2px solid #ddd;
+  
+  /* 2. Agregamos un relleno interno para que el texto no toque el borde */
+  padding: 20px;
+  
+  /* 3. (Opcional) Podemos redondear un poco las esquinas para un efecto más suave */
+  border-radius: 8px;
+}

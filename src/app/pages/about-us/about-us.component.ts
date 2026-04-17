@@ -1,12 +1,13 @@
 import { Component, AfterViewInit, ElementRef, inject } from '@angular/core';
 import { StaffCardComponent } from '../../components/staff-card/staff-card.component';
 import { EnergyGridComponent } from '../../components/energy-grid/energy-grid';
+import { ScrollGuideComponent } from '../../components/scroll-guide/scroll-guide';
 
 @Component({
   selector: 'app-about-us',
   standalone: true,
-  // 2. LO AGREGAMOS A LA LISTA DE IMPORTS
-  imports: [StaffCardComponent, EnergyGridComponent],
+  // 2. Lo agregamos a la lista de imports de Angular
+  imports: [StaffCardComponent, EnergyGridComponent, ScrollGuideComponent],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.css'
 })

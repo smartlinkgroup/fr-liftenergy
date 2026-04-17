@@ -1,69 +1,37 @@
-<section class="relative h-[65vh] flex items-center justify-center overflow-hidden bg-black" (mousemove)="onMouseMove($event)">
-  
-  <div 
-    class="absolute inset-0 opacity-40 bg-cover bg-center transition-transform duration-75 scale-110"
-    [style.backgroundImage]="'url(/img/seccion.webp)'"
-    [style.transform]="'translate(' + mouseX + 'px, ' + mouseY + 'px) scale(1.1)'">
-  </div>
+<section class="relative h-[65vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden bg-black group"
+         (mouseenter)="stopAutoplay()" 
+         (mouseleave)="startAutoplay()">
 
-  <div 
-    class="absolute inset-0 z-1 transition-transform duration-150 opacity-50 pointer-events-none"
-    [style.transform]="'translate(' + (mouseX * -0.8) + 'px, ' + (mouseY * -0.8) + 'px)'">
-    <app-energy-grid></app-energy-grid>
-  </div>
+  @for (slide of slides; track slide.image; let i = $index) {
+    <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+         [ngClass]="{'opacity-100 z-10': currentSlide === i, 'opacity-0 z-0 pointer-events-none': currentSlide !== i}">
 
-  <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/60 z-2"></div>
-
-  <div 
-    class="relative z-10 p-12 rounded-[2.5rem] border border-white/10 bg-black/40 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] max-w-2xl text-center transform-gpu transition-all duration-700 ease-out"
-    [style.transform]="'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)'"
-    [class.border-lime-400/50]="isExplored"
-    [class.shadow-[0_0_80px_rgba(163,230,53,0.15)]]="isExplored">
-    
-    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-lime-500 text-black text-[10px] font-black px-6 py-1.5 rounded-full uppercase tracking-[0.3em] shadow-[0_0_20px_rgba(163,230,53,0.4)] whitespace-nowrap">
-      Next Gen Technology
+      <img src="{{ slide.image }}" 
+           alt="Lift Energy Instalaciones"
+           class="absolute inset-0 w-full h-full object-cover transition-transform duration-[10000ms] ease-out"
+           [ngClass]="{'scale-110': currentSlide === i, 'scale-100': currentSlide !== i}">
     </div>
+  }
 
-    <div *ngIf="!isExplored" class="animate-in fade-in zoom-in duration-500">
-      <h2 class="text-6xl font-black text-white mb-6 leading-[0.9] tracking-tighter uppercase">
-        Innovación <br> <span class="text-lime-400 italic">Sin Límites</span>
-      </h2>
-      
-      <p class="text-gray-300 text-lg font-light leading-relaxed mb-10 max-w-md mx-auto">
-        Elevamos la energía a una nueva dimensión digital. Diseño fluido y tecnología de vanguardia.
-      </p>
-      
-      <button 
-        (click)="exploreFuture()"
-        class="relative z-50 px-12 py-5 bg-transparent border-2 border-lime-400 text-lime-400 rounded-full hover:bg-lime-400 hover:text-black transition-all duration-500 font-black uppercase text-xs tracking-[0.3em] cursor-pointer shadow-[0_0_20px_rgba(163,230,53,0.1)] hover:shadow-[0_0_40px_rgba(163,230,53,0.4)] active:scale-95">
-        Explorar el Futuro
+  <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/80 to-transparent z-20 pointer-events-none transition-opacity duration-500"></div>
+
+  <button (click)="prevSlide()" 
+          class="absolute left-6 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/20 text-white/50 backdrop-blur-md border border-white/10 opacity-0 group-hover:opacity-100 hover:bg-lime-500/20 hover:text-lime-400 hover:border-lime-500/50 transition-all duration-500 transform -translate-x-8 group-hover:translate-x-0 cursor-pointer">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"></path></svg>
+  </button>
+
+  <button (click)="nextSlide()" 
+          class="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/20 text-white/50 backdrop-blur-md border border-white/10 opacity-0 group-hover:opacity-100 hover:bg-lime-500/20 hover:text-lime-400 hover:border-lime-500/50 transition-all duration-500 transform translate-x-8 group-hover:translate-x-0 cursor-pointer">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"></path></svg>
+  </button>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+    @for (slide of slides; track slide.image; let i = $index) {
+      <button (click)="goToSlide(i)"
+              class="h-1 rounded-full transition-all duration-500 cursor-pointer"
+              [ngClass]="{'w-12 bg-lime-400 shadow-[0_0_10px_rgba(163,230,53,0.6)]': currentSlide === i, 'w-6 bg-white/30 hover:bg-white/60': currentSlide !== i}">
       </button>
-    </div>
-
-    <div *ngIf="isExplored" class="animate-in slide-in-from-bottom-12 duration-1000 text-center">
-      <div class="flex items-center justify-center gap-3 mb-4">
-        <span class="h-[1px] w-8 bg-lime-500/50"></span>
-        <h3 class="text-lime-400 text-xs font-black uppercase tracking-[0.5em] animate-pulse">
-          Sistemas Activados
-        </h3>
-        <span class="h-[1px] w-8 bg-lime-500/50"></span>
-      </div>
-      
-      <h2 class="text-8xl font-black text-white mb-6 tracking-tighter italic leading-none">
-        LIFT <span class="text-lime-400">ENERGY</span>
-      </h2>
-      
-      <div class="h-[1px] w-full bg-gradient-to-r from-transparent via-lime-500 to-transparent mb-8 opacity-50"></div>
-      
-      <p class="text-white text-4xl font-light leading-tight tracking-tight">
-        Bienvenido a la <br>
-        <span class="font-black italic text-lime-400 uppercase">Revolución Industrial</span>
-      </p>
-
-      <button (click)="isExplored = false" class="mt-10 text-white/30 hover:text-lime-400 text-[10px] uppercase tracking-widest transition-colors cursor-pointer">
-        [ Reiniciar Sistema ]
-      </button>
-    </div>
-
+    }
   </div>
+
 </section>

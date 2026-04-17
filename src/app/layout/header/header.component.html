@@ -9,14 +9,15 @@
   
   <div class="container mx-auto flex justify-between items-center">
     
-    <div class="flex items-center gap-3 cursor-pointer group" (click)="scrollToSection('top')">
-      <img src="img/white-lg-33.webp"
-           alt="Logo de Lift Energy Group"
-           [class.w-8]="isScrolled"
-           [class.w-10]="!isScrolled"
-           class="h-auto object-contain transition-all duration-500"
-           priority>
-      <h3 class="text-white text-lg sm:text-xl font-medium tracking-[0.1em] uppercase group-hover:text-lime-400 transition-colors">
+    <div class="flex items-center gap-3 cursor-pointer group transition-transform duration-300 active:scale-95" (click)="scrollToSection('top')">
+      
+      <div class="transition-all duration-500 bg-white group-hover:bg-lime-400 group-hover:drop-shadow-[0_0_12px_rgba(163,230,53,0.9)]"
+           [class.w-8]="isScrolled" [class.h-8]="isScrolled"
+           [class.w-10]="!isScrolled" [class.h-10]="!isScrolled"
+           style="-webkit-mask-image: url('img/white-lg-33.webp'); mask-image: url('img/white-lg-33.webp'); -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center;">
+      </div>
+      
+      <h3 class="text-white text-lg sm:text-xl font-medium tracking-[0.1em] uppercase transition-all duration-500 group-hover:text-lime-300 group-hover:drop-shadow-[0_0_15px_rgba(163,230,53,0.9)]">
         Lift Energy Group
       </h3>
     </div>
@@ -50,7 +51,7 @@
       </button>
     </div>
 
-    <div class="md:hidden cursor-pointer text-white" (click)="showMenu()">
+    <div class="md:hidden cursor-pointer text-white transition-colors hover:text-lime-400" (click)="showMenu()">
       @if (menu) {
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -68,10 +69,10 @@
      [ngClass]="menu ? 'max-h-screen py-32 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'">
     
     <div class="flex flex-col items-center gap-10">
-      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400" (click)="scrollToSection('top')">Welcome</button>
-      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400" (click)="scrollToSection('services')">Services</button>
-      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400" (click)="scrollToSection('projects')">Projects</button>
-      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400" (click)="scrollToSection('aboutus')">About Us</button>
-      <button class="text-lime-400 text-sm font-bold uppercase tracking-[0.4em] border border-lime-400/30 px-8 py-2 rounded-full" (click)="scrollToSection('contact')">Contact</button>
+      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400 transition-colors" (click)="scrollToSection('top')">Welcome</button>
+      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400 transition-colors" (click)="scrollToSection('services')">Services</button>
+      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400 transition-colors" (click)="scrollToSection('projects')">Projects</button>
+      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400 transition-colors" (click)="scrollToSection('aboutus')">About Us</button>
+      <button class="text-lime-400 text-sm font-bold uppercase tracking-[0.4em] border border-lime-400/30 px-8 py-2 rounded-full hover:bg-lime-400 hover:text-black transition-all duration-300" (click)="scrollToSection('contact')">Contact</button>
     </div>
 </div>

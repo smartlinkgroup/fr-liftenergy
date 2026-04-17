@@ -8,7 +8,7 @@ import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
 })
 export class ScrollGuideComponent {
   @ViewChild('guidePath') path!: ElementRef<SVGPathElement>;
-  @ViewChild('guidePoint') point!: ElementRef<SVGCircleElement>;
+  
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -19,20 +19,13 @@ export class ScrollGuideComponent {
 
     const scrollPercent = scrollElement.scrollTop / scrollTotal;
 
-    if (this.path && this.point) {
+    // AHORA SOLO VERIFICAMOS EL PATH
+    if (this.path) {
       const pathEl = this.path.nativeElement;
-      const pointEl = this.point.nativeElement;
 
-      // Dibujamos el trazo
+      // Dibujamos el trazo del "gusanito"
       pathEl.style.strokeDashoffset = (1 - scrollPercent).toString();
 
-      // Calculamos la posición exacta en la curva para el punto
-      const pathLength = pathEl.getTotalLength();
-      const currentPos = pathEl.getPointAtLength(pathLength * scrollPercent);
-
-      // Movemos el punto de luz
-      pointEl.setAttribute('cx', currentPos.x.toString());
-      pointEl.setAttribute('cy', currentPos.y.toString());
-    }
+  }
   }
 }

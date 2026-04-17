@@ -1,39 +1,57 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; 
-import { EnergyGridComponent } from '../energy-grid/energy-grid';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-innovation-well',
   standalone: true,
-  imports: [
-    CommonModule,
-    EnergyGridComponent 
-  ], 
+  imports: [CommonModule],
   templateUrl: './innovation-well.html',
-  styleUrl: './innovation-well.css'
+  styleUrl: './innovation-well.css' 
 })
-export class InnovationWellComponent {
-  mouseX = 0;
-  mouseY = 0;
-  rotateX = 0;
-  rotateY = 0;
-  
-  // NUEVA VARIABLE
-  isExplored = false;
+export class InnovationWellComponent implements OnInit, OnDestroy {
+  currentSlide = 0;
+  slideInterval: any;
 
-  onMouseMove(event: MouseEvent) {
-    this.mouseX = (event.clientX - window.innerWidth / 2) / 40;
-    this.mouseY = (event.clientY - window.innerHeight / 2) / 40;
+  // Tus 3 imágenes confirmadas
+   slides = [
 
-    const cardX = event.clientX - window.innerWidth / 2;
-    const cardY = event.clientY - window.innerHeight / 2;
-    
-    this.rotateY = cardX / 25;
-    this.rotateX = (cardY / 25) * -1;
+    { image: '/img/pozo.webp' },
+    { image: '/img/pozito.webp' },
+    { image: '/img/pozote.webp' }
+
+  ];
+
+
+
+  ngOnInit() {
+    this.startAutoplay();
   }
 
-  // FUNCIÓN PARA EL BOTÓN
-  exploreFuture() {
-    this.isExplored = true;
+  ngOnDestroy() {
+    this.stopAutoplay();
+  }
+
+  startAutoplay() {
+    this.slideInterval = setInterval(() => {
+      this.nextSlide();
+    }, 6000); // Cambia suavemente cada 6 segundos
+  }
+
+  stopAutoplay() {
+    if (this.slideInterval) {
+      clearInterval(this.slideInterval);
+    }
+  }
+
+  nextSlide() {
+    this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+  }
+
+  prevSlide() {
+    this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+  }
+
+  goToSlide(index: number) {
+    this.currentSlide = index;
   }
 }
