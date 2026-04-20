@@ -1,13 +1,20 @@
 import { Component, AfterViewInit, ElementRef, inject } from '@angular/core';
+import { CommonModule } from '@angular/common'; // 🌟 Importante
 import { StaffCardComponent } from '../../components/staff-card/staff-card.component';
 import { EnergyGridComponent } from '../../components/energy-grid/energy-grid';
 import { ScrollGuideComponent } from '../../components/scroll-guide/scroll-guide';
+import { TranslateModule } from '@ngx-translate/core'; // 🌟 Importante
 
 @Component({
   selector: 'app-about-us',
   standalone: true,
-  // 2. Lo agregamos a la lista de imports de Angular
-  imports: [StaffCardComponent, EnergyGridComponent, ScrollGuideComponent],
+  imports: [
+    CommonModule, 
+    StaffCardComponent, 
+    EnergyGridComponent, 
+    ScrollGuideComponent, 
+    TranslateModule 
+  ],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.css'
 })
@@ -18,15 +25,13 @@ export class AboutUsComponent implements AfterViewInit {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Cuando entra en pantalla: añadimos la clase
           entry.target.classList.add('visible');
         } else {
-          // Esto permite que la animación se repita al volver a pasar
           entry.target.classList.remove('visible');
         }
       });
     }, { 
-      threshold: 0.15 // Gatilla cuando se ve el 15% del elemento
+      threshold: 0.15 
     });
 
     const elements = this.el.nativeElement.querySelectorAll('.reveal, .reveal-left, .reveal-right');

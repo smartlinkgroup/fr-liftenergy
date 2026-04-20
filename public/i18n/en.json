@@ -1,0 +1,125 @@
+{
+  "NAV": { "WELCOME": "WELCOME", "SERVICES": "SERVICES", "PROJECTS": "PROJECTS", "ABOUT": "ABOUT US", "CONTACT": "CONTACT" },
+  "HERO": {
+    "TITLE_1": "Automated",
+    "TITLE_2": "Solutions",
+    "TITLE_3": "for a Better Future",
+    "DESC_1": "Commitment to innovation and efficiency for the companies of the future through",
+    "DESC_2": "high-level industrial technology",
+    "BTN_START": "Get started",
+    "BTN_STORY": "Our story"
+  },
+  "PROJECTS_PAGE": {
+    "SUBTITLE": "Portfolio",
+    "TITLE": "Our",
+    "TITLE_HIGHLIGHT": "Projects",
+    "DESC_MAIN": "Explore how our automated solutions have driven business transformation.",
+    "FILTER_ALL": "All",
+    "FILTER_IND": "Industrial",
+    "FILTER_SOFT": "Software",
+    "CARD_CAT": "Software",
+    "CARD_TITLE": "SLC",
+    "CARD_TITLE_ITALIC": "Intelligent",
+    "CARD_SUBTITLE": "Oil Pumping Solutions",
+    "CARD_DESC": "Integrated software solution for monitoring and controlling mechanical pumping in oil production.",
+    "BTN_DETAILS": "View details"
+  },
+  "ABOUT_PAGE": {
+    "SUBTITLE": "Enterprise Identity",
+    "TITLE_MAIN": "ABOUT",
+    "TITLE_ITALIC": "US",
+    "SLOGAN": "\"Commitment to innovation and efficiency\"",
+    "HISTORY_TITLE": "Our <br> History",
+    "HISTORY_P1": "We are a company dedicated to the research and development of new technologies with an emphasis on cutting-edge applications and equipment for the Oil and Gas industry.",
+    "HISTORY_QUOTE": "Our software is specifically designed to help obtain maximum performance from mechanical pumping systems.",
+    "HISTORY_P2": "By leveraging advanced data analysis and intelligent automation, our software offers benefits such as monitoring, analysis, and early detection of faults.",
+    "IDENTITY_TITLE": "Our Core Identity",
+    "MISSION_TITLE": "Mission",
+    "MISSION_TEXT": "Our mission is to provide our clients with innovative solutions that drive efficiency, sustainability, and profitability.",
+    "VISION_TITLE": "Vision",
+    "VISION_TEXT": "To be recognized globally as a leader in automation solutions.",
+    "VALUES_TITLE": "Values",
+    "VALUES_TEXT": "Our core values guide every decision and action we take.",
+    "VAL_1": "Innovation", "VAL_2": "Integrity", "VAL_3": "Excellence", "VAL_4": "Teamwork",
+    "STAFF_TITLE": "Our",
+    "STAFF_HIGHLIGHT": "Staff",
+    "STAFF_DESC": "We have a team of passionate and highly qualified professionals.",
+    "DEPT_EXEC": "Executive Board",
+    "DEPT_SOFT": "Software Engineering",
+    "DEPT_ELEC": "Electronics Engineering"
+  },
+  "SMARTLINK": {
+    "TITLE_1": "SMART LINK", "TITLE_2": "INTELLIGENT", "TITLE_3": "MONITORING PLATFORM",
+    "HERO_P1": "The comprehensive solution that transforms field data into strategic decisions.",
+    "HERO_HIGHLIGHT": "Visualize, control, and optimize",
+    "HERO_P2": "your oil operations from anywhere, in real time.",
+    "CARD1_TITLE": "Analysis with Dynagraph Cards",
+    "CARD2_TITLE": "Real-Time Data Visualization",
+    "CARD2_DESC": "Go beyond simple monitoring. Track live data from sensors, production, and equipment status. Our dashboards allow you to visualize historical trends, track KPIs, and customize your view.",
+    "CARD3_TITLE": "Asset Geolocation",
+    "CARD4_TITLE": "Alarm & Event Management",
+    "CARD4_DESC": "Receive critical notifications instantly. Configure custom alerts to respond proactively to any anomaly.",
+    "CARD5_TITLE": "Remote Operational Control",
+    "CARD5_DESC": "Execute actions directly from the interface, such as adjusting parameters or shutting down systems, securely and with authorization.",
+    "CARD6_TITLE": "Custom Solutions & Integrations",
+    "CARD6_DESC": "Need a specific feature? Our platform is built to be flexible. We work with clients to develop and integrate new functionalities."
+  },
+  "SERVICES_PAGE": {
+    "TITLE_CORE": "Core",
+    "TITLE_SERVICES": "Services",
+    "WORKFLOW_TITLE": "Our Workflow",
+    "S1": {
+      "TITLE": "Automation Consulting",
+      "DESC": "We analyze your current processes and design customized automation strategies.",
+      "L1": "Detailed analysis of existing processes",
+      "L2": "Identification of opportunities for improvement",
+      "L3": "Design of implementation strategies",
+      "L4": "ROI and cost-benefit analysis",
+      "BTN": "Request Consultation"
+    },
+    "S2": {
+      "TITLE": "Systems Integration",
+      "DESC": "Seamless integration of new systems with your existing technology infrastructure.",
+      "L1": "Compatibility analysis",
+      "L2": "Custom APIs and connectors",
+      "L3": "Secure data migration",
+      "L4": "Extensive integration testing",
+      "BTN": "Integration Info"
+    },
+    "S3": {
+      "TITLE": "Intelligent Systems",
+      "DESC": "We implement intelligent and automated control systems to optimize production.",
+      "L1": "Automation of production lines",
+      "L2": "Control and monitoring systems",
+      "L3": "Integration of intelligent industrial systems",
+      "L4": "SCADA and HMI systems",
+      "BTN": "More Information"
+    },
+    "WORK": {
+      "T1": "Initial Analysis", "D1": "We evaluate your current needs and future goals.",
+      "T2": "Design and Planning", "D2": "We create a detailed plan with technical specifications.",
+      "T3": "Implementation", "D3": "We carry out the installation with minimal disruption.",
+      "T4": "Ongoing Support", "D4": "We provide maintenance and technical support."
+    }
+  },
+  "STAFF_ROLES": {
+    "LEO_CARGO": "CEO & Founder", "LEO_PROF": "Aeronautical engineer.",
+    "VAL_CARGO": "CFO", "VAL_PROF": "B.Sc. Business Administration and Marketing",
+    "HENRY_CARGO": "COO", "HENRY_PROF": "Aeronautical engineer.",
+    "EXE_CARGO": "Administrative Assistant", "EXE_PROF": "Administrative Assistant.",
+    "ALON_CARGO": "Department Coordinator", "ALON_PROF": "Software Engineer.",
+    "JOSE_CARGO": "Software Developer", "JOSE_PROF": "Software Engineer.",
+    "DIEGO_CARGO": "Software Developer", "DIEGO_PROF": "Software Engineer.",
+    "AND_CARGO": "Intern", "AND_PROF": "Software Engineer.",
+    "VALERIA_CARGO": "Department Coordinator", "VALERIA_PROF": "Electronics Engineer.",
+    "CARLOS_CARGO": "Electronics Engineer", "CARLOS_PROF": "Electronics Engineer.",
+    "DAVID_CARGO": "Electronics Engineer", "DAVID_PROF": "Electronics Engineer."
+  },
+  "CONTACT_PAGE": {
+    "TITLE": "Contact",
+    "TITLE_HIGHLIGHT": "Us"
+  },
+  "FOOTER": {
+    "RIGHTS": "© 2026 Lift Energy Group. All rights reserved."
+  }
+}

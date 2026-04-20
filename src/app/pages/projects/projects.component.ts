@@ -1,17 +1,19 @@
 import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core'; 
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, TranslateModule], 
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
+  private router = inject(Router);
 
-  private router = inject(Router)
-
-  navigateTo(ruta:string){
-    this.router.navigate([ruta]);
+  navigateTo(path: string) {
+    this.router.navigate([path]);
   }
 }

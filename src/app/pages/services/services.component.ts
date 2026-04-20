@@ -1,23 +1,19 @@
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core'; 
 
 @Component({
   selector: 'app-services',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, TranslateModule], 
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })
-export class ServicesComponent implements OnInit, OnDestroy{
+export class ServicesComponent {
+  private router = inject(Router);
 
-  private router = inject(Router); 
-
-  ngOnInit(): void {}
-
-  goToRoutes(ruta:String):void{
+  goToRoutes(ruta: string) {
     this.router.navigate([ruta]);
   }
-
-  ngOnDestroy(): void {}
-  
-
 }

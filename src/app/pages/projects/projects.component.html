@@ -3,13 +3,13 @@
 
   <div class="container mx-auto px-6 relative z-10 text-center">
       <span class="inline-block text-lime-400 text-[10px] uppercase tracking-[0.8em] font-medium mb-4 opacity-80">
-        Portfolio
+        {{ 'PROJECTS_PAGE.SUBTITLE' | translate }}
       </span>
       <h1 class="text-6xl md:text-7xl font-black text-white uppercase tracking-tighter mb-6 italic">
-        Our <span class="text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.4)">Projects</span>
+        {{ 'PROJECTS_PAGE.TITLE' | translate }} <span class="text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.4)">{{ 'PROJECTS_PAGE.TITLE_HIGHLIGHT' | translate }}</span>
       </h1>
       <p class="text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
-        Explore how our automated solutions have driven <span class="text-white font-normal">business transformation</span> and process optimization.
+        {{ 'PROJECTS_PAGE.DESC_MAIN' | translate }} <span class="text-white font-normal">{{ 'PROJECTS_PAGE.DESC_HIGHLIGHT' | translate }}</span> {{ 'PROJECTS_PAGE.DESC_END' | translate }}
       </p>
   </div>
 </section>
@@ -19,13 +19,13 @@
       
       <div class="flex flex-wrap justify-center gap-4 mb-20">
           <button class="px-8 py-2 rounded-full bg-lime-500 text-black font-bold text-[11px] uppercase tracking-widest shadow-[0_0_20px_rgba(163,230,53,0.4)] cursor-pointer transition-all">
-              All
+              {{ 'PROJECTS_PAGE.FILTER_ALL' | translate }}
           </button>
           <button class="px-8 py-2 rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-white hover:border-lime-500/50 transition-all cursor-pointer text-[11px] uppercase tracking-widest backdrop-blur-md">
-              Industrial
+              {{ 'PROJECTS_PAGE.FILTER_IND' | translate }}
           </button>
           <button class="px-8 py-2 rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-white hover:border-lime-500/50 transition-all cursor-pointer text-[11px] uppercase tracking-widest backdrop-blur-md">
-              Software
+              {{ 'PROJECTS_PAGE.FILTER_SOFT' | translate }}
           </button>
       </div>
 
@@ -43,28 +43,28 @@
                            class="relative z-10 w-full h-full object-contain filter drop-shadow-sm transition-transform duration-700 group-hover:scale-105">
 
                       <div class="absolute top-6 right-6 bg-black/80 backdrop-blur-md text-lime-400 text-[9px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest border border-white/10">
-                          Software
+                          {{ 'PROJECTS_PAGE.CARD_CAT' | translate }}
                       </div>
                   </div>
 
                   <div class="p-10">
                       <h2 class="text-2xl font-black text-white mb-1 uppercase tracking-tighter">
-                          SLC <span class="text-lime-400 font-light italic">Intelligent</span>
+                          {{ 'PROJECTS_PAGE.CARD_TITLE' | translate }} <span class="text-lime-400 font-light italic">{{ 'PROJECTS_PAGE.CARD_TITLE_ITALIC' | translate }}</span>
                       </h2>
-                      <p class="text-[10px] font-medium text-gray-500 uppercase tracking-[0.2em] mb-6 italic">Oil Pumping Solutions</p>
+                      <p class="text-[10px] font-medium text-gray-500 uppercase tracking-[0.2em] mb-6 italic">{{ 'PROJECTS_PAGE.CARD_SUBTITLE' | translate }}</p>
                       
                       <p class="text-gray-400 font-light leading-relaxed mb-10 text-sm">
-                          Integrated software solution for monitoring and controlling mechanical pumping in oil production.
+                          {{ 'PROJECTS_PAGE.CARD_DESC' | translate }}
                       </p>
                       
                       <button (click)="navigateTo('/smartlink')" 
                               class="w-full py-4 bg-white/5 border border-white/10 rounded-2xl text-white hover:text-lime-400 hover:border-lime-500/50 transition-all duration-500 cursor-pointer text-[10px] font-bold uppercase tracking-[0.3em]">
-                          View details
+                          {{ 'PROJECTS_PAGE.BTN_DETAILS' | translate }}
                       </button>
                   </div>
               </div>
           </div>
 
-          </div>
+      </div>
   </div>
 </section>

@@ -1,0 +1,125 @@
+{
+  "NAV": { "WELCOME": "INICIO", "SERVICES": "SERVICIOS", "PROJECTS": "PROYECTOS", "ABOUT": "NOSOTROS", "CONTACT": "CONTACTO" },
+  "HERO": {
+    "TITLE_1": "Soluciones",
+    "TITLE_2": "Automatizadas",
+    "TITLE_3": "para un Futuro Mejor",
+    "DESC_1": "Compromiso con la innovación y eficiencia para las empresas del futuro a través de",
+    "DESC_2": "tecnología industrial de alto nivel",
+    "BTN_START": "Comenzar",
+    "BTN_STORY": "Nuestra historia"
+  },
+  "PROJECTS_PAGE": {
+    "SUBTITLE": "Portafolio",
+    "TITLE": "Nuestros",
+    "TITLE_HIGHLIGHT": "Proyectos",
+    "DESC_MAIN": "Explore cómo nuestras soluciones automatizadas han impulsado la transformación empresarial.",
+    "FILTER_ALL": "Todos",
+    "FILTER_IND": "Industrial",
+    "FILTER_SOFT": "Software",
+    "CARD_CAT": "Software",
+    "CARD_TITLE": "SLC",
+    "CARD_TITLE_ITALIC": "Inteligente",
+    "CARD_SUBTITLE": "Soluciones de Bombeo de Petróleo",
+    "CARD_DESC": "Solución de software integrada para el monitoreo y control del bombeo mecánico en la producción de petróleo.",
+    "BTN_DETAILS": "Ver detalles"
+  },
+  "ABOUT_PAGE": {
+    "SUBTITLE": "Identidad Corporativa",
+    "TITLE_MAIN": "SOBRE",
+    "TITLE_ITALIC": "NOSOTROS",
+    "SLOGAN": "\"Compromiso con la innovación y la eficiencia\"",
+    "HISTORY_TITLE": "Nuestra <br> Historia",
+    "HISTORY_P1": "Somos una empresa dedicada a la investigación y desarrollo de nuevas tecnologías con énfasis en la industria del Petróleo y Gas.",
+    "HISTORY_QUOTE": "Nuestro software está diseñado específicamente para obtener el máximo rendimiento de los sistemas de bombeo mecánico.",
+    "HISTORY_P2": "Al aprovechar el análisis de datos, nuestro software ofrece monitoreo, análisis y detección temprana de fallas.",
+    "IDENTITY_TITLE": "Nuestra Identidad Central",
+    "MISSION_TITLE": "Misión",
+    "MISSION_TEXT": "Nuestra misión es proporcionar a nuestros clientes soluciones innovadoras que impulsen la eficiencia.",
+    "VISION_TITLE": "Visión",
+    "VISION_TEXT": "Ser reconocidos globalmente como líderes en soluciones de automatización.",
+    "VALUES_TITLE": "Values",
+    "VALUES_TEXT": "Nuestros valores fundamentales guían cada decisión y acción.",
+    "VAL_1": "Innovación", "VAL_2": "Integridad", "VAL_3": "Excellence", "VAL_4": "Trabajo en Equipo",
+    "STAFF_TITLE": "Nuestro",
+    "STAFF_HIGHLIGHT": "Personal",
+    "STAFF_DESC": "Contamos con un equipo de profesionales apasionados y altamente calificados.",
+    "DEPT_EXEC": "Junta Ejecutiva",
+    "DEPT_SOFT": "Ingeniería de Software",
+    "DEPT_ELEC": "Ingeniería Electrónica"
+  },
+  "SMARTLINK": {
+    "TITLE_1": "SMART LINK", "TITLE_2": "INTELIGENTE", "TITLE_3": "PLATAFORMA DE MONITOREO",
+    "HERO_P1": "La solución integral que transforma los datos de campo en decisiones estratégicas.",
+    "HERO_HIGHLIGHT": "Visualice, controle y optimice",
+    "HERO_P2": "sus operaciones petroleras desde cualquier lugar, en tiempo real.",
+    "CARD1_TITLE": "Análisis con Cartas Dinamográficas",
+    "CARD2_TITLE": "Visualización de Datos en Tiempo Real",
+    "CARD2_DESC": "Vaya más allá del simple monitoreo. Realice un seguimiento de los datos en vivo de los sensores y equipos.",
+    "CARD3_TITLE": "Geolocalización de Activos",
+    "CARD4_TITLE": "Gestión de Alarmas y Eventos",
+    "CARD4_DESC": "Reciba notificaciones críticas al instante. Configure alertas personalizadas.",
+    "CARD5_TITLE": "Control Operativo Remoto",
+    "CARD5_DESC": "Ejecute acciones directamente desde la interfaz de forma segura.",
+    "CARD6_TITLE": "Soluciones e Integraciones a Medida",
+    "CARD6_DESC": "¿Necesita una función específica? Nuestra plataforma es flexible."
+  },
+  "SERVICES_PAGE": {
+    "TITLE_CORE": "Servicios",
+    "TITLE_SERVICES": "Principales",
+    "WORKFLOW_TITLE": "Nuestro Flujo de Trabajo",
+    "S1": {
+      "TITLE": "Consultoría en Automatización",
+      "DESC": "Analizamos sus procesos y diseñamos estrategias personalizadas.",
+      "L1": "Análisis detallado de procesos",
+      "L2": "Identificación de mejoras",
+      "L3": "Diseño de estrategias",
+      "L4": "Análisis de ROI",
+      "BTN": "Solicitar Consultoría"
+    },
+    "S2": {
+      "TITLE": "Integración de Sistemas",
+      "DESC": "Integración de nuevos sistemas con su infraestructura existente.",
+      "L1": "Análisis de compatibilidad",
+      "L2": "APIs personalizadas",
+      "L3": "Migración segura",
+      "L4": "Pruebas exhaustivas",
+      "BTN": "Info de Integración"
+    },
+    "S3": {
+      "TITLE": "Sistemas Inteligentes",
+      "DESC": "Sistemas de control inteligentes para optimizar la producción.",
+      "L1": "Líneas de producción",
+      "L2": "Control y monitoreo",
+      "L3": "Sistemas industriales",
+      "L4": "SCADA y HMI",
+      "BTN": "Más Información"
+    },
+    "WORK": {
+      "T1": "Análisis Inicial", "D1": "Evaluamos sus necesidades y metas futuras.",
+      "T2": "Diseño y Planificación", "D2": "Creamos un plan detallado con especificaciones.",
+      "T3": "Implementación", "D3": "Realizamos la instalación con mínima interrupción.",
+      "T4": "Soporte Continuo", "D4": "Brindamos mantenimiento y soporte técnico."
+    }
+  },
+  "STAFF_ROLES": {
+    "LEO_CARGO": "CEO y Fundador", "LEO_PROF": "Ingeniero Aeronáutico.",
+    "VAL_CARGO": "CFO", "VAL_PROF": "Lic. en Administración de Empresas y Marketing",
+    "HENRY_CARGO": "COO", "HENRY_PROF": "Ingeniero Aeronáutico.",
+    "EXE_CARGO": "Asistente Administrativo", "EXE_PROF": "Asistente Administrativo.",
+    "ALON_CARGO": "Coordinador de departamento", "ALON_PROF": "Ingeniero de Software.",
+    "JOSE_CARGO": "Desarrollador de Software", "JOSE_PROF": "Ingeniero de Software.",
+    "DIEGO_CARGO": "Desarrollador de Software", "DIEGO_PROF": "Ingeniero de Software.",
+    "AND_CARGO": "Pasantía", "AND_PROF": "Ingeniero de Software.",
+    "VALERIA_CARGO": "Coordinadora de departamento", "VALERIA_PROF": "Ingeniera Electrónica.",
+    "CARLOS_CARGO": "Ingeniero Electrónico", "CARLOS_PROF": "Ingeniero Electrónico.",
+    "DAVID_CARGO": "Ingeniero Electrónico", "DAVID_PROF": "Ingeniero Electrónico."
+  },
+  "CONTACT_PAGE": {
+    "TITLE": "Ponte en",
+    "TITLE_HIGHLIGHT": "Contacto"
+  },
+  "FOOTER": {
+    "RIGHTS": "© 2026 Lift Energy Group. Todos los derechos reservados."
+  }
+}

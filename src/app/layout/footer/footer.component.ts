@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'; 
 import { Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, TranslateModule], 
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
 
-  // Inyectamos el router de forma sencilla
   constructor(private router: Router) {}
 
-  // Esta función es la que tus botones del HTML van a llamar
   navigateTo(path: string) {
     this.router.navigate([path]);
   }

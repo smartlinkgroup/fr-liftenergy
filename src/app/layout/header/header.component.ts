@@ -2,10 +2,14 @@ import { Component, inject, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
+// 🌟 AGREGADO: Importaciones del traductor
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  // 🌟 AGREGADO: TranslateModule en los imports
+  imports: [CommonModule, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -13,8 +17,23 @@ export class HeaderComponent {
   public menu: boolean = false;
   private router = inject(Router);
 
+  // 🌟 AGREGADO: Inyectamos el servicio y definimos el idioma actual
+  public translate = inject(TranslateService);
+  public currentLang: string = 'en';
+
   // Nueva variable para controlar el efecto de vidrio
   public isScrolled: boolean = false;
+
+  // 🌟 AGREGADO: Constructor para inicializar el idioma por defecto
+  constructor() {
+    this.translate.use(this.currentLang);
+  }
+
+  // 🌟 AGREGADO: Función para cambiar el idioma al hacer clic
+  switchLanguage(lang: string) {
+    this.currentLang = lang;
+    this.translate.use(lang);
+  }
 
   // Escuchamos el scroll para activar el efecto visual
   @HostListener('window:scroll', [])

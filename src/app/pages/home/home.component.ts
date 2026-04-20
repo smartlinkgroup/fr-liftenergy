@@ -2,7 +2,6 @@ import { Component, inject, ViewChild, ElementRef, AfterViewInit, HostListener }
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common'; 
 
-// IMPORTAMOS LAS SECCIONES EXISTENTES
 import { AboutUsComponent } from '../about-us/about-us.component';
 import { ContactComponent } from '../contact/contact.component';
 import { ProjectsComponent } from '../projects/projects.component';
@@ -13,11 +12,15 @@ import { ScrollGuideComponent } from '../../components/scroll-guide/scroll-guide
 import { InnovationWellComponent } from '../../components/innovation-well/innovation-well';
 import { EnergyGridComponent } from '../../components/energy-grid/energy-grid';
 
+// 🌟 IMPORT DEL TRADUCTOR
+import { TranslateModule } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     CommonModule,
+    TranslateModule, 
     AboutUsComponent, 
     ContactComponent, 
     ProjectsComponent, 
