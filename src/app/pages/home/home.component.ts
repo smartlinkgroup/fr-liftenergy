@@ -7,12 +7,10 @@ import { ContactComponent } from '../contact/contact.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ServicesComponent } from '../services/services.component';
 
-// IMPORTAMOS LOS COMPONENTES
 import { ScrollGuideComponent } from '../../components/scroll-guide/scroll-guide';
 import { InnovationWellComponent } from '../../components/innovation-well/innovation-well';
 import { EnergyGridComponent } from '../../components/energy-grid/energy-grid';
 
-// 🌟 IMPORT DEL TRADUCTOR
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -36,34 +34,25 @@ export class HomeComponent implements AfterViewInit {
   private router = inject(Router);
   
   showScrollButton = false;
+  showCopiedMessage = false; // 🌟 Controla el mensaje de "Copiado"
 
   @ViewChild('bgVideo') videoElement!: ElementRef<HTMLVideoElement>;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    // Detectamos el scroll para mostrar/ocultar el botón "To Top"
     const yOffset = window.pageYOffset || document.documentElement.scrollTop;
     this.showScrollButton = yOffset > 500;
   }
 
   scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   ngAfterViewInit() {
-    // Forzamos la reproducción del video hero
     if (this.videoElement) {
       const video = this.videoElement.nativeElement;
       video.muted = true;
-      video.volume = 0;
-      
-      video.play().catch(error => {
-        console.log("El navegador bloqueó el inicio, reintentando...", error);
-        setTimeout(() => video.play(), 100);
-      });
+      video.play().catch(() => setTimeout(() => video.play(), 100));
     }
   }
 
@@ -71,7 +60,21 @@ export class HomeComponent implements AfterViewInit {
     this.router.navigate([ruta]);
   }
 
-  // Método para el scroll suave a IDs específicos (Welcome, Services, etc)
+  // 🌟 NUEVO MÉTODO PARA EMPLEO
+  contactWork() {
+    const email = 'info@lift.energy';
+    
+    // Intenta abrir el cliente de correo
+    window.location.href = `mailto:${email}?subject=Career%20Inquiry%20-%20Lift%20Energy%20Group`;
+
+    // Copia al portapapeles como respaldo
+    navigator.clipboard.writeText(email).then(() => {
+      this.showCopiedMessage = true;
+      // Oculta el mensaje después de 2 segundos
+      setTimeout(() => this.showCopiedMessage = false, 2000);
+    });
+  }
+
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {

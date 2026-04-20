@@ -117,9 +117,25 @@
   },
   "CONTACT_PAGE": {
     "TITLE": "Ponte en",
-    "TITLE_HIGHLIGHT": "Contacto"
+    "TITLE_HIGHLIGHT": "Contacto",
+    "OFFICE_TITLE": "Sede Principal",
+    "ADDRESS": "Av. 2 El Milagro, Centro Empresarial del Norte, Piso 4. Maracaibo, Venezuela.",
+    "CONTACT_TITLE": "Contacto Directo",
+    "LABEL_NAME": "Nombre Completo",
+    "PLACEHOLDER_NAME": "Ingresa tu nombre",
+    "LABEL_EMAIL": "Correo Electrónico",
+    "PLACEHOLDER_EMAIL": "ejemplo@correo.com",
+    "LABEL_MESSAGE": "Tu Mensaje",
+    "PLACEHOLDER_MESSAGE": "¿En qué podemos ayudarte?",
+    "BTN_SEND": "Enviar Mensaje"
   },
   "FOOTER": {
     "RIGHTS": "© 2026 Lift Energy Group. Todos los derechos reservados."
-  }
+  },
+"CAREERS": {
+  "TITLE": "Únete al equipo",
+  "TEXT": "Buscamos talento en Ingeniería y Software.",
+  "BTN": "Enviar CV",
+  "COPIED": "¡Copiado! Pégalo en tu correo"
+}
 }
