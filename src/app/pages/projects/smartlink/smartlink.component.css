@@ -1,0 +1,23 @@
+
+
+.pumpjack {
+  position: absolute;
+  top: -150px;
+  animation: rainDown linear infinite;
+  z-index: 1;
+}
+
+/* Tamaños chiquitos y opacidades sutiles */
+.drop-1 { left: 5%; animation-duration: 15s; animation-delay: 0s; width: 35px; height: 35px; opacity: 0.5; }
+.drop-2 { left: 25%; animation-duration: 22s; animation-delay: -4s; width: 60px; height: 60px; opacity: 0.2; filter: blur(2px); }
+.drop-3 { left: 40%; animation-duration: 12s; animation-delay: -2s; width: 25px; height: 25px; opacity: 0.6; }
+.drop-4 { left: 55%; animation-duration: 18s; animation-delay: -8s; width: 45px; height: 45px; opacity: 0.4; }
+.drop-5 { left: 70%; animation-duration: 14s; animation-delay: -1s; width: 30px; height: 30px; opacity: 0.5; }
+.drop-6 { left: 85%; animation-duration: 25s; animation-delay: -7s; width: 70px; height: 70px; opacity: 0.15; filter: blur(3px); }
+.drop-7 { left: 92%; animation-duration: 16s; animation-delay: -5s; width: 40px; height: 40px; opacity: 0.3; filter: blur(1px); }
+.drop-8 { left: 15%; animation-duration: 19s; animation-delay: -10s; width: 30px; height: 30px; opacity: 0.5; }
+
+@keyframes rainDown {
+  0% { transform: translateY(-150px) rotate(-10deg); }
+  100% { transform: translateY(120vh) rotate(10deg); }
+}
