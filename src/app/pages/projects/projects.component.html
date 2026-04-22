@@ -2,69 +2,99 @@
   <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-full bg-lime-500/5 blur-[120px] rounded-full pointer-events-none"></div>
 
   <div class="container mx-auto px-6 relative z-10 text-center">
-      <span class="inline-block text-lime-400 text-[10px] uppercase tracking-[0.8em] font-medium mb-4 opacity-80">
-        {{ 'PROJECTS_PAGE.SUBTITLE' | translate }}
-      </span>
-      <h1 class="text-6xl md:text-7xl font-black text-white uppercase tracking-tighter mb-6 italic">
-        {{ 'PROJECTS_PAGE.TITLE' | translate }} <span class="text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.4)">{{ 'PROJECTS_PAGE.TITLE_HIGHLIGHT' | translate }}</span>
-      </h1>
-      <p class="text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
-        {{ 'PROJECTS_PAGE.DESC_MAIN' | translate }} <span class="text-white font-normal">{{ 'PROJECTS_PAGE.DESC_HIGHLIGHT' | translate }}</span> {{ 'PROJECTS_PAGE.DESC_END' | translate }}
-      </p>
+    <span class="inline-block text-lime-400 text-[10px] uppercase tracking-[0.8em] font-medium mb-4 opacity-80">
+      {{ 'PROJECTS_PAGE.SUBTITLE' | translate }}
+    </span>
+    <h1 class="text-6xl md:text-7xl font-black text-white uppercase tracking-tighter mb-6 italic">
+      {{ 'PROJECTS_PAGE.TITLE' | translate }} <span class="text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.4)">{{ 'PROJECTS_PAGE.TITLE_HIGHLIGHT' | translate }}</span>
+    </h1>
+    <p class="text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+      {{ 'PROJECTS_PAGE.DESC_MAIN' | translate }}
+    </p>
   </div>
 </section>
 
 <section class="py-12 bg-black relative">
   <div class="container mx-auto px-6">
+    
+    <div class="flex flex-wrap justify-center gap-4 mb-20">
       
-      <div class="flex flex-wrap justify-center gap-4 mb-20">
-          <button class="px-8 py-2 rounded-full bg-lime-500 text-black font-bold text-[11px] uppercase tracking-widest shadow-[0_0_20px_rgba(163,230,53,0.4)] cursor-pointer transition-all">
-              {{ 'PROJECTS_PAGE.FILTER_ALL' | translate }}
-          </button>
-          <button class="px-8 py-2 rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-white hover:border-lime-500/50 transition-all cursor-pointer text-[11px] uppercase tracking-widest backdrop-blur-md">
-              {{ 'PROJECTS_PAGE.FILTER_IND' | translate }}
-          </button>
-          <button class="px-8 py-2 rounded-full bg-white/5 border border-white/10 text-white/50 hover:text-white hover:border-lime-500/50 transition-all cursor-pointer text-[11px] uppercase tracking-widest backdrop-blur-md">
-              {{ 'PROJECTS_PAGE.FILTER_SOFT' | translate }}
-          </button>
-      </div>
+      <button (click)="setFilter('all')" 
+        class="px-8 py-2 rounded-full font-bold text-[11px] uppercase tracking-widest cursor-pointer transition-all backdrop-blur-md"
+        [class.bg-lime-500]="currentFilter === 'all'"
+        [class.text-black]="currentFilter === 'all'"
+        [class.bg-white/5]="currentFilter !== 'all'"
+        [class.text-white/50]="currentFilter !== 'all'"
+        [class.border]="currentFilter !== 'all'"
+        [class.border-white/10]="currentFilter !== 'all'">
+        {{ 'PROJECTS_PAGE.FILTER_ALL' | translate }}
+      </button>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <button (click)="setFilter('industrial')" 
+        class="px-8 py-2 rounded-full font-bold text-[11px] uppercase tracking-widest cursor-pointer transition-all backdrop-blur-md"
+        [class.bg-lime-500]="currentFilter === 'industrial'"
+        [class.text-black]="currentFilter === 'industrial'"
+        [class.bg-white/5]="currentFilter !== 'industrial'"
+        [class.text-white/50]="currentFilter !== 'industrial'"
+        [class.border]="currentFilter !== 'industrial'"
+        [class.border-white/10]="currentFilter !== 'industrial'">
+        {{ 'PROJECTS_PAGE.FILTER_IND' | translate }}
+      </button>
+
+      <button (click)="setFilter('software')" 
+        class="px-8 py-2 rounded-full font-bold text-[11px] uppercase tracking-widest cursor-pointer transition-all backdrop-blur-md"
+        [class.bg-lime-500]="currentFilter === 'software'"
+        [class.text-black]="currentFilter === 'software'"
+        [class.bg-white/5]="currentFilter !== 'software'"
+        [class.text-white/50]="currentFilter !== 'software'"
+        [class.border]="currentFilter !== 'software'"
+        [class.border-white/10]="currentFilter !== 'software'">
+        {{ 'PROJECTS_PAGE.FILTER_SOFT' | translate }}
+      </button>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      
+      <div *ngIf="currentFilter === 'all' || currentFilter === 'software'" 
+           class="group relative max-w-sm mx-auto p-[1px] rounded-[2.5rem] bg-gradient-to-b from-white/20 to-transparent transition-all duration-500 hover:-translate-y-2">
+        
+        <div class="bg-black/60 backdrop-blur-2xl rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5">
           
-          <div class="group relative max-w-sm mx-auto p-[1px] rounded-[2.5rem] bg-gradient-to-b from-white/20 to-transparent transition-all duration-500 hover:-translate-y-2">
-              
-              <div class="bg-black/60 backdrop-blur-2xl rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5">
-                  
-                  <div class="relative h-60 flex items-center justify-center bg-white/90 backdrop-blur-md overflow-hidden p-10">
-                      
-                      <div class="absolute w-32 h-32 bg-lime-500/10 blur-[40px] rounded-full"></div>
+          <div class="relative h-60 flex items-center justify-center bg-white/90 backdrop-blur-md overflow-hidden p-10">
+            <div class="absolute w-32 h-32 bg-lime-500/10 blur-[40px] rounded-full"></div>
 
-                      <img src="img/smart-lg.webp" alt="SLC" 
-                           class="relative z-10 w-full h-full object-contain filter drop-shadow-sm transition-transform duration-700 group-hover:scale-105">
+            <img src="img/smart-lg.webp" alt="SLC" 
+                 class="relative z-10 w-full h-full object-contain filter drop-shadow-sm transition-transform duration-700 group-hover:scale-105">
 
-                      <div class="absolute top-6 right-6 bg-black/80 backdrop-blur-md text-lime-400 text-[9px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest border border-white/10">
-                          {{ 'PROJECTS_PAGE.CARD_CAT' | translate }}
-                      </div>
-                  </div>
-
-                  <div class="p-10">
-                      <h2 class="text-2xl font-black text-white mb-1 uppercase tracking-tighter">
-                          {{ 'PROJECTS_PAGE.CARD_TITLE' | translate }} <span class="text-lime-400 font-light italic">{{ 'PROJECTS_PAGE.CARD_TITLE_ITALIC' | translate }}</span>
-                      </h2>
-                      <p class="text-[10px] font-medium text-gray-500 uppercase tracking-[0.2em] mb-6 italic">{{ 'PROJECTS_PAGE.CARD_SUBTITLE' | translate }}</p>
-                      
-                      <p class="text-gray-400 font-light leading-relaxed mb-10 text-sm">
-                          {{ 'PROJECTS_PAGE.CARD_DESC' | translate }}
-                      </p>
-                      
-                      <button (click)="navigateTo('/smartlink')" 
-                              class="w-full py-4 bg-white/5 border border-white/10 rounded-2xl text-white hover:text-lime-400 hover:border-lime-500/50 transition-all duration-500 cursor-pointer text-[10px] font-bold uppercase tracking-[0.3em]">
-                          {{ 'PROJECTS_PAGE.BTN_DETAILS' | translate }}
-                      </button>
-                  </div>
-              </div>
+            <div class="absolute top-6 right-6 bg-black/80 backdrop-blur-md text-lime-400 text-[9px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest border border-white/10">
+              {{ 'PROJECTS_PAGE.CARD_CAT' | translate }}
+            </div>
           </div>
 
+          <div class="p-10">
+            <h2 class="text-2xl font-black text-white mb-1 uppercase tracking-tighter">
+              {{ 'PROJECTS_PAGE.CARD_TITLE' | translate }} <span class="text-lime-400 font-light italic">{{ 'PROJECTS_PAGE.CARD_TITLE_ITALIC' | translate }}</span>
+            </h2>
+            <p class="text-[10px] font-medium text-gray-500 uppercase tracking-[0.2em] mb-6 italic">{{ 'PROJECTS_PAGE.CARD_SUBTITLE' | translate }}</p>
+            
+            <p class="text-gray-400 font-light leading-relaxed mb-10 text-sm">
+              {{ 'PROJECTS_PAGE.CARD_DESC' | translate }}
+            </p>
+            
+            <button (click)="navigateTo('/smartlink')" 
+                    class="w-full py-4 bg-white/5 border border-white/10 rounded-2xl text-white hover:text-lime-400 hover:border-lime-500/50 transition-all duration-500 cursor-pointer text-[10px] font-bold uppercase tracking-[0.3em]">
+              {{ 'PROJECTS_PAGE.BTN_DETAILS' | translate }}
+            </button>
+          </div>
+        </div>
       </div>
+
+      <div *ngIf="currentFilter === 'industrial'" class="col-span-full text-center py-20">
+        <p class="text-gray-500 italic font-light tracking-[0.4em] text-xs uppercase animate-pulse">
+           {{ 'PROJECTS_PAGE.COMING_SOON' | translate }}
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>

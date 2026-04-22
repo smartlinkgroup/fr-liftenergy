@@ -13,6 +13,13 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ProjectsComponent {
   private router = inject(Router);
 
+  currentFilter: string = 'all';
+
+  // Función para cambiar el filtro
+  setFilter(filter: string) {
+    this.currentFilter = filter;
+  }
+
   navigateTo(path: string) {
     this.router.navigate([path]);
   }
