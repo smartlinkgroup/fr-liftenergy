@@ -21,3 +21,15 @@
   0% { transform: translateY(-150px) rotate(-10deg); }
   100% { transform: translateY(120vh) rotate(10deg); }
 }
+@keyframes hover-swing {
+  0%, 100% { transform: translateY(-8px) rotate(0deg); }
+  25% { transform: translateY(-12px) rotate(-2deg); }
+  75% { transform: translateY(-12px) rotate(2deg); }
+}
+
+.group:hover .animate-image-breathe {
+ 
+  animation: hover-swing 2s ease-in-out infinite !important;
+  transition: all 0.5s ease;
+  scale: 1.05; /* Un pequeño zoom extra para el toque 'wow' */
+}
