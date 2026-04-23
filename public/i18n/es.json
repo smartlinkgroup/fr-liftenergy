@@ -42,7 +42,7 @@
     "HISTORY_P2": "Al aprovechar el análisis de datos, nuestro software ofrece monitoreo, análisis y detección temprana de fallas.",
     "IDENTITY_TITLE": "Nuestra Identidad Central",
     "MISSION_TITLE": "Misión",
-    "MISSION_TEXT": "Nuestra misión es proporcionar a nuestros clientes soluciones innovadoras que impulsen la eficiencia.",
+    "MISSION_TEXT": "Nuestra misión es proporcionar a nuestros clientes soluciones innovadoras que impulsen la eficiencia, sostenibilidad y rentabilidad.",
     "VISION_TITLE": "Visión",
     "VISION_TEXT": "Ser reconocidos globalmente como líderes en soluciones de automatización.",
     "VALUES_TITLE": "Valores",
@@ -133,7 +133,7 @@
     "JOSE_PROF": "Ingeniero de Software.",
     "DIEGO_CARGO": "Representante del Medio Oriente",
     "DIEGO_PROF": "Ingeniero de Software.",
-    "AND_CARGO": "Pasantía",
+    "AND_CARGO": "Pasante",
     "AND_PROF": "Ingeniero de Software.",
     "VALERIA_CARGO": "Coordinadora de departamento",
     "VALERIA_PROF": "Ingeniera Electrónica.",
@@ -159,16 +159,44 @@
   "FOOTER": {
     "RIGHTS": "© 2026 Lift Energy Group. Todos los derechos reservados."
   },
-
- "CAREERS": {
+  "CAREERS": {
     "SUBTITLE": "Talento y Cultura",
     "TITLE": "Trabaja en",
     "DESC": "Únete al equipo que está redefiniendo el monitoreo industrial.",
     "SEE_DETAILS": "Ver detalles",
-    "MODAL_INFO": "Especificaciones",
-    "ROLE_DESC": "Descripción del rol",
-    "WHAT_LOOKING": "Lo que buscamos",
-    "POSTULAR": "Postularme a esta vacante",
-    "REDIRECT_MSG": "Este proceso es gestionado bajo estrictas normas de confidencialidad."
+    "MODAL_INFO": "ESPECIFICACIONES",
+    "ROLE_DESC": "DESCRIPCIÓN DEL ROL",
+    "WHAT_LOOKING": "LO QUE BUSCAMOS",
+    "POSTULAR": "POSTULARME A ESTA VACANTE",
+    "REDIRECT_MSG": "ESTE PROCESO ES GESTIONADO BAJO ESTRICTAS NORMAS DE CONFIDENCIALIDAD.",
+    "JOBS": {
+      "SOFT": {
+        "TITLE": "SOFTWARE ENGINEER",
+        "LOC": "Remoto / Híbrido",
+        "DESC": "Buscamos ingenieros con visión disruptiva para escalar nuestra plataforma de monitoreo inteligente. Tu misión será optimizar el flujo de datos desde el campo petrolero hasta la interfaz de usuario.",
+        "REQ1": "Dominio sólido de frameworks modernos (Angular/TypeScript).",
+        "REQ2": "Experiencia en visualización de datos en tiempo real.",
+        "REQ3": "Compromiso con la escritura de código limpio y escalable.",
+        "REQ4": "Capacidad de autogestión en entornos de alta tecnología."
+      },
+      "ELEC": {
+        "TITLE": "INGENIERO ELECTRÓNICO",
+        "LOC": "Campo / Oficina Maracaibo",
+        "DESC": "Responsable del ciclo de vida del hardware de telemetría. Buscamos a alguien capaz de integrar sistemas de comunicación industrial en condiciones exigentes.",
+        "REQ1": "Experiencia en diseño y mantenimiento de hardware industrial.",
+        "REQ2": "Manejo de protocolos Modbus, MQTT y redes de sensores.",
+        "REQ3": "Habilidad para diagnóstico de fallas en sitio y remoto.",
+        "REQ4": "Conocimiento en sistemas de alimentación solar y baterías."
+      },
+      "INST": {
+        "TITLE": "TÉCNICO INSTRUMENTISTA",
+        "LOC": "Operaciones de Campo",
+        "DESC": "Perfil clave para asegurar que los sensores en pozo transmitan información precisa. Serás el guardián de la precisión de los datos de producción.",
+        "REQ1": "Calibración y montaje de instrumentos de presión y nivel.",
+        "REQ2": "Cumplimiento estricto de normativas de seguridad industrial.",
+        "REQ3": "Experiencia previa en servicios a pozos petroleros.",
+        "REQ4": "Actitud proactiva para el trabajo en equipos multidisciplinarios."
+      }
+    }
   }
 }

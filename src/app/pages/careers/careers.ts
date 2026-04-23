@@ -16,36 +16,36 @@ export class CareersComponent {
 
   vacantes = [
     {
-      titulo: 'Software Engineer',
-      ubicacion: 'Remoto / Híbrido',
-      descripcion: 'Buscamos ingenieros con visión disruptiva para escalar nuestra plataforma de monitoreo inteligente. Tu misión será optimizar el flujo de datos desde el campo petrolero hasta la interfaz de usuario.',
+      titulo: 'CAREERS.JOBS.SOFT.TITLE',
+      ubicacion: 'CAREERS.JOBS.SOFT.LOC',
+      descripcion: 'CAREERS.JOBS.SOFT.DESC',
       buscamos: [
-        'Dominio sólido de frameworks modernos (Angular/TypeScript).',
-        'Experiencia en visualización de datos en tiempo real.',
-        'Compromiso con la escritura de código limpio y escalable.',
-        'Capacidad de autogestión en entornos de alta tecnología.'
+        'CAREERS.JOBS.SOFT.REQ1',
+        'CAREERS.JOBS.SOFT.REQ2',
+        'CAREERS.JOBS.SOFT.REQ3',
+        'CAREERS.JOBS.SOFT.REQ4'
       ]
     },
     {
-      titulo: 'Ingeniero Electrónico',
-      ubicacion: 'Campo / Oficina Maracaibo',
-      descripcion: 'Responsable del ciclo de vida del hardware de telemetría. Buscamos a alguien capaz de integrar sistemas de comunicación industrial en condiciones exigentes.',
+      titulo: 'CAREERS.JOBS.ELEC.TITLE',
+      ubicacion: 'CAREERS.JOBS.ELEC.LOC',
+      descripcion: 'CAREERS.JOBS.ELEC.DESC',
       buscamos: [
-        'Experiencia en diseño y mantenimiento de hardware industrial.',
-        'Manejo de protocolos Modbus, MQTT y redes de sensores.',
-        'Habilidad para diagnóstico de fallas en sitio y remoto.',
-        'Conocimiento en sistemas de alimentación solar y baterías.'
+        'CAREERS.JOBS.ELEC.REQ1',
+        'CAREERS.JOBS.ELEC.REQ2',
+        'CAREERS.JOBS.ELEC.REQ3',
+        'CAREERS.JOBS.ELEC.REQ4'
       ]
     },
     {
-      titulo: 'Técnico Instrumentista',
-      ubicacion: 'Operaciones de Campo',
-      descripcion: 'Perfil clave para asegurar que los sensores en pozo transmitan información precisa. Serás el guardián de la precisión de los datos de producción.',
+      titulo: 'CAREERS.JOBS.INST.TITLE',
+      ubicacion: 'CAREERS.JOBS.INST.LOC',
+      descripcion: 'CAREERS.JOBS.INST.DESC',
       buscamos: [
-        'Calibración y montaje de instrumentos de presión y nivel.',
-        'Cumplimiento estricto de normativas de seguridad industrial.',
-        'Experiencia previa en servicios a pozos petroleros.',
-        'Actitud proactiva para el trabajo en equipos multidisciplinarios.'
+        'CAREERS.JOBS.INST.REQ1',
+        'CAREERS.JOBS.INST.REQ2',
+        'CAREERS.JOBS.INST.REQ3',
+        'CAREERS.JOBS.INST.REQ4'
       ]
     }
   ];

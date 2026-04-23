@@ -67,14 +67,14 @@
     "HERO_P2": "your oil operations from anywhere, in real time.",
     "CARD1_TITLE": "Analysis with Dynagraph Cards",
     "CARD2_TITLE": "Real-Time Data Visualization",
-    "CARD2_DESC": "Go beyond simple monitoring. Track live data from sensors, production, and equipment status. Our dashboards allow you to visualize historical trends, track KPIs, and customize your view.",
+    "CARD2_DESC": "Go beyond simple monitoring. Track live data from sensors, production, and equipment status.",
     "CARD3_TITLE": "Asset Geolocation",
     "CARD4_TITLE": "Alarm & Event Management",
-    "CARD4_DESC": "Receive critical notifications instantly. Configure custom alerts to respond proactively to any anomaly.",
+    "CARD4_DESC": "Receive critical notifications instantly. Configure custom alerts to respond proactively.",
     "CARD5_TITLE": "Remote Operational Control",
-    "CARD5_DESC": "Execute actions directly from the interface, such as adjusting parameters or shutting down systems, securely and with authorization.",
+    "CARD5_DESC": "Execute actions directly from the interface securely and with authorization.",
     "CARD6_TITLE": "Custom Solutions & Integrations",
-    "CARD6_DESC": "Need a specific feature? Our platform is built to be flexible. We work with clients to develop and integrate new functionalities."
+    "CARD6_DESC": "Need a specific feature? Our platform is built to be flexible."
   },
   "SERVICES_PAGE": {
     "TITLE_CORE": "Core",
@@ -83,48 +83,48 @@
     "S1": {
       "TITLE": "Automation Consulting",
       "DESC": "We analyze your current processes and design customized automation strategies.",
-      "L1": "Detailed analysis of existing processes",
-      "L2": "Identification of opportunities for improvement",
-      "L3": "Design of implementation strategies",
-      "L4": "ROI and cost-benefit analysis",
+      "L1": "Detailed process analysis",
+      "L2": "Improvement identification",
+      "L3": "Implementation strategy design",
+      "L4": "ROI analysis",
       "BTN": "Request Consultation"
     },
     "S2": {
       "TITLE": "Systems Integration",
-      "DESC": "Seamless integration of new systems with your existing technology infrastructure.",
+      "DESC": "Seamless integration of new systems with your existing infrastructure.",
       "L1": "Compatibility analysis",
-      "L2": "Custom APIs and connectors",
-      "L3": "Secure data migration",
-      "L4": "Extensive integration testing",
+      "L2": "Custom APIs",
+      "L3": "Secure migration",
+      "L4": "Extensive testing",
       "BTN": "Integration Info"
     },
     "S3": {
       "TITLE": "Intelligent Systems",
       "DESC": "We implement intelligent and automated control systems to optimize production.",
-      "L1": "Automation of production lines",
-      "L2": "Control and monitoring systems",
-      "L3": "Integration of intelligent industrial systems",
-      "L4": "SCADA and HMI systems",
+      "L1": "Production lines",
+      "L2": "Control and monitoring",
+      "L3": "Industrial systems",
+      "L4": "SCADA and HMI",
       "BTN": "More Information"
     },
     "WORK": {
       "T1": "Initial Analysis",
-      "D1": "We evaluate your current needs and future goals.",
+      "D1": "We evaluate your needs and future goals.",
       "T2": "Design and Planning",
       "D2": "We create a detailed plan with technical specifications.",
       "T3": "Implementation",
-      "D3": "We carry out the installation with minimal disruption.",
+      "D3": "We carry out installation with minimal disruption.",
       "T4": "Ongoing Support",
       "D4": "We provide maintenance and technical support."
     }
   },
   "STAFF_ROLES": {
     "LEO_CARGO": "CEO & Founder",
-    "LEO_PROF": "Aeronautical engineer.",
+    "LEO_PROF": "Aeronautical Engineer.",
     "VAL_CARGO": "CFO",
     "VAL_PROF": "B.Sc. Business Administration and Marketing",
     "HENRY_CARGO": "COO",
-    "HENRY_PROF": "Aeronautical engineer.",
+    "HENRY_PROF": "Aeronautical Engineer.",
     "EXE_CARGO": "Administrative Assistant",
     "EXE_PROF": "Administrative Assistant.",
     "ALON_CARGO": "Department Coordinator",
@@ -143,10 +143,10 @@
     "DAVID_PROF": "Electronics Engineer."
   },
   "CONTACT_PAGE": {
-    "TITLE": "Contact",
-    "TITLE_HIGHLIGHT": "Us",
+    "TITLE": "Get in",
+    "TITLE_HIGHLIGHT": "Contact",
     "OFFICE_TITLE": "Main Office",
-    "ADDRESS": "Av. 2 El Milagro, Centro Empresarial del Norte, Piso 4. Maracaibo, Venezuela.",
+    "ADDRESS": "Av. 2 El Milagro, Centro Empresarial del Norte, Floor 4. Maracaibo, Venezuela.",
     "CONTACT_TITLE": "Direct Contact",
     "LABEL_NAME": "Full Name",
     "PLACEHOLDER_NAME": "Enter your name",
@@ -159,21 +159,44 @@
   "FOOTER": {
     "RIGHTS": "© 2026 Lift Energy Group. All rights reserved."
   },
- "CAREERS": {
+  "CAREERS": {
     "SUBTITLE": "Talent & Culture",
     "TITLE": "Work at",
-    "DESC": "We don't just build software, we define the future of industrial monitoring. Are you ready?",
-    "POSTULAR": "Apply Now",
-    "MODAL_TITLE": "Apply for",
-    "MODAL_SUB": "Fill in your details and attach your CV in PDF format.",
-    "FORM": {
-      "NAME": "Full Name",
-      "EMAIL": "Corporate Email",
-      "PHONE": "Contact Phone",
-      "CV": "Curriculum Vitae (PDF)",
-      "SUBMIT": "Send Application",
-      "ERROR_REQUIRED": "Hey! This field is required.",
-      "ERROR_EMAIL": "Hey! Enter a valid email."
+    "DESC": "Join the team that is redefining industrial monitoring.",
+    "SEE_DETAILS": "See details",
+    "MODAL_INFO": "JOB SPECIFICATION",
+    "ROLE_DESC": "ROLE DESCRIPTION",
+    "WHAT_LOOKING": "WHAT WE ARE LOOKING FOR",
+    "POSTULAR": "APPLY FOR THIS VACANCY",
+    "REDIRECT_MSG": "THIS PROCESS IS MANAGED UNDER STRICT CONFIDENTIALITY STANDARDS.",
+    "JOBS": {
+      "SOFT": {
+        "TITLE": "SOFTWARE ENGINEER",
+        "LOC": "Remote / Hybrid",
+        "DESC": "We are looking for engineers with a disruptive vision to scale our intelligent monitoring platform. Your mission will be to optimize the data flow from the oil field to the user interface.",
+        "REQ1": "Solid mastery of modern frameworks (Angular/TypeScript).",
+        "REQ2": "Experience in real-time data visualization.",
+        "REQ3": "Commitment to writing clean and scalable code.",
+        "REQ4": "Self-management skills in high-tech environments."
+      },
+      "ELEC": {
+        "TITLE": "ELECTRONIC ENGINEER",
+        "LOC": "Field / Maracaibo Office",
+        "DESC": "Responsible for the telemetry hardware lifecycle. We are looking for someone capable of integrating industrial communication systems in demanding conditions.",
+        "REQ1": "Experience in industrial hardware design and maintenance.",
+        "REQ2": "Handling of Modbus, MQTT and sensor networks.",
+        "REQ3": "Ability for on-site and remote troubleshooting.",
+        "REQ4": "Knowledge in solar power systems and batteries."
+      },
+      "INST": {
+        "TITLE": "INSTRUMENTATION TECHNICIAN",
+        "LOC": "Field Operations",
+        "DESC": "Key profile to ensure that downhole sensors transmit accurate information. You will be the guardian of production data accuracy.",
+        "REQ1": "Calibration and assembly of pressure and level instruments.",
+        "REQ2": "Strict compliance with industrial safety regulations.",
+        "REQ3": "Previous experience in oil well services.",
+        "REQ4": "Proactive attitude for working in multidisciplinary teams."
+      }
     }
   }
 }
