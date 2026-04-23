@@ -159,21 +159,16 @@
   "FOOTER": {
     "RIGHTS": "© 2026 Lift Energy Group. Todos los derechos reservados."
   },
+
  "CAREERS": {
     "SUBTITLE": "Talento y Cultura",
     "TITLE": "Trabaja en",
-    "DESC": "No solo construimos software, definimos el futuro del monitoreo industrial. ¿Estás listo?",
-    "POSTULAR": "Postularme",
-    "MODAL_TITLE": "Aplica para",
-    "MODAL_SUB": "Completa tus datos y adjunta tu CV en formato PDF.",
-    "FORM": {
-      "NAME": "Nombre Completo",
-      "EMAIL": "Email Corporativo",
-      "PHONE": "Teléfono de contacto",
-      "CV": "Curriculum Vitae (PDF)",
-      "SUBMIT": "Enviar Postulación",
-      "ERROR_REQUIRED": "¡Epa! Este campo es obligatorio.",
-      "ERROR_EMAIL": "¡Epa! Escribe un correo válido."
-    }
+    "DESC": "Únete al equipo que está redefiniendo el monitoreo industrial.",
+    "SEE_DETAILS": "Ver detalles",
+    "MODAL_INFO": "Especificaciones",
+    "ROLE_DESC": "Descripción del rol",
+    "WHAT_LOOKING": "Lo que buscamos",
+    "POSTULAR": "Postularme a esta vacante",
+    "REDIRECT_MSG": "Este proceso es gestionado bajo estrictas normas de confidencialidad."
   }
 }
