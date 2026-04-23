@@ -28,6 +28,11 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent),
     data: { animation: 'contact' }
   },
+ {
+    path: 'careers',
+   loadComponent: () => import('./pages/careers/careers').then(m => m.CareersComponent),
+    data: { animation: 'careers' }
+  },
   {
     path: 'projects',
     loadComponent: () => import('./pages/projects/projects.component').then(m => m.ProjectsComponent),
