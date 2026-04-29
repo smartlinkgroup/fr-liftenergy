@@ -1,10 +1,13 @@
-<div class="relative bg-transparent text-white pb-32 overflow-hidden">
-  <app-energy-grid
-    class="absolute inset-0 z-0 pointer-events-none opacity-40"
-  ></app-energy-grid>
+<div class="relative bg-transparent text-white pb-32 overflow-visible">
+  
+  <!-- FONDO INFINITO -->
+  <div class="fixed inset-0 z-0 pointer-events-none">
+   <img src="img/nuevo.webp" class="absolute inset-0 w-full h-full object-cover blur-sm scale-105 opacity-50">
+    <div class="absolute inset-0 bg-[#010501]/75"></div> 
+  </div>
 
-  <app-scroll-guide></app-scroll-guide>
-
+  <app-energy-grid class="absolute inset-0 z-0 pointer-events-none opacity-40"></app-energy-grid>
+  
   <div class="relative z-10">
     <header
       class="relative min-h-[70vh] flex flex-col justify-center items-center px-6 text-center z-10"

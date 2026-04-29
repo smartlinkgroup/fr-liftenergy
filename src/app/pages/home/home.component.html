@@ -1,8 +1,10 @@
 <section
   id="top"
-  class="relative h-screen w-full flex items-center overflow-hidden bg-canvas m-0 p-0"
+  class="relative h-screen w-full flex items-center overflow-hidden bg-transparent m-0 p-0 z-50"
 >
-  <div class="absolute inset-0 z-0">
+  <!-- Aquí está la máscara que difumina -->
+  <div class="absolute inset-0 z-0" style="-webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%); mask-image: linear-gradient(to bottom, black 70%, transparent 100%);">
+  
     <video
       #bgVideo
       autoplay
@@ -15,12 +17,8 @@
     >
       <source src="/video.MP4" type="video/MP4" />
     </video>
-    <div
-      class="absolute inset-0 bg-linear-to-b from-canvas-deep/74 via-canvas-raised/22 to-canvas/84"
-    ></div>
-    <div
-      class="absolute inset-x-0 bottom-0 h-48 bg-linear-to-t from-white/8 to-transparent"
-    ></div>
+    
+    <div class="absolute inset-0 bg-linear-to-b from-canvas-deep/74 via-canvas-raised/22 to-canvas/84"></div>
   </div>
 
   <div class="container mx-auto relative z-10 px-6 md:px-16 text-left">
@@ -79,9 +77,7 @@
   </div>
 </section>
 
-<div
-  class="relative w-full bg-linear-to-b from-canvas-raised via-canvas to-canvas-deep"
->
+<div class="relative w-full bg-transparent">
   <div class="absolute inset-0 z-0 pointer-events-none opacity-50">
     <app-energy-grid></app-energy-grid>
   </div>

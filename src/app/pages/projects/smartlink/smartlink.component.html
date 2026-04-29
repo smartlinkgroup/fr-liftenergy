@@ -1,9 +1,14 @@
-<div class="relative min-h-screen bg-black pt-32 pb-20 overflow-hidden">
+<div class="relative min-h-screen bg-transparent pt-32 pb-20 overflow-hidden">
   
+  <!-- FONDO VERDE: Lo cambiamos a absolute y z-0 para que no se esconda -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <img src="img/nuevo.webp" class="absolute inset-0 w-full h-full object-cover blur-[2px] scale-105 opacity-50">
+    <div class="absolute inset-0 bg-[#010501]/75"></div> 
+  </div>
+
   <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
     <app-energy-grid></app-energy-grid>
   </div>
-
   <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
     <div class="pumpjack drop-1"><svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21h20M12 21l-2-10h4zM12 11l-7 3m7-3l6 2M5 14v4c0 1.5 1 2 2 2M18 15a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></div>
     <div class="pumpjack drop-2"><svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21h20M12 21l-2-10h4zM12 11l-7 3m7-3l6 2M5 14v4c0 1.5 1 2 2 2M18 15a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></div>
@@ -134,11 +139,11 @@
 
   </div>
   
-<section class="container mx-auto px-6 py-20 relative z-10">
+<!-- <section class="container mx-auto px-6 py-20 relative z-10">
   <div class="relative bg-gradient-to-r from-lime-900/20 to-black border border-white/10 p-12 rounded-[3rem] overflow-hidden group">
     <div class="absolute -right-20 -top-20 w-64 h-64 bg-lime-500/10 blur-[100px] group-hover:bg-lime-500/20 transition-all duration-700"></div>
-    
-    <div class="flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
+     -->
+    <!-- <div class="flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
       <div class="text-center md:text-left">
         <h2 class="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-2">
           ¿Quieres ser parte de <span class="text-lime-400 font-italic">Lift</span>?
@@ -149,6 +154,6 @@
         Ver Vacantes
       </a>
     </div>
-  </div>
-</section>
+  </div> -->
+<!-- </section> -->
 </div>
