@@ -1,0 +1,66 @@
+@theme {
+  /*
+   * Core background scale for the site shell.
+   * Use these for page backgrounds, dark sections and layered transitions.
+   * Tailwind defaults like lime/gray/white remain available; these only cover
+   * the custom brand neutrals introduced for this project.
+   *
+   * ES:
+   * Escala principal de fondos para el 'shell' del sitio.
+   * Úsalos para fondos de página, secciones oscuras y transiciones en capas.
+   * Los colores por defecto de Tailwind (lime/gray/white) siguen disponibles;
+   * estas variables cubren únicamente los neutros personalizados del proyecto.
+   */
+  --color-canvas: #0e120d;
+  --color-canvas-raised: #181d17;
+  --color-canvas-deep: #090b08;
+  --color-canvas-soft: #141913;
+  --color-canvas-glow: #1b211a;
+
+  /*
+   * Elevated dark surfaces.
+   * Intended for cards, highlighted sections and glass panels that should sit
+   * above the main canvas without jumping to a bright background.
+   *
+   * ES:
+   * Superficies oscuras elevadas.
+   * Pensadas para tarjetas, secciones destacadas y paneles tipo 'glass' que
+   * deben reposar sobre el canvas sin pasar a un fondo brillante.
+   */
+  --color-panel-top: #191e18;
+  --color-panel-mid: #10140f;
+  --color-panel-bottom: #171c16;
+  --color-panel-card: #121712;
+
+  /*
+   * Text helpers for custom surfaces.
+   * Prefer Tailwind text-white/text-gray-* when they are enough; use these when
+   * the design needs a project-specific neutral text tone.
+   *
+   * ES:
+   * Ayudantes para texto en superficies personalizadas.
+   * Prefiere `text-white`/`text-gray-*` de Tailwind cuando baste; usa estas
+   * variables cuando el diseño necesite tonos neutrales específicos del proyecto.
+   */
+  --color-copy-strong: #f5f7f0;
+  --color-copy-muted: #40453f;
+
+  /*
+   * Soft contrasting surfaces.
+   * Useful for labels, media backplates and subtle light areas that still need
+   * to feel integrated with the darker palette.
+   *
+   * ES:
+   * Superficies de contraste suaves.
+   * Útiles para etiquetas, soportes de medios y áreas sutilmente claras que
+   * deben integrarse con la paleta oscura.
+   */
+  --color-surface-soft: #eef1eb;
+  --color-surface-soft-start: #f1f2ef;
+  --color-surface-soft-mid: #dfe3dc;
+  --color-surface-soft-end: #cfd5cd;
+
+  /* Scrollbar track neutral aligned with the darkest canvas tone.
+   * ES: Track de scrollbar neutral alineado con el tono más oscuro del canvas. */
+  --color-scroll-track: #0b0f0a;
+}

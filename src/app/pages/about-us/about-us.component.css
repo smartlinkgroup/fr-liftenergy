@@ -2,13 +2,14 @@
   display: block;
   position: relative;
   width: 100%;
-  /* Gradiente con más contraste para que el verde de las partículas "explote" */
-  background: linear-gradient(to bottom, 
-    #000000 0%, 
-    #062d12 15%, 
-    #000000 40%, 
-    #062d12 70%, 
-    #000000 100%
+  /* Mantiene profundidad, pero evita el negro puro continuo. */
+  background: linear-gradient(
+    to bottom,
+    var(--color-canvas-raised) 0%,
+    var(--color-canvas-soft) 18%,
+    var(--color-canvas) 42%,
+    var(--color-canvas-glow) 72%,
+    var(--color-canvas) 100%
   ) !important;
 }
 
@@ -19,7 +20,7 @@ app-energy-grid {
   width: 100%;
   height: 100%;
   z-index: 1;
-  opacity: 1; /* Opacidad total para que se noten mucho */
+  opacity: 0.78;
 }
 
 /* Opcional: Dale un toque itálico y agresivo al título de Our History para que pegue con la velocidad */
@@ -28,13 +29,19 @@ h3.text-5xl {
   filter: drop-shadow(0 0 10px rgba(163, 230, 53, 0.2));
 }
 /* Aseguramos que el contenido de la historia esté por encima */
-.max-w-7xl, header, section {
+.max-w-7xl,
+header,
+section {
   position: relative;
   z-index: 10;
 }
 
 /* Aseguramos que los textos estén POR ENCIMA de las partículas */
-header, section, .reveal, .reveal-left, .reveal-right {
+header,
+section,
+.reveal,
+.reveal-left,
+.reveal-right {
   position: relative;
   z-index: 10;
 }
@@ -50,25 +57,37 @@ header, section, .reveal, .reveal-left, .reveal-right {
   color: transparent;
 }
 
-.reveal, .reveal-left, .reveal-right {
+.reveal,
+.reveal-left,
+.reveal-right {
   opacity: 0;
-  transition: opacity 0.8s ease-out, transform 1.2s cubic-bezier(0.17, 0.55, 0.55, 1);
+  transition:
+    opacity 0.8s ease-out,
+    transform 1.2s cubic-bezier(0.17, 0.55, 0.55, 1);
   will-change: transform, opacity;
 }
 
-.reveal { transform: translateY(100px); }
-.reveal-left { transform: translateX(-100px); }
-.reveal-right { transform: translateX(100px); }
+.reveal {
+  transform: translateY(100px);
+}
+.reveal-left {
+  transform: translateX(-100px);
+}
+.reveal-right {
+  transform: translateX(100px);
+}
 
 /* Efecto de cristal para las tarjetas de Misión/Visión */
 .backdrop-blur-xl {
   backdrop-filter: blur(24px);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: color-mix(in srgb, var(--color-canvas) 34%, transparent);
 }
 /* Solo para pantallas de teléfonos (menos de 768px) */
 @media (max-width: 768px) {
   /* Forzamos que los elementos con reveal se vean de inmediato */
-  .reveal, .reveal-left, .reveal-right {
+  .reveal,
+  .reveal-left,
+  .reveal-right {
     opacity: 1 !important;
     transform: none !important;
     visibility: visible !important;

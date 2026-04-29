@@ -1,105 +1,209 @@
-<nav 
-  [class.bg-transparent]="!isScrolled" 
-  [class.bg-black/60]="isScrolled" 
+<nav
+  [class.bg-transparent]="!isScrolled"
+  [class.bg-canvas/78]="isScrolled"
   [class.backdrop-blur-lg]="isScrolled"
   [class.border-b]="isScrolled"
   [class.py-3]="isScrolled"
   [class.py-5]="!isScrolled"
-  class="fixed top-0 left-0 w-full z-[100] transition-all duration-500 px-4 sm:px-6 border-white/10">
-  
+  class="fixed top-0 left-0 w-full z-100 transition-all duration-500 px-4 sm:px-6 border-white/15"
+>
   <div class="container mx-auto flex justify-between items-center">
-    
-    <div class="flex items-center gap-3 cursor-pointer group transition-transform duration-300 active:scale-95" (click)="scrollToSection('top')">
-      <div class="transition-all duration-500 bg-white group-hover:bg-lime-400 group-hover:drop-shadow-[0_0_12px_rgba(163,230,53,0.9)]"
-           [class.w-8]="isScrolled" [class.h-8]="isScrolled"
-           [class.w-10]="!isScrolled" [class.h-10]="!isScrolled"
-           style="-webkit-mask-image: url('img/white-lg-33.webp'); mask-image: url('img/white-lg-33.webp'); -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center;">
-      </div>
-      <h3 class="text-white text-lg sm:text-xl font-medium tracking-[0.1em] uppercase transition-all duration-500 group-hover:text-lime-300 group-hover:drop-shadow-[0_0_15px_rgba(163,230,53,0.9)]">
+    <div
+      class="flex items-center gap-3 cursor-pointer group transition-transform duration-300 active:scale-95"
+      (click)="scrollToSection('top')"
+    >
+      <div
+        class="transition-all duration-500 bg-white group-hover:bg-lime-400 group-hover:drop-shadow-[0_0_12px_rgba(163,230,53,0.9)]"
+        [class.w-8]="isScrolled"
+        [class.h-8]="isScrolled"
+        [class.w-10]="!isScrolled"
+        [class.h-10]="!isScrolled"
+        style="
+          -webkit-mask-image: url(&quot;img/white-lg-33.webp&quot;);
+          mask-image: url(&quot;img/white-lg-33.webp&quot;);
+          -webkit-mask-size: contain;
+          mask-size: contain;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+          -webkit-mask-position: center;
+          mask-position: center;
+        "
+      ></div>
+      <h3
+        class="text-white text-lg sm:text-xl font-medium tracking-widest uppercase transition-all duration-500 group-hover:text-lime-300 group-hover:drop-shadow-[0_0_15px_rgba(163,230,53,0.9)]"
+      >
         Lift Energy Group
       </h3>
     </div>
 
     <div class="hidden md:flex gap-8 lg:gap-10 text-white items-center">
-      <button class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]" 
-              (click)="scrollToSection('top')">
-        {{ 'NAV.WELCOME' | translate }}
+      <button
+        class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]"
+        (click)="scrollToSection('top')"
+      >
+        {{ "NAV.WELCOME" | translate }}
       </button>
-      <button class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]" 
-              (click)="scrollToSection('services')">
-        {{ 'NAV.SERVICES' | translate }}
+      <button
+        class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]"
+        (click)="scrollToSection('services')"
+      >
+        {{ "NAV.SERVICES" | translate }}
       </button>
-      <button class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]" 
-              (click)="scrollToSection('projects')">
-        {{ 'NAV.PROJECTS' | translate }}
+      <button
+        class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]"
+        (click)="scrollToSection('projects')"
+      >
+        {{ "NAV.PROJECTS" | translate }}
       </button>
-      <button class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]" 
-              (click)="scrollToSection('aboutus')">
-        {{ 'NAV.ABOUT' | translate }}
+      <button
+        class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]"
+        (click)="scrollToSection('aboutus')"
+      >
+        {{ "NAV.ABOUT" | translate }}
       </button>
-      
-      <button 
+
+      <button
         [class.bg-lime-500]="isScrolled"
         [class.text-black]="isScrolled"
         [class.border-lime-500]="isScrolled"
-        [class.border-white/20]="!isScrolled"
-        class="border hover:border-lime-400 hover:bg-lime-400 hover:text-black px-6 py-2 rounded-full transition-all duration-500 cursor-pointer text-[11px] font-bold uppercase tracking-[0.3em] backdrop-blur-sm" 
-        (click)="scrollToSection('contact')">
-        {{ 'NAV.CONTACT' | translate }}
+        [class.border-white/30]="!isScrolled"
+        [class.bg-white/10]="!isScrolled"
+        class="border hover:border-lime-400 hover:bg-lime-400 hover:text-black px-6 py-2 rounded-full transition-all duration-500 cursor-pointer text-[11px] font-bold uppercase tracking-[0.3em] backdrop-blur-sm"
+        (click)="scrollToSection('contact')"
+      >
+        {{ "NAV.CONTACT" | translate }}
       </button>
 
-      <div class="flex items-center gap-2 ml-2 pl-4 lg:ml-4 lg:pl-6 border-l border-white/20 h-6">
-        <button (click)="switchLanguage('en')" 
-                class="text-[10px] font-mono tracking-widest transition-all duration-300 cursor-pointer"
-                [ngClass]="currentLang === 'en' ? 'text-lime-400 font-bold drop-shadow-[0_0_8px_rgba(163,230,53,0.5)]' : 'text-gray-500 hover:text-white'">
+      <div
+        class="flex items-center gap-2 ml-2 pl-4 lg:ml-4 lg:pl-6 border-l border-white/20 h-6"
+      >
+        <button
+          (click)="switchLanguage('en')"
+          class="text-[10px] font-mono tracking-widest transition-all duration-300 cursor-pointer"
+          [ngClass]="
+            currentLang === 'en'
+              ? 'text-lime-400 font-bold drop-shadow-[0_0_8px_rgba(163,230,53,0.5)]'
+              : 'text-gray-500 hover:text-white'
+          "
+        >
           EN
         </button>
         <span class="text-gray-700 text-[10px]">/</span>
-        <button (click)="switchLanguage('es')" 
-                class="text-[10px] font-mono tracking-widest transition-all duration-300 cursor-pointer"
-                [ngClass]="currentLang === 'es' ? 'text-lime-400 font-bold drop-shadow-[0_0_8px_rgba(163,230,53,0.5)]' : 'text-gray-500 hover:text-white'">
+        <button
+          (click)="switchLanguage('es')"
+          class="text-[10px] font-mono tracking-widest transition-all duration-300 cursor-pointer"
+          [ngClass]="
+            currentLang === 'es'
+              ? 'text-lime-400 font-bold drop-shadow-[0_0_8px_rgba(163,230,53,0.5)]'
+              : 'text-gray-500 hover:text-white'
+          "
+        >
           ES
         </button>
       </div>
-
     </div>
 
-    <div class="md:hidden cursor-pointer text-white transition-colors hover:text-lime-400" (click)="showMenu()">
+    <div
+      class="md:hidden cursor-pointer text-white transition-colors hover:text-lime-400"
+      (click)="showMenu()"
+    >
       @if (menu) {
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="currentColor"
+          class="w-8 h-8"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18 18 6M6 6l12 12"
+          />
         </svg>
       } @else {
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="currentColor"
+          class="w-8 h-8"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
         </svg>
       }
     </div>
   </div>
 </nav>
 
-<div class="fixed top-0 left-0 w-full transition-all duration-500 ease-in-out bg-black/98 backdrop-blur-2xl flex flex-col z-[90] md:hidden"
-     [ngClass]="menu ? 'max-h-screen py-32 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'">
-    
-    <div class="flex flex-col items-center gap-10">
-      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400 transition-colors" (click)="scrollToSection('top')">{{ 'NAV.WELCOME' | translate }}</button>
-      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400 transition-colors" (click)="scrollToSection('services')">{{ 'NAV.SERVICES' | translate }}</button>
-      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400 transition-colors" (click)="scrollToSection('projects')">{{ 'NAV.PROJECTS' | translate }}</button>
-      <button class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400 transition-colors" (click)="scrollToSection('aboutus')">{{ 'NAV.ABOUT' | translate }}</button>
-      <button class="text-lime-400 text-sm font-bold uppercase tracking-[0.4em] border border-lime-400/30 px-8 py-2 rounded-full hover:bg-lime-400 hover:text-black transition-all duration-300" (click)="scrollToSection('contact')">{{ 'NAV.CONTACT' | translate }}</button>
-      
-      <div class="flex items-center gap-4 mt-6 pt-6 border-t border-white/10 w-32 justify-center">
-        <button (click)="switchLanguage('en'); menu=false" 
-                class="text-sm font-mono tracking-widest transition-all duration-300"
-                [ngClass]="currentLang === 'en' ? 'text-lime-400 font-bold' : 'text-gray-500'">
-          EN
-        </button>
-        <span class="text-gray-700 text-sm">/</span>
-        <button (click)="switchLanguage('es'); menu=false" 
-                class="text-sm font-mono tracking-widest transition-all duration-300"
-                [ngClass]="currentLang === 'es' ? 'text-lime-400 font-bold' : 'text-gray-500'">
-          ES
-        </button>
-      </div>
+<div
+  class="fixed top-0 left-0 w-full transition-all duration-500 ease-in-out bg-canvas/92 backdrop-blur-2xl flex flex-col z-90 md:hidden"
+  [ngClass]="
+    menu
+      ? 'max-h-screen py-32 opacity-100'
+      : 'max-h-0 opacity-0 overflow-hidden'
+  "
+>
+  <div class="flex flex-col items-center gap-10">
+    <button
+      class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400 transition-colors"
+      (click)="scrollToSection('top')"
+    >
+      {{ "NAV.WELCOME" | translate }}
+    </button>
+    <button
+      class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400 transition-colors"
+      (click)="scrollToSection('services')"
+    >
+      {{ "NAV.SERVICES" | translate }}
+    </button>
+    <button
+      class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400 transition-colors"
+      (click)="scrollToSection('projects')"
+    >
+      {{ "NAV.PROJECTS" | translate }}
+    </button>
+    <button
+      class="text-white text-sm font-light uppercase tracking-[0.4em] hover:text-lime-400 transition-colors"
+      (click)="scrollToSection('aboutus')"
+    >
+      {{ "NAV.ABOUT" | translate }}
+    </button>
+    <button
+      class="text-lime-400 text-sm font-bold uppercase tracking-[0.4em] border border-lime-400/30 px-8 py-2 rounded-full hover:bg-lime-400 hover:text-black transition-all duration-300"
+      (click)="scrollToSection('contact')"
+    >
+      {{ "NAV.CONTACT" | translate }}
+    </button>
+
+    <div
+      class="flex items-center gap-4 mt-6 pt-6 border-t border-white/10 w-32 justify-center"
+    >
+      <button
+        (click)="switchLanguage('en'); menu = false"
+        class="text-sm font-mono tracking-widest transition-all duration-300"
+        [ngClass]="
+          currentLang === 'en' ? 'text-lime-400 font-bold' : 'text-gray-500'
+        "
+      >
+        EN
+      </button>
+      <span class="text-gray-700 text-sm">/</span>
+      <button
+        (click)="switchLanguage('es'); menu = false"
+        class="text-sm font-mono tracking-widest transition-all duration-300"
+        [ngClass]="
+          currentLang === 'es' ? 'text-lime-400 font-bold' : 'text-gray-500'
+        "
+      >
+        ES
+      </button>
     </div>
+  </div>
 </div>

@@ -1,15 +1,23 @@
 @import "tailwindcss";
+@import "./styles/tailwind-theme.css";
 
 /* EFECTO DE SCROLL SUAVE GLOBAL */
 html {
   scroll-behavior: smooth;
-  background-color: black;
+  background-color: var(--color-canvas);
 }
 
 body {
   margin: 0;
-  background-color: black;
-  color: white;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 32%),
+    linear-gradient(
+      180deg,
+      var(--color-canvas-raised) 0%,
+      var(--color-canvas) 45%,
+      var(--color-canvas-deep) 100%
+    );
+  color: var(--color-copy-strong);
 }
 
 /* Personaliza la barra de scroll lateral */
@@ -18,11 +26,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: var(--color-scroll-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #a3e635; 
+  background: #a3e635;
   border-radius: 10px;
 }
 
