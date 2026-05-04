@@ -1,4 +1,4 @@
-<section class="relative h-[65vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden bg-black group"
+<section class="relative h-[65vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden bg-gray-200 dark:bg-black transition-colors duration-500 group"
          (mouseenter)="stopAutoplay()" 
          (mouseleave)="startAutoplay()">
 
@@ -13,15 +13,16 @@
     </div>
   }
 
-  <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/80 to-transparent z-20 pointer-events-none transition-opacity duration-500"></div>
+  <!-- El degradado inferior: De gris claro (modo claro) o negro (oscuro) hacia transparente -->
+  <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-100/90 dark:from-black/80 to-transparent z-20 pointer-events-none transition-all duration-500"></div>
 
   <button (click)="prevSlide()" 
-          class="absolute left-6 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/20 text-white/50 backdrop-blur-md border border-white/10 opacity-0 group-hover:opacity-100 hover:bg-lime-500/20 hover:text-lime-400 hover:border-lime-500/50 transition-all duration-500 transform -translate-x-8 group-hover:translate-x-0 cursor-pointer">
+          class="absolute left-6 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-white/50 dark:bg-black/20 text-black/70 dark:text-white/50 backdrop-blur-md border border-black/10 dark:border-white/10 opacity-0 group-hover:opacity-100 hover:bg-lime-500/40 hover:text-black dark:hover:bg-lime-500/20 dark:hover:text-lime-400 dark:hover:border-lime-500/50 transition-all duration-500 transform -translate-x-8 group-hover:translate-x-0 cursor-pointer">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"></path></svg>
   </button>
 
   <button (click)="nextSlide()" 
-          class="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-black/20 text-white/50 backdrop-blur-md border border-white/10 opacity-0 group-hover:opacity-100 hover:bg-lime-500/20 hover:text-lime-400 hover:border-lime-500/50 transition-all duration-500 transform translate-x-8 group-hover:translate-x-0 cursor-pointer">
+          class="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-white/50 dark:bg-black/20 text-black/70 dark:text-white/50 backdrop-blur-md border border-black/10 dark:border-white/10 opacity-0 group-hover:opacity-100 hover:bg-lime-500/40 hover:text-black dark:hover:bg-lime-500/20 dark:hover:text-lime-400 dark:hover:border-lime-500/50 transition-all duration-500 transform translate-x-8 group-hover:translate-x-0 cursor-pointer">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"></path></svg>
   </button>
 
@@ -29,7 +30,10 @@
     @for (slide of slides; track slide.image; let i = $index) {
       <button (click)="goToSlide(i)"
               class="h-1 rounded-full transition-all duration-500 cursor-pointer"
-              [ngClass]="{'w-12 bg-lime-400 shadow-[0_0_10px_rgba(163,230,53,0.6)]': currentSlide === i, 'w-6 bg-white/30 hover:bg-white/60': currentSlide !== i}">
+              [ngClass]="{
+                'w-12 bg-lime-500 dark:bg-lime-400 shadow-[0_0_10px_rgba(132,204,22,0.8)] dark:shadow-[0_0_10px_rgba(163,230,53,0.6)]': currentSlide === i, 
+                'w-6 bg-black/30 hover:bg-black/50 dark:bg-white/30 dark:hover:bg-white/60': currentSlide !== i
+              }">
       </button>
     }
   </div>
