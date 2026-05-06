@@ -45,3 +45,153 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #bef264;
 }
+/* Animación Dramática para el Título Principal */
+@keyframes dramaticEntrance {
+  0% {
+    opacity: 0;
+    letter-spacing: -0.5em;
+    transform: translateY(100px) scale(0.8) skewY(10deg);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: normal;
+    transform: translateY(0) scale(1) skewY(0deg);
+    filter: blur(0);
+  }
+}
+
+/* Animación Dramática de Scroll (Entrada y Salida) */
+@keyframes dramaticScroll {
+  0% {
+    opacity: 0;
+    letter-spacing: -0.5em;
+    transform: translateY(100px) scale(0.8);
+    filter: blur(0);
+  }
+  20%, 80% {
+    opacity: 1;
+    letter-spacing: normal;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) scale(1.1);
+    filter: blur(10px);
+  }
+}
+
+/* ============================================================
+   NUEVAS ANIMACIONES DE SCROLL MÁS DINÁMICAS (NÍTIDAS)
+   ============================================================ */
+
+/* 🎭 TÍTULO PRINCIPAL: Movimiento Dramático y Nitidez Total */
+@keyframes highEnergyDramaticScroll {
+  /* Entrada (cuando asoma por abajo) */
+  0% {
+    opacity: 0;
+    transform: translateY(150px) scale(0.6); /* Más lejos y más pequeño */
+  }
+  
+  /* Punto Central (Nítido y visible en el centro) */
+  25%, 75% {
+    opacity: 1;
+    transform: translateY(0) scale(1); /* Perfecto */
+  }
+  
+  /* Salida (cuando se va por arriba) */
+  100% {
+    opacity: 0;
+    transform: translateY(-150px) scale(1.4); /* Más lejos y más grande */
+  }
+}
+
+
+@keyframes elasticTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) scale(0.7);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) scale(1.2);
+  }
+}
+
+@keyframes elasticTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) scale(0.7);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) scale(1.2);
+  }
+}
+
+@keyframes slideInLeftDrammatic {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Entrada desde la derecha */
+@keyframes slideInRightDrammatic {
+  0% {
+    opacity: 0;
+    transform: translateX(150px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes cinematicSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(150px) scale(0.7) rotateX(-10deg);
+  }
+  /* Estado perfecto cuando el elemento está en el centro de la pantalla */
+  50% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateX(0deg);
+  }
+  /* Se va hacia arriba */
+  100% {
+    opacity: 0;
+    transform: translateY(-150px) scale(1.1) rotateX(10deg);
+  }
+}
+
+/* Aplicamos la línea de tiempo de scroll */
+.scroll-dynamic-move {
+  /* Esto activa el modo ida y vuelta sincronizado con el scroll */
+  view-timeline-name: --revealer;
+  view-timeline-axis: block;
+  
+  animation: cinematicSlide linear both;
+  animation-timeline: --revealer;
+  
+  /* Ajustamos el rango para que se note mucho el movimiento */
+  animation-range: entry 0% exit 100%;
+}
+
+/* Para que no se vea nada antes de que empiece la animación */
+.scroll-dynamic-move {
+  will-change: transform, opacity;
+}
