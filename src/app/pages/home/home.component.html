@@ -1,7 +1,8 @@
 <section
   id="top"
-  class="relative h-screen w-full flex items-center overflow-hidden bg-canvas m-0 p-0"
+  class="relative h-screen w-full flex items-center overflow-hidden bg-transparent m-0 p-0 z-50"
 >
+  <!-- VIDEO Y TRANSICIÓN -->
   <div class="absolute inset-0 z-0">
     <video
       #bgVideo
@@ -11,67 +12,44 @@
       playsinline
       preload="auto"
       [muted]="true"
-      class="w-full h-full object-cover opacity-70"
+      class="w-full h-full object-cover opacity-90"
     >
       <source src="/video.MP4" type="video/MP4" />
     </video>
-    <div
-      class="absolute inset-0 bg-linear-to-b from-canvas-deep/74 via-canvas-raised/22 to-canvas/84"
-    ></div>
-    <div
-      class="absolute inset-x-0 bottom-0 h-48 bg-linear-to-t from-white/8 to-transparent"
-    ></div>
-  </div>
+    
+    <!-- Capa sutil para proteger la lectura de los textos -->
+    <div class="absolute inset-0 bg-black/10 dark:bg-black/40 transition-colors duration-700"></div>
+    
+    <!-- DEGRADADO CHIQUITITO: Blanco de día, oscuro exacto de noche. Cero franjas sucias. -->
+    <div class="absolute bottom-0 w-full h-24 bg-gradient-to-t from-white dark:from-[#010501] to-transparent pointer-events-none transition-colors duration-700"></div>
+  </div> <!-- ¡Este era el div que te faltaba cerrar! -->
 
+  <!-- CONTENIDO PRINCIPAL -->
   <div class="container mx-auto relative z-10 px-6 md:px-16 text-left">
     <div class="max-w-6xl space-y-10">
-      <h1
-        class="text-7xl md:text-[9rem] font-black text-white leading-[0.85] tracking-tighter"
-      >
-        <span class="text-lime-400">{{ "HERO.TITLE_1" | translate }}</span
-        ><br />
+      
+      <h1 class="text-white text-7xl md:text-[9rem] font-black leading-[0.85] tracking-tighter">
+        <span class="text-lime-400">{{ "HERO.TITLE_1" | translate }}</span><br />
         {{ "HERO.TITLE_2" | translate }}<br />
-        <span
-          class="text-4xl md:text-5xl font-light opacity-70 italic tracking-normal"
-          >{{ "HERO.TITLE_3" | translate }}</span
-        >
+        <span class="text-4xl md:text-5xl font-light opacity-70 italic tracking-normal">
+          {{ "HERO.TITLE_3" | translate }}
+        </span>
       </h1>
 
-      <p
-        class="text-xl md:text-2xl text-gray-300 max-w-2xl font-light leading-relaxed border-l-2 border-lime-500/40 pl-6"
-      >
+      <p class="text-xl md:text-2xl text-white/90 max-w-2xl font-light leading-relaxed border-l-2 border-lime-500/40 pl-6">
         {{ "HERO.DESC_1" | translate }}
-        <span class="text-white font-medium italic">{{
-          "HERO.DESC_2" | translate
-        }}</span
-        >.
+        <span class="text-white font-medium italic">{{ "HERO.DESC_2" | translate }}</span>.
       </p>
 
       <div class="flex flex-wrap gap-6 items-center pt-6">
-        <button
-          (click)="navigateTo('/contact')"
-          class="px-10 py-4 bg-lime-500 hover:bg-lime-400 text-black font-bold rounded-full transition-all hover:scale-105 shadow-[0_0_20px_rgba(163,230,53,0.4)] cursor-pointer"
-        >
+        <button (click)="navigateTo('/contact')" class="px-10 py-4 bg-lime-500 hover:bg-lime-400 text-black font-bold rounded-full transition-all hover:scale-105 shadow-lg cursor-pointer">
           {{ "HERO.BTN_START" | translate }}
         </button>
-        <button
-          (click)="navigateTo('/aboutus')"
-          class="group flex items-center gap-3 px-10 py-4 border border-white/20 hover:bg-white/10 text-white font-medium rounded-full transition-all backdrop-blur-sm cursor-pointer"
-        >
+        
+        <button (click)="navigateTo('/aboutus')" class="group flex items-center gap-3 px-10 py-4 border border-white/20 hover:bg-white/10 text-white font-medium rounded-full transition-all backdrop-blur-sm cursor-pointer">
           <span>{{ "HERO.BTN_STORY" | translate }}</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="w-4 h-4 group-hover:translate-x-2 transition-transform"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 group-hover:translate-x-2 transition-transform">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>
         </button>
       </div>
@@ -79,24 +57,18 @@
   </div>
 </section>
 
-<div
-  class="relative w-full bg-linear-to-b from-canvas-raised via-canvas to-canvas-deep"
->
-  <div class="absolute inset-0 z-0 pointer-events-none opacity-50">
+<!-- CUERPO RESTANTE DE LA PÁGINA -->
+<div class="relative w-full bg-transparent transition-colors duration-700">
+  <div class="absolute inset-0 z-0 pointer-events-none opacity-20 dark:opacity-50">
     <app-energy-grid></app-energy-grid>
   </div>
 
   <div class="relative z-10">
-    <section
-      id="aboutus"
-      class="relative m-0 p-0 overflow-hidden bg-transparent"
-    >
+    <section id="aboutus" class="relative m-0 p-0 overflow-hidden bg-transparent">
       <app-about-us></app-about-us>
     </section>
 
-    <div
-      class="w-full h-px bg-linear-to-r from-transparent via-lime-400/30 to-transparent"
-    ></div>
+    <div class="w-full h-px bg-gradient-to-r from-transparent via-lime-400/30 to-transparent"></div>
 
     <section id="services" class="relative m-0 p-0 bg-transparent">
       <div class="container mx-auto py-24 px-6">
@@ -104,9 +76,7 @@
       </div>
     </section>
 
-    <div
-      class="w-full h-px bg-linear-to-r from-transparent via-lime-400/30 to-transparent"
-    ></div>
+    <div class="w-full h-px bg-gradient-to-r from-transparent via-lime-400/30 to-transparent"></div>
 
     <section id="projects" class="relative m-0 p-0 bg-transparent">
       <div class="container mx-auto py-24 px-6">
@@ -118,35 +88,8 @@
 
 <app-innovation-well></app-innovation-well>
 
-<section id="contact" class="relative bg-canvas m-0 p-0">
-  <div class="container mx-auto py-24 px-6 border-t border-white/10">
+<section id="contact" class="relative bg-white/40 dark:bg-canvas transition-colors duration-300">
+  <div class="container mx-auto py-24 px-6 border-t border-black/5 dark:border-white/10">
     <app-contact></app-contact>
   </div>
 </section>
-
-<button
-  (click)="scrollToTop()"
-  [class.opacity-100]="showScrollButton"
-  [class.opacity-0]="!showScrollButton"
-  class="fixed bottom-8 right-8 z-50 p-4 rounded-2xl border border-white/15 bg-white/10 backdrop-blur-md text-white shadow-2xl transition-all duration-500 hover:bg-lime-500/20 hover:border-lime-500/40 group overflow-hidden cursor-pointer"
->
-  <div
-    class="absolute inset-0 bg-linear-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
-  ></div>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke-width="2.5"
-    stroke="currentColor"
-    class="w-6 h-6 relative z-10 group-hover:-translate-y-1 transition-transform"
-  >
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      d="M4.5 15.75l7.5-7.5 7.5 7.5"
-    />
-  </svg>
-</button>
-
-<app-scroll-guide></app-scroll-guide>

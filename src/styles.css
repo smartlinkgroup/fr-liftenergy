@@ -1,14 +1,22 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 @import "./styles/tailwind-theme.css";
 
 /* EFECTO DE SCROLL SUAVE GLOBAL */
 html {
   scroll-behavior: smooth;
-  background-color: var(--color-canvas);
 }
 
+/* --- MODO CLARO (El traje de día) --- */
 body {
   margin: 0;
+  background-color: #f8fafc; /* Un color perla muy limpio y nítido */
+  color: #0f172a; /* Texto oscuro para que se lea bien */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* --- MODO OSCURO (El traje de noche, tu diseño original) --- */
+.dark body {
   background:
     radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 32%),
     linear-gradient(
@@ -20,7 +28,7 @@ body {
   color: var(--color-copy-strong);
 }
 
-/* Personaliza la barra de scroll lateral */
+/* --- Personaliza la barra de scroll lateral --- */
 ::-webkit-scrollbar {
   width: 8px;
 }

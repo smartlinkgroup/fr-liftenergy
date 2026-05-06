@@ -1,76 +1,48 @@
+<!-- SECCIÓN DE SERVICIOS PRINCIPALES -->
 <section
-  class="py-24 relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/4 backdrop-blur-sm shadow-[0_24px_60px_rgba(0,0,0,0.12)]"
+  class="py-24 relative overflow-hidden rounded-[2.5rem] border border-white/40 dark:border-white/10 bg-white/20 dark:bg-white/4 backdrop-blur-md shadow-xl dark:shadow-[0_24px_60px_rgba(0,0,0,0.12)] transition-all duration-700"
 >
-  <div
-    class="absolute top-0 left-1/4 w-96 h-96 bg-lime-500/5 blur-[120px] rounded-full pointer-events-none"
-  ></div>
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-lime-500/10 blur-[120px] rounded-full pointer-events-none"></div>
 
   <div class="container mx-auto px-6 relative z-10">
-    <h2
-      class="text-5xl md:text-7xl font-black text-center mb-20 text-white tracking-tighter"
-    >
+    <h2 class="text-5xl md:text-7xl font-black text-center mb-20 text-black dark:text-white tracking-tighter transition-all duration-700">
       {{ "SERVICES_PAGE.TITLE_CORE" | translate }}
-      <span class="text-lime-400">{{
-        "SERVICES_PAGE.TITLE_SERVICES" | translate
-      }}</span>
+      <span class="text-lime-600 dark:text-lime-400">{{ "SERVICES_PAGE.TITLE_SERVICES" | translate }}</span>
     </h2>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- SERVICIO 01: MONITOR COG -->
       <div class="service-card group">
         <div class="flex items-center mb-6">
           <div class="icon-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-monitor-cog"
-            >
-              <path d="M12 17v4" />
-              <path d="m14.305 7.53.923-.382" />
-              <path d="m15.228 4.852-.923-.383" />
-              <path d="m16.852 3.228-.383-.924" />
-              <path d="m16.852 8.772-.383.923" />
-              <path d="m19.148 3.228.383-.924" />
-              <path d="m19.53 9.696-.382-.924" />
-              <path d="m20.772 4.852.924-.383" />
-              <path d="m20.772 7.148.924.383" />
-              <path
-                d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7"
-              />
-              <path d="M8 21h8" />
-              <circle cx="18" cy="6" r="3" />
+            <!-- AQUÍ ESTÁ EL VERDECITO: text-lime-500 dark:text-lime-400 -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-cog text-lime-500 dark:text-lime-400 transition-colors duration-700">
+              <path d="M12 17v4" /><path d="m14.305 7.53.923-.382" /><path d="m15.228 4.852-.923-.383" /><path d="m16.852 3.228-.383-.924" /><path d="m16.852 8.772-.383.923" /><path d="m19.148 3.228.383-.924" /><path d="m19.53 9.696-.382-.924" /><path d="m20.772 4.852.924-.383" /><path d="m20.772 7.148.924.383" /><path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" /><path d="M8 21h8" /><circle cx="18" cy="6" r="3" />
             </svg>
           </div>
-          <h3
-            class="text-2xl font-bold text-white ml-4 group-hover:text-lime-400 transition-colors"
-          >
+          <h3 class="text-2xl font-bold text-black dark:text-white ml-4 group-hover:text-lime-600 dark:group-hover:text-lime-400 transition-all duration-700">
             {{ "SERVICES_PAGE.S1.TITLE" | translate }}
           </h3>
         </div>
-        <p class="text-gray-400 mb-6 leading-relaxed">
+        <p class="text-black dark:text-white mb-6 leading-relaxed transition-all duration-700">
           {{ "SERVICES_PAGE.S1.DESC" | translate }}
         </p>
         <ul class="space-y-3 mb-8">
-          <li class="flex items-start text-sm text-gray-300">
-            <span class="mr-3 text-lime-400 font-bold">✔</span>
+          <li class="flex items-start text-sm text-black dark:text-white transition-all duration-700">
+            <span class="mr-3 text-lime-600 dark:text-lime-400 font-bold">✔</span>
             {{ "SERVICES_PAGE.S1.L1" | translate }}
           </li>
-          <li class="flex items-start text-sm text-gray-300">
-            <span class="mr-3 text-lime-400 font-bold">✔</span>
+          <li class="flex items-start text-sm text-black dark:text-white transition-all duration-700">
+            <span class="mr-3 text-lime-600 dark:text-lime-400 font-bold">✔</span>
             {{ "SERVICES_PAGE.S1.L2" | translate }}
           </li>
-          <li class="flex items-start text-sm text-gray-300">
-            <span class="mr-3 text-lime-400 font-bold">✔</span>
+          <li class="flex items-start text-sm text-black dark:text-white transition-all duration-700">
+            <span class="mr-3 text-lime-600 dark:text-lime-400 font-bold">✔</span>
             {{ "SERVICES_PAGE.S1.L3" | translate }}
           </li>
-          <li class="flex items-start text-sm text-gray-300">
-            <span class="mr-3 text-lime-400 font-bold">✔</span>
+          <li class="flex items-start text-sm text-black dark:text-white transition-all duration-700">
+            <span class="mr-3 text-lime-600 dark:text-lime-400 font-bold">✔</span>
             {{ "SERVICES_PAGE.S1.L4" | translate }}
           </li>
         </ul>
@@ -79,194 +51,99 @@
         </button>
       </div>
 
+      <!-- SERVICIO 02: REFRESH CW -->
       <div class="service-card group">
         <div class="flex items-center mb-6">
           <div class="icon-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-refresh-cw"
-            >
-              <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
-              <path d="M21 3v5h-5" />
-              <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
-              <path d="M8 16H3v5" />
+            <!-- AQUÍ ESTÁ EL VERDECITO: text-lime-500 dark:text-lime-400 -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw text-lime-500 dark:text-lime-400 transition-colors duration-700">
+              <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /><path d="M21 3v5h-5" /><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /><path d="M8 16H3v5" />
             </svg>
           </div>
-          <h3
-            class="text-2xl font-bold text-white ml-4 group-hover:text-lime-400 transition-colors"
-          >
+          <h3 class="text-2xl font-bold text-black dark:text-white ml-4 group-hover:text-lime-600 dark:group-hover:text-lime-400 transition-all duration-700">
             {{ "SERVICES_PAGE.S2.TITLE" | translate }}
           </h3>
         </div>
-        <p class="text-gray-400 mb-6 leading-relaxed">
+        <p class="text-black dark:text-white mb-6 leading-relaxed transition-all duration-700">
           {{ "SERVICES_PAGE.S2.DESC" | translate }}
         </p>
-        <ul class="space-y-3 mb-8">
-          <li class="flex items-start text-sm text-gray-300">
-            <span class="mr-3 text-lime-400 font-bold">✔</span>
-            {{ "SERVICES_PAGE.S2.L1" | translate }}
-          </li>
-          <li class="flex items-start text-sm text-gray-300">
-            <span class="mr-3 text-lime-400 font-bold">✔</span>
-            {{ "SERVICES_PAGE.S2.L2" | translate }}
-          </li>
-          <li class="flex items-start text-sm text-gray-300">
-            <span class="mr-3 text-lime-400 font-bold">✔</span>
-            {{ "SERVICES_PAGE.S2.L3" | translate }}
-          </li>
-          <li class="flex items-start text-sm text-gray-300">
-            <span class="mr-3 text-lime-400 font-bold">✔</span>
-            {{ "SERVICES_PAGE.S2.L4" | translate }}
-          </li>
+        <ul class="space-y-3 mb-8 text-black dark:text-white">
+          <li class="flex items-start text-sm"><span class="mr-3 text-lime-600 dark:text-lime-400 font-bold">✔</span> {{ "SERVICES_PAGE.S2.L1" | translate }}</li>
+          <li class="flex items-start text-sm"><span class="mr-3 text-lime-600 dark:text-lime-400 font-bold">✔</span> {{ "SERVICES_PAGE.S2.L2" | translate }}</li>
+          <li class="flex items-start text-sm"><span class="mr-3 text-lime-600 dark:text-lime-400 font-bold">✔</span> {{ "SERVICES_PAGE.S2.L3" | translate }}</li>
+          <li class="flex items-start text-sm"><span class="mr-3 text-lime-600 dark:text-lime-400 font-bold">✔</span> {{ "SERVICES_PAGE.S2.L4" | translate }}</li>
         </ul>
-        <button (click)="goToRoutes('/contact')" class="service-btn">
-          {{ "SERVICES_PAGE.S2.BTN" | translate }}
-        </button>
+        <button (click)="goToRoutes('/contact')" class="service-btn">{{ "SERVICES_PAGE.S2.BTN" | translate }}</button>
       </div>
 
+      <!-- SERVICIO 03: FACTORY -->
       <div class="service-card group">
         <div class="flex items-center mb-6">
           <div class="icon-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-factory"
-            >
-              <path d="M12 16h.01" />
-              <path d="M16 16h.01" />
-              <path
-                d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"
-              />
-              <path d="M8 16h.01" />
+            <!-- AQUÍ ESTÁ EL VERDECITO: text-lime-500 dark:text-lime-400 -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-factory text-lime-500 dark:text-lime-400 transition-colors duration-700">
+              <path d="M12 16h.01" /><path d="M16 16h.01" /><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" /><path d="M8 16h.01" />
             </svg>
           </div>
-          <h3
-            class="text-2xl font-bold text-white ml-4 group-hover:text-lime-400 transition-colors"
-          >
+          <h3 class="text-2xl font-bold text-black dark:text-white ml-4 group-hover:text-lime-600 dark:group-hover:text-lime-400 transition-all duration-700">
             {{ "SERVICES_PAGE.S3.TITLE" | translate }}
           </h3>
         </div>
-        <p class="text-gray-400 mb-6 leading-relaxed">
+        <p class="text-black dark:text-white mb-6 leading-relaxed transition-all duration-700">
           {{ "SERVICES_PAGE.S3.DESC" | translate }}
         </p>
-        <ul class="space-y-3 mb-8">
-          <li class="flex items-start text-sm text-gray-300">
-            <span class="mr-3 text-lime-400 font-bold">✔</span>
-            {{ "SERVICES_PAGE.S3.L1" | translate }}
-          </li>
-          <li class="flex items-start text-sm text-gray-300">
-            <span class="mr-3 text-lime-400 font-bold">✔</span>
-            {{ "SERVICES_PAGE.S3.L2" | translate }}
-          </li>
-          <li class="flex items-start text-sm text-gray-300">
-            <span class="mr-3 text-lime-400 font-bold">✔</span>
-            {{ "SERVICES_PAGE.S3.L3" | translate }}
-          </li>
-          <li class="flex items-start text-sm text-gray-300">
-            <span class="mr-3 text-lime-400 font-bold">✔</span>
-            {{ "SERVICES_PAGE.S3.L4" | translate }}
-          </li>
+        <ul class="space-y-3 mb-8 text-black dark:text-white">
+          <li class="flex items-start text-sm"><span class="mr-3 text-lime-600 dark:text-lime-400 font-bold">✔</span> {{ "SERVICES_PAGE.S3.L1" | translate }}</li>
+          <li class="flex items-start text-sm"><span class="mr-3 text-lime-600 dark:text-lime-400 font-bold">✔</span> {{ "SERVICES_PAGE.S3.L2" | translate }}</li>
+          <li class="flex items-start text-sm"><span class="mr-3 text-lime-600 dark:text-lime-400 font-bold">✔</span> {{ "SERVICES_PAGE.S3.L3" | translate }}</li>
+          <li class="flex items-start text-sm"><span class="mr-3 text-lime-600 dark:text-lime-400 font-bold">✔</span> {{ "SERVICES_PAGE.S3.L4" | translate }}</li>
         </ul>
-        <button (click)="goToRoutes('/contact')" class="service-btn">
-          {{ "SERVICES_PAGE.S3.BTN" | translate }}
-        </button>
+        <button (click)="goToRoutes('/contact')" class="service-btn">{{ "SERVICES_PAGE.S3.BTN" | translate }}</button>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SECCIÓN WORKFLOW -->
 <section
-  class="mt-10 py-24 rounded-[2.5rem] border border-white/10 bg-linear-to-br from-panel-top/90 via-panel-mid/86 to-panel-bottom/90 shadow-[0_24px_60px_rgba(0,0,0,0.18)] backdrop-blur-xl"
+  class="mt-10 py-24 rounded-[2.5rem] border border-white/40 dark:border-white/10 bg-white/30 dark:bg-linear-to-br dark:from-panel-top/90 dark:via-panel-mid/86 dark:to-panel-bottom/90 shadow-2xl backdrop-blur-xl transition-all duration-700"
 >
   <div class="container mx-auto px-6">
-    <h2
-      class="text-4xl font-black text-center mb-20 text-white tracking-[0.2em] uppercase opacity-70"
-    >
+    <h2 class="text-4xl font-black text-center mb-20 text-black dark:text-white tracking-[0.2em] uppercase opacity-70 transition-all duration-700">
       {{ "SERVICES_PAGE.WORKFLOW_TITLE" | translate }}
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <!-- PASO 01 -->
       <div class="relative group">
-        <div
-          class="text-7xl font-black text-white/8 absolute -top-12 left-0 group-hover:text-white/14 transition-all duration-500"
-        >
-          01
-        </div>
-        <h3 class="text-xl font-bold text-white mb-4 relative z-10">
-          {{ "SERVICES_PAGE.WORK.T1" | translate }}
-        </h3>
-        <p class="text-gray-300 text-sm leading-relaxed">
-          {{ "SERVICES_PAGE.WORK.D1" | translate }}
-        </p>
-        <div
-          class="h-1 w-12 bg-lime-500 mt-6 group-hover:w-full transition-all duration-700"
-        ></div>
+        <div class="text-7xl font-black text-black/5 dark:text-white/8 absolute -top-12 left-0 group-hover:text-lime-500/20 transition-all duration-500">01</div>
+        <h3 class="text-xl font-bold text-black dark:text-white mb-4 relative z-10 transition-all duration-700">{{ "SERVICES_PAGE.WORK.T1" | translate }}</h3>
+        <p class="text-black dark:text-white text-sm leading-relaxed transition-all duration-700">{{ "SERVICES_PAGE.WORK.D1" | translate }}</p>
+        <div class="h-1 w-12 bg-lime-500 mt-6 group-hover:w-full transition-all duration-700"></div>
       </div>
 
+      <!-- PASO 02 -->
       <div class="relative group">
-        <div
-          class="text-7xl font-black text-white/8 absolute -top-12 left-0 group-hover:text-white/14 transition-all duration-500"
-        >
-          02
-        </div>
-        <h3 class="text-xl font-bold text-white mb-4 relative z-10">
-          {{ "SERVICES_PAGE.WORK.T2" | translate }}
-        </h3>
-        <p class="text-gray-300 text-sm leading-relaxed">
-          {{ "SERVICES_PAGE.WORK.D2" | translate }}
-        </p>
-        <div
-          class="h-1 w-12 bg-lime-500 mt-6 group-hover:w-full transition-all duration-700"
-        ></div>
+        <div class="text-7xl font-black text-black/5 dark:text-white/8 absolute -top-12 left-0 group-hover:text-lime-600/20 transition-all duration-500">02</div>
+        <h3 class="text-xl font-bold text-black dark:text-white mb-4 relative z-10 transition-all duration-700">{{ "SERVICES_PAGE.WORK.T2" | translate }}</h3>
+        <p class="text-black dark:text-white text-sm leading-relaxed transition-all duration-700">{{ "SERVICES_PAGE.WORK.D2" | translate }}</p>
+        <div class="h-1 w-12 bg-lime-500 mt-6 group-hover:w-full transition-all duration-700"></div>
       </div>
 
+      <!-- PASO 03 -->
       <div class="relative group">
-        <div
-          class="text-7xl font-black text-white/8 absolute -top-12 left-0 group-hover:text-white/14 transition-all duration-500"
-        >
-          03
-        </div>
-        <h3 class="text-xl font-bold text-white mb-4 relative z-10">
-          {{ "SERVICES_PAGE.WORK.T3" | translate }}
-        </h3>
-        <p class="text-gray-300 text-sm leading-relaxed">
-          {{ "SERVICES_PAGE.WORK.D3" | translate }}
-        </p>
-        <div
-          class="h-1 w-12 bg-lime-500 mt-6 group-hover:w-full transition-all duration-700"
-        ></div>
+        <div class="text-7xl font-black text-black/5 dark:text-white/8 absolute -top-12 left-0 group-hover:text-lime-600/20 transition-all duration-500">03</div>
+        <h3 class="text-xl font-bold text-black dark:text-white mb-4 relative z-10 transition-all duration-700">{{ "SERVICES_PAGE.WORK.T3" | translate }}</h3>
+        <p class="text-black dark:text-white text-sm leading-relaxed transition-all duration-700">{{ "SERVICES_PAGE.WORK.D3" | translate }}</p>
+        <div class="h-1 w-12 bg-lime-500 mt-6 group-hover:w-full transition-all duration-700"></div>
       </div>
 
+      <!-- PASO 04 -->
       <div class="relative group">
-        <div
-          class="text-7xl font-black text-white/8 absolute -top-12 left-0 group-hover:text-white/14 transition-all duration-500"
-        >
-          04
-        </div>
-        <h3 class="text-xl font-bold text-white mb-4 relative z-10">
-          {{ "SERVICES_PAGE.WORK.T4" | translate }}
-        </h3>
-        <p class="text-gray-300 text-sm leading-relaxed">
-          {{ "SERVICES_PAGE.WORK.D4" | translate }}
-        </p>
-        <div
-          class="h-1 w-12 bg-lime-500 mt-6 group-hover:w-full transition-all duration-700"
-        ></div>
+        <div class="text-7xl font-black text-black/5 dark:text-white/8 absolute -top-12 left-0 group-hover:text-lime-600/20 transition-all duration-500">04</div>
+        <h3 class="text-xl font-bold text-black dark:text-white mb-4 relative z-10 transition-all duration-700">{{ "SERVICES_PAGE.WORK.T4" | translate }}</h3>
+        <p class="text-black dark:text-white text-sm leading-relaxed transition-all duration-700">{{ "SERVICES_PAGE.WORK.D4" | translate }}</p>
+        <div class="h-1 w-12 bg-lime-500 mt-6 group-hover:w-full transition-all duration-700"></div>
       </div>
     </div>
   </div>
