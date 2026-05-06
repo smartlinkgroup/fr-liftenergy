@@ -74,7 +74,12 @@
     "CARD5_TITLE": "Control Operativo Remoto",
     "CARD5_DESC": "Ejecute acciones directamente desde la interfaz de forma segura.",
     "CARD6_TITLE": "Soluciones e Integraciones a Medida",
-    "CARD6_DESC": "¿Necesita una función específica? Nuestra plataforma es flexible."
+    "CARD6_DESC": "¿Necesita una función específica? Nuestra plataforma es flexible.",
+    "AI_TAG": "POTENCIADO POR I.A.",
+    "AI_TITLE_MAIN": "Análisis Dinagráfico con",
+    "AI_TITLE_HIGHLIGHT": "Inteligencia Artificial",
+    "AI_DESC": "Descubre cómo nuestra Inteligencia Artificial es capaz de interpretar y generar cartas dinagráficas en tiempo real. Optimiza la producción de tus pozos dejando que la IA analice patrones que el ojo humano no puede ver."
+  
   },
   "SERVICES_PAGE": {
     "TITLE_CORE": "Servicios",

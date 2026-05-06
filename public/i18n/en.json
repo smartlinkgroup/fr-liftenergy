@@ -74,7 +74,11 @@
     "CARD5_TITLE": "Remote Operational Control",
     "CARD5_DESC": "Execute actions directly from the interface securely and with authorization.",
     "CARD6_TITLE": "Custom Solutions & Integrations",
-    "CARD6_DESC": "Need a specific feature? Our platform is built to be flexible."
+    "CARD6_DESC": "Need a specific feature? Our platform is built to be flexible.",
+    "AI_TAG": "POWERED BY A.I.",
+    "AI_TITLE_MAIN": "Dynagraph Analysis with",
+    "AI_TITLE_HIGHLIGHT": "Artificial Intelligence",
+    "AI_DESC": "Discover how our Artificial Intelligence is capable of interpreting and generating dynagraph cards in real time. Optimize your well production by letting AI analyze patterns that the human eye cannot see."
   },
   "SERVICES_PAGE": {
     "TITLE_CORE": "Core",

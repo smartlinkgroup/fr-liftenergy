@@ -1,11 +1,10 @@
 <!-- SECCIÓN DE SERVICIOS PRINCIPALES -->
 <section
-  class="py-24 relative overflow-hidden rounded-[2.5rem] border border-gray-200 dark:border-white/10 bg-white/40 dark:bg-white/4 backdrop-blur-sm shadow-xl dark:shadow-[0_24px_60px_rgba(0,0,0,0.12)] transition-all duration-700"
+  class="py-24 relative overflow-hidden rounded-[2.5rem] border border-white/40 dark:border-white/10 bg-white/20 dark:bg-white/4 backdrop-blur-md shadow-xl dark:shadow-[0_24px_60px_rgba(0,0,0,0.12)] transition-all duration-700"
 >
-  <div class="absolute top-0 left-1/4 w-96 h-96 bg-lime-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-lime-500/10 blur-[120px] rounded-full pointer-events-none"></div>
 
   <div class="container mx-auto px-6 relative z-10">
-    <!-- TÍTULO: Negro de día / Blanco de noche -->
     <h2 class="text-5xl md:text-7xl font-black text-center mb-20 text-black dark:text-white tracking-tighter transition-all duration-700">
       {{ "SERVICES_PAGE.TITLE_CORE" | translate }}
       <span class="text-lime-600 dark:text-lime-400">{{ "SERVICES_PAGE.TITLE_SERVICES" | translate }}</span>
@@ -17,7 +16,8 @@
       <div class="service-card group">
         <div class="flex items-center mb-6">
           <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-cog text-black dark:text-lime-400 transition-colors duration-700">
+            <!-- AQUÍ ESTÁ EL VERDECITO: text-lime-500 dark:text-lime-400 -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-cog text-lime-500 dark:text-lime-400 transition-colors duration-700">
               <path d="M12 17v4" /><path d="m14.305 7.53.923-.382" /><path d="m15.228 4.852-.923-.383" /><path d="m16.852 3.228-.383-.924" /><path d="m16.852 8.772-.383.923" /><path d="m19.148 3.228.383-.924" /><path d="m19.53 9.696-.382-.924" /><path d="m20.772 4.852.924-.383" /><path d="m20.772 7.148.924.383" /><path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" /><path d="M8 21h8" /><circle cx="18" cy="6" r="3" />
             </svg>
           </div>
@@ -55,7 +55,8 @@
       <div class="service-card group">
         <div class="flex items-center mb-6">
           <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw text-black dark:text-lime-400 transition-colors duration-700">
+            <!-- AQUÍ ESTÁ EL VERDECITO: text-lime-500 dark:text-lime-400 -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw text-lime-500 dark:text-lime-400 transition-colors duration-700">
               <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /><path d="M21 3v5h-5" /><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /><path d="M8 16H3v5" />
             </svg>
           </div>
@@ -79,7 +80,8 @@
       <div class="service-card group">
         <div class="flex items-center mb-6">
           <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-factory text-black dark:text-lime-400 transition-colors duration-700">
+            <!-- AQUÍ ESTÁ EL VERDECITO: text-lime-500 dark:text-lime-400 -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-factory text-lime-500 dark:text-lime-400 transition-colors duration-700">
               <path d="M12 16h.01" /><path d="M16 16h.01" /><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" /><path d="M8 16h.01" />
             </svg>
           </div>
@@ -102,9 +104,9 @@
   </div>
 </section>
 
-<!-- SECCIÓN WORKFLOW: NUESTRO FLUJO -->
+<!-- SECCIÓN WORKFLOW -->
 <section
-  class="mt-10 py-24 rounded-[2.5rem] border border-gray-200 dark:border-white/10 bg-white/60 dark:bg-linear-to-br dark:from-panel-top/90 dark:via-panel-mid/86 dark:to-panel-bottom/90 shadow-2xl backdrop-blur-xl transition-all duration-700"
+  class="mt-10 py-24 rounded-[2.5rem] border border-white/40 dark:border-white/10 bg-white/30 dark:bg-linear-to-br dark:from-panel-top/90 dark:via-panel-mid/86 dark:to-panel-bottom/90 shadow-2xl backdrop-blur-xl transition-all duration-700"
 >
   <div class="container mx-auto px-6">
     <h2 class="text-4xl font-black text-center mb-20 text-black dark:text-white tracking-[0.2em] uppercase opacity-70 transition-all duration-700">
@@ -114,15 +116,9 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
       <!-- PASO 01 -->
       <div class="relative group">
-        <div class="text-7xl font-black text-black/5 dark:text-white/8 absolute -top-12 left-0 group-hover:text-lime-500/20 transition-all duration-500">
-          01
-        </div>
-        <h3 class="text-xl font-bold text-black dark:text-white mb-4 relative z-10 transition-all duration-700">
-          {{ "SERVICES_PAGE.WORK.T1" | translate }}
-        </h3>
-        <p class="text-black dark:text-white text-sm leading-relaxed transition-all duration-700">
-          {{ "SERVICES_PAGE.WORK.D1" | translate }}
-        </p>
+        <div class="text-7xl font-black text-black/5 dark:text-white/8 absolute -top-12 left-0 group-hover:text-lime-500/20 transition-all duration-500">01</div>
+        <h3 class="text-xl font-bold text-black dark:text-white mb-4 relative z-10 transition-all duration-700">{{ "SERVICES_PAGE.WORK.T1" | translate }}</h3>
+        <p class="text-black dark:text-white text-sm leading-relaxed transition-all duration-700">{{ "SERVICES_PAGE.WORK.D1" | translate }}</p>
         <div class="h-1 w-12 bg-lime-500 mt-6 group-hover:w-full transition-all duration-700"></div>
       </div>
 

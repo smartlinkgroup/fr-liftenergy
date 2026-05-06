@@ -1,6 +1,6 @@
 <!-- SECCIÓN DE ENCABEZADO DE PROYECTOS -->
 <section
-  class="relative pt-32 pb-20 overflow-hidden rounded-[2.5rem] border border-gray-200 dark:border-white/10 bg-white/30 dark:bg-white/4 backdrop-blur-md shadow-lg dark:shadow-2xl transition-all duration-500"
+  class="relative pt-32 pb-20 overflow-hidden rounded-[2.5rem] border border-white/40 dark:border-white/10 bg-white/20 dark:bg-white/4 backdrop-blur-md shadow-lg dark:shadow-2xl transition-all duration-500"
 >
   <!-- Brillo de fondo: Muy sutil para que no ensucie el texto -->
   <div
@@ -8,37 +8,34 @@
   ></div>
 
   <div class="container mx-auto px-6 relative z-10 text-center">
-    <!-- SUBTÍTULO: Verde más sólido para que no desaparezca -->
-   <span
-  class="inline-block text-lime-500 dark:text-lime-400 text-xs uppercase tracking-[1em] font-black mb-4 transition-colors"
->
-  {{ "PROJECTS_PAGE.SUBTITLE" | translate }}
-</span>
+    <!-- SUBTÍTULO -->
+    <span
+      class="inline-block text-lime-600 dark:text-lime-400 text-xs uppercase tracking-[1em] font-black mb-4 transition-colors"
+    >
+      {{ "PROJECTS_PAGE.SUBTITLE" | translate }}
+    </span>
 
-   <h1 class="text-6xl md:text-7xl font-black text-black dark:text-white uppercase tracking-tighter mb-6 italic transition-colors">
-  {{ "PROJECTS_PAGE.TITLE" | translate }}
-  
-  <span
-    class="text-transparent border-stroke-light dark:border-stroke-dark"
-    style="-webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.7);"
-  >
-    {{ "PROJECTS_PAGE.TITLE_HIGHLIGHT" | translate }}
-  </span>
-</h1>
+    <h1 class="text-6xl md:text-7xl font-black text-black dark:text-white uppercase tracking-tighter mb-6 italic transition-colors">
+      <span>{{ "PROJECTS_PAGE.TITLE" | translate }}</span>
+      <!-- AQUÍ ESTÁ LA PALABRA PROJECTS AGREGADA CON EL BORDE CORREGIDO -->
+      <span
+        class="text-transparent [-webkit-text-stroke:2px_black] dark:[-webkit-text-stroke:2px_white] ml-3"
+      >
+        PROJECTS
+      </span>
+    </h1>
     <!-- DESCRIPCIÓN: Gris oscuro de día para que se lea perfecto -->
     <p
-      class="text-xl text-gray-700 dark:text-gray-400 max-w-2xl mx-auto font-medium dark:font-light leading-relaxed transition-colors"
+      class="text-xl text-gray-800 dark:text-gray-400 max-w-2xl mx-auto font-medium dark:font-light leading-relaxed transition-colors"
     >
       {{ "PROJECTS_PAGE.DESC_MAIN" | translate }}
     </p>
   </div>
 </section>
 
-<!-- El resto de tu código de filtros y grilla sigue igual abajo -->
-
 <!-- SECCIÓN DE FILTROS Y GRILLA -->
 <section
-  class="py-12 mt-10 relative rounded-[2.5rem] border border-gray-200 dark:border-white/10 bg-white/60 dark:bg-linear-to-br dark:from-panel-top/88 dark:via-panel-mid/84 dark:to-panel-bottom/88 shadow-2xl backdrop-blur-xl transition-all duration-500"
+  class="py-12 mt-10 relative rounded-[2.5rem] border border-white/40 dark:border-white/10 bg-white/30 dark:bg-linear-to-br dark:from-panel-top/88 dark:via-panel-mid/84 dark:to-panel-bottom/88 shadow-2xl backdrop-blur-xl transition-all duration-500"
 >
   <div class="container mx-auto px-6">
     <!-- BOTONES DE FILTRO -->
@@ -49,7 +46,7 @@
         [class.bg-lime-500]="currentFilter === 'all'"
         [class.text-black]="currentFilter === 'all'"
         [class.border-lime-500]="currentFilter === 'all'"
-        [class.bg-gray-100]="currentFilter !== 'all'"
+        [class.bg-white/50]="currentFilter !== 'all'"
         [class.dark:bg-white/8]="currentFilter !== 'all'"
         [class.text-gray-600]="currentFilter !== 'all'"
         [class.dark:text-white/80]="currentFilter !== 'all'"
@@ -65,7 +62,7 @@
         [class.bg-lime-500]="currentFilter === 'industrial'"
         [class.text-black]="currentFilter === 'industrial'"
         [class.border-lime-500]="currentFilter === 'industrial'"
-        [class.bg-gray-100]="currentFilter !== 'industrial'"
+        [class.bg-white/50]="currentFilter !== 'industrial'"
         [class.dark:bg-white/8]="currentFilter !== 'industrial'"
         [class.text-gray-600]="currentFilter !== 'industrial'"
         [class.dark:text-white/80]="currentFilter !== 'industrial'"
@@ -81,7 +78,7 @@
         [class.bg-lime-500]="currentFilter === 'software'"
         [class.text-black]="currentFilter === 'software'"
         [class.border-lime-500]="currentFilter === 'software'"
-        [class.bg-gray-100]="currentFilter !== 'software'"
+        [class.bg-white/50]="currentFilter !== 'software'"
         [class.dark:bg-white/8]="currentFilter !== 'software'"
         [class.text-gray-600]="currentFilter !== 'software'"
         [class.dark:text-white/80]="currentFilter !== 'software'"
@@ -99,11 +96,11 @@
         class="group relative max-w-sm mx-auto p-px rounded-[2.5rem] bg-linear-to-b from-gray-200 dark:from-white/18 to-transparent transition-all duration-500 hover:-translate-y-2"
       >
         <div
-          class="bg-white dark:bg-panel-card/84 backdrop-blur-2xl rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-white/10"
+          class="bg-white/60 dark:bg-panel-card/84 backdrop-blur-2xl rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/40 dark:border-white/10"
         >
           <!-- Imagen del Proyecto -->
           <div
-            class="relative h-60 flex items-center justify-center bg-gray-50 dark:bg-linear-to-br dark:from-surface-soft-start/90 dark:via-surface-soft-mid/86 dark:to-surface-soft-end/82 backdrop-blur-md overflow-hidden p-10"
+            class="relative h-60 flex items-center justify-center bg-gray-50/50 dark:bg-linear-to-br dark:from-surface-soft-start/90 dark:via-surface-soft-mid/86 dark:to-surface-soft-end/82 backdrop-blur-md overflow-hidden p-10"
           >
             <div
               class="absolute w-32 h-32 bg-lime-500/10 dark:bg-lime-500/8 blur-2xl rounded-full"
@@ -138,13 +135,13 @@
               {{ "PROJECTS_PAGE.CARD_SUBTITLE" | translate }}
             </p>
 
-            <p class="text-gray-600 dark:text-gray-300 font-light leading-relaxed mb-10 text-sm">
+            <p class="text-gray-700 dark:text-gray-300 font-medium dark:font-light leading-relaxed mb-10 text-sm">
               {{ "PROJECTS_PAGE.CARD_DESC" | translate }}
             </p>
 
             <button
               (click)="navigateTo('/smartlink')"
-              class="w-full py-4 bg-gray-50 dark:bg-white/7 border border-gray-200 dark:border-white/12 rounded-2xl text-gray-800 dark:text-white hover:text-lime-600 dark:hover:text-lime-400 hover:border-lime-500/50 transition-all duration-500 cursor-pointer text-[10px] font-bold uppercase tracking-[0.3em]"
+              class="w-full py-4 bg-white/50 dark:bg-white/7 border border-white/60 dark:border-white/12 rounded-2xl text-gray-800 dark:text-white hover:text-lime-600 dark:hover:text-lime-400 hover:border-lime-500/50 transition-all duration-500 cursor-pointer text-[10px] font-bold uppercase tracking-[0.3em]"
             >
               {{ "PROJECTS_PAGE.BTN_DETAILS" | translate }}
             </button>
@@ -158,10 +155,10 @@
         class="col-span-full text-center py-20"
       >
        <p
-  class="text-black dark:text-white italic font-bold tracking-[0.4em] text-xs uppercase animate-pulse"
->
-  {{ "PROJECTS_PAGE.COMING_SOON" | translate }}
-</p>
+          class="text-black dark:text-white italic font-bold tracking-[0.4em] text-xs uppercase animate-pulse"
+        >
+          {{ "PROJECTS_PAGE.COMING_SOON" | translate }}
+        </p>
       </div>
     </div>
   </div>
