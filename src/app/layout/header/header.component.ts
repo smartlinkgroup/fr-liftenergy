@@ -1,8 +1,6 @@
 import { Component, inject, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-
-// 🌟 AGREGADO: Importaciones del traductor
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -76,7 +74,7 @@ export class HeaderComponent {
     setTimeout(() => {
       const element = document.getElementById(id);
       if (element) {
-        // Ajustamos un poco el scroll para que no tape el título si el header es fijo
+      
         const headerOffset = 80;
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
