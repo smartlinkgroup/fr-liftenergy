@@ -74,7 +74,12 @@
     "CARD5_TITLE": "Remote Operational Control",
     "CARD5_DESC": "Execute actions directly from the interface securely and with authorization.",
     "CARD6_TITLE": "Custom Solutions & Integrations",
-    "CARD6_DESC": "Need a specific feature? Our platform is built to be flexible."
+    "CARD6_DESC": "Need a specific feature? Our platform is built to be flexible.",
+    "DINAI_BADGE": "Power by Dinai",
+    "DINAI_TITLE_1": "Analysis of",
+    "DINAI_TITLE_2": "Dynagraphs",
+    "DINAI_DESC": "Precise visualization of load states and well behavior through real-time surface and downhole diagrams."
+
   },
   "SERVICES_PAGE": {
     "TITLE_CORE": "Core",
@@ -143,8 +148,8 @@
     "DAVID_PROF": "Electronics Engineer."
   },
   "CONTACT_PAGE": {
-    "TITLE": "Get in",
-    "TITLE_HIGHLIGHT": "Contact",
+    "TITLE": "Contact",
+    "TITLE_HIGHLIGHT": "Us",
     "OFFICE_TITLE": "Main Office",
     "ADDRESS": "Av. 2 El Milagro, Centro Empresarial del Norte, Floor 4. Maracaibo, Venezuela.",
     "CONTACT_TITLE": "Direct Contact",
