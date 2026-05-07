@@ -92,3 +92,16 @@
   0%, 100% { transform: scale(1); filter: brightness(1); }
   50% { transform: scale(1.4); filter: brightness(1.5); }
 }
+
+/* Smooth and ordered transitions for header: make border-color switch faster
+   than backdrop blur so the divider fades before blur is removed. */
+.site-header {
+  -webkit-transition: border-color 120ms linear, background-color 220ms linear, backdrop-filter 320ms linear;
+  transition: border-color 120ms linear, background-color 220ms linear, backdrop-filter 320ms linear;
+}
+
+/* Ensure border-color can transition (Tailwind border classes set color).
+   We keep `border-b` always and toggle `border-transparent` to animate. */
+.site-header.border-transparent {
+  border-color: transparent !important;
+}

@@ -70,12 +70,12 @@
    * Se mantiene con suficiente brillo para CTAs sin perder la identidad
    * verde bosque en las utilidades Tailwind existentes.
    */
-  --color-accent-soft: #9acb93;
-  --color-accent: #6fa56a;
-  --color-accent-strong: #4f854c;
-  --color-accent-deep: #2d5c2d;
-  --color-accent-contrast: #041105;
-  --color-accent-glow: rgba(154, 203, 147, 0.42);
+  --color-accent-soft: #a3e635;  
+  --color-accent: #d9f6a8;
+  --color-accent-strong: #79c21f;
+  --color-accent-deep: #4f8016;
+  --color-accent-contrast: #081601;
+  --color-accent-glow: rgba(163, 230, 53, 0.42);
 
   --color-lime-400: var(--color-accent-soft);
   --color-lime-500: var(--color-accent);
@@ -85,4 +85,6 @@
   /* Scrollbar track neutral aligned with the darkest canvas tone.
    * ES: Track de scrollbar neutral alineado con el tono más oscuro del canvas. */
   --color-scroll-track: #061106;
+  /* Footer base: very dark (near-black) but not pure black, slightly greenish */
+  --color-footer: #07110b;
 }
