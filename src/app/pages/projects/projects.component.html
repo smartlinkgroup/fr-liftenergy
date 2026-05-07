@@ -10,21 +10,21 @@
   <div class="container mx-auto px-6 relative z-10 text-center">
     <!-- SUBTÍTULO -->
     <span
-      class="inline-block text-lime-600 dark:text-lime-400 text-xs uppercase tracking-[1em] font-black mb-4 transition-colors"
+      class="inline-block text-lime-800 dark:text-lime-400 text-xs uppercase tracking-[1em] font-black mb-4 transition-colors"
     >
       {{ "PROJECTS_PAGE.SUBTITLE" | translate }}
     </span>
 
     <h1 class="text-6xl md:text-7xl font-black text-black dark:text-white uppercase tracking-tighter mb-6 italic transition-colors">
       <span>{{ "PROJECTS_PAGE.TITLE" | translate }}</span>
-      <!-- AQUÍ ESTÁ LA PALABRA PROJECTS AGREGADA CON EL BORDE CORREGIDO -->
+   
       <span
         class="text-transparent [-webkit-text-stroke:2px_black] dark:[-webkit-text-stroke:2px_white] ml-3"
       >
         PROJECTS
       </span>
     </h1>
-    <!-- DESCRIPCIÓN: Gris oscuro de día para que se lea perfecto -->
+   
     <p
       class="text-xl text-gray-800 dark:text-gray-400 max-w-2xl mx-auto font-medium dark:font-light leading-relaxed transition-colors"
     >
@@ -43,9 +43,9 @@
       <button
         (click)="setFilter('all')"
         class="px-8 py-2 rounded-full font-bold text-[11px] uppercase tracking-widest cursor-pointer transition-all backdrop-blur-md border"
-        [class.bg-lime-500]="currentFilter === 'all'"
+        [class.bg-lime-800]="currentFilter === 'all'"
         [class.text-black]="currentFilter === 'all'"
-        [class.border-lime-500]="currentFilter === 'all'"
+        [class.border-lime-800]="currentFilter === 'all'"
         [class.bg-white/50]="currentFilter !== 'all'"
         [class.dark:bg-white/8]="currentFilter !== 'all'"
         [class.text-gray-600]="currentFilter !== 'all'"
@@ -59,9 +59,9 @@
       <button
         (click)="setFilter('industrial')"
         class="px-8 py-2 rounded-full font-bold text-[11px] uppercase tracking-widest cursor-pointer transition-all backdrop-blur-md border"
-        [class.bg-lime-500]="currentFilter === 'industrial'"
+        [class.bg-lime-800]="currentFilter === 'industrial'"
         [class.text-black]="currentFilter === 'industrial'"
-        [class.border-lime-500]="currentFilter === 'industrial'"
+        [class.border-lime-800]="currentFilter === 'industrial'"
         [class.bg-white/50]="currentFilter !== 'industrial'"
         [class.dark:bg-white/8]="currentFilter !== 'industrial'"
         [class.text-gray-600]="currentFilter !== 'industrial'"
@@ -75,9 +75,9 @@
       <button
         (click)="setFilter('software')"
         class="px-8 py-2 rounded-full font-bold text-[11px] uppercase tracking-widest cursor-pointer transition-all backdrop-blur-md border"
-        [class.bg-lime-500]="currentFilter === 'software'"
+        [class.bg-lime-800]="currentFilter === 'software'"
         [class.text-black]="currentFilter === 'software'"
-        [class.border-lime-500]="currentFilter === 'software'"
+        [class.border-lime-800]="currentFilter === 'software'"
         [class.bg-white/50]="currentFilter !== 'software'"
         [class.dark:bg-white/8]="currentFilter !== 'software'"
         [class.text-gray-600]="currentFilter !== 'software'"
@@ -95,15 +95,11 @@
         *ngIf="currentFilter === 'all' || currentFilter === 'software'"
         class="group relative max-w-sm mx-auto p-px rounded-[2.5rem] bg-linear-to-b from-gray-200 dark:from-white/18 to-transparent transition-all duration-500 hover:-translate-y-2"
       >
-        <div
-          class="bg-white/60 dark:bg-panel-card/84 backdrop-blur-2xl rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/40 dark:border-white/10"
-        >
+       <div class="bg-white/10 dark:bg-white/20 backdrop-blur-md rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/20 dark:border-white/5">
           <!-- Imagen del Proyecto -->
-          <div
-            class="relative h-60 flex items-center justify-center bg-gray-50/50 dark:bg-linear-to-br dark:from-surface-soft-start/90 dark:via-surface-soft-mid/86 dark:to-surface-soft-end/82 backdrop-blur-md overflow-hidden p-10"
-          >
+          <div class="relative h-60 flex items-center justify-center bg-white/5 dark:bg-black/10 backdrop-blur-sm overflow-hidden p-10">
             <div
-              class="absolute w-32 h-32 bg-lime-500/10 dark:bg-lime-500/8 blur-2xl rounded-full"
+              class="absolute w-32 h-32 bg-lime-700/10 dark:bg-lime-700/8 blur-2xl rounded-full"
             ></div>
 
             <img
@@ -125,7 +121,7 @@
               class="text-2xl font-black text-black dark:text-white mb-1 uppercase tracking-tighter"
             >
               {{ "PROJECTS_PAGE.CARD_TITLE" | translate }}
-              <span class="text-lime-600 dark:text-lime-400 font-light italic">{{
+              <span class="text-lime-700 dark:text-lime-500 font-light italic">{{
                 "PROJECTS_PAGE.CARD_TITLE_ITALIC" | translate
               }}</span>
             </h2>
@@ -139,17 +135,14 @@
               {{ "PROJECTS_PAGE.CARD_DESC" | translate }}
             </p>
 
-            <button
-              (click)="navigateTo('/smartlink')"
-              class="w-full py-4 bg-white/50 dark:bg-white/7 border border-white/60 dark:border-white/12 rounded-2xl text-gray-800 dark:text-white hover:text-lime-600 dark:hover:text-lime-400 hover:border-lime-500/50 transition-all duration-500 cursor-pointer text-[10px] font-bold uppercase tracking-[0.3em]"
-            >
-              {{ "PROJECTS_PAGE.BTN_DETAILS" | translate }}
-            </button>
+            <button (click)="navigateTo('/smartlink')"
+           class="w-full py-4 bg-white/5 dark:bg-white/5 border border-white/10 rounded-2xl text-gray-800 dark:text-white hover:text-lime-600 dark:hover:text-lime-400 transition-all duration-500 cursor-pointer text-[10px] font-bold uppercase tracking-[0.3em]">
+            {{ "PROJECTS_PAGE.BTN_DETAILS" | translate }}
+           </button>
           </div>
         </div>
       </div>
 
-      <!-- Próximamente -->
       <div
         *ngIf="currentFilter === 'industrial'"
         class="col-span-full text-center py-20"

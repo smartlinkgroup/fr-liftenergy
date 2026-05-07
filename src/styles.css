@@ -4,8 +4,8 @@
 
 /* --- 1. TU PANEL DE CONTROL --- */
 :root {
-  --bg-claro: #849980;    
-  --bg-oscuro: #072409;   
+  --bg-claro: #8c948ad2;    
+  --bg-oscuro: #080f08;   
 }
 
 html { scroll-behavior: smooth; }
@@ -34,7 +34,7 @@ section, .bg-main-theme {
 /* Esto permite que el color verde #a3e635 gane cuando pasas el mouse */
 .hover\:text-\[\#a3e635\]:hover, 
 .group:hover .group-hover\:text-\[\#a3e635\] {
-  color: #a3e635 !important;
+  color: #283611 !important;
 }
 
 /* --- 4. PROFUNDIDAD Y DISEÑO --- */
