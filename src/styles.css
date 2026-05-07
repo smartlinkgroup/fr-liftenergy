@@ -2,196 +2,53 @@
 @custom-variant dark (&:where(.dark, .dark *));
 @import "./styles/tailwind-theme.css";
 
-/* EFECTO DE SCROLL SUAVE GLOBAL */
-html {
-  scroll-behavior: smooth;
+/* --- 1. TU PANEL DE CONTROL --- */
+:root {
+  --bg-claro: #849980;    
+  --bg-oscuro: #072409;   
 }
 
-/* --- MODO CLARO (El traje de día) --- */
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
-  background-color: #f8fafc; /* Un color perla muy limpio y nítido */
-  color: #0f172a; /* Texto oscuro para que se lea bien */
-  transition: background-color 0.5s ease, color 0.5s ease;
+  /* Color base blanco, pero sin !important para que el hover funcione */
+  color: white; 
+  background-color: var(--bg-claro) !important;
+  transition: background-color 0.5s ease;
 }
 
-/* --- MODO OSCURO (El traje de noche, tu diseño original) --- */
 .dark body {
-  background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 32%),
-    linear-gradient(
-      180deg,
-      var(--color-canvas-raised) 0%,
-      var(--color-canvas) 45%,
-      var(--color-canvas-deep) 100%
-    );
-  color: var(--color-copy-strong);
+  background-color: var(--bg-oscuro) !important;
 }
 
-/* --- Personaliza la barra de scroll lateral --- */
-::-webkit-scrollbar {
-  width: 8px;
+/* --- 2. FORZAR TRANSPARENCIA DE COMPONENTES --- */
+app-about-us, app-services, app-projects, app-contact, 
+app-innovation-well, app-energy-grid, app-smartlink,
+section, .bg-main-theme {
+  background-color: transparent !important;
+  background-image: none !important;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--color-scroll-track);
+/* --- 3. REGLA MAESTRA PARA EL HOVER DEL HEADER --- */
+/* Esto permite que el color verde #a3e635 gane cuando pasas el mouse */
+.hover\:text-\[\#a3e635\]:hover, 
+.group:hover .group-hover\:text-\[\#a3e635\] {
+  color: #a3e635 !important;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #a3e635;
-  border-radius: 10px;
+/* --- 4. PROFUNDIDAD Y DISEÑO --- */
+.shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important; }
+.backdrop-blur-2xl { backdrop-filter: blur(40px) !important; }
+
+/* --- 5. ANIMACIONES --- */
+@keyframes superDramaticScale {
+  0% { opacity: 0; transform: translateY(150px) scale(0.5); }
+  50% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-150px) scale(1.2); }
 }
-
-::-webkit-scrollbar-thumb:hover {
-  background: #bef264;
-}
-/* Animación Dramática para el Título Principal */
-@keyframes dramaticEntrance {
-  0% {
-    opacity: 0;
-    letter-spacing: -0.5em;
-    transform: translateY(100px) scale(0.8) skewY(10deg);
-    filter: blur(0);
-  }
-  100% {
-    opacity: 1;
-    letter-spacing: normal;
-    transform: translateY(0) scale(1) skewY(0deg);
-    filter: blur(0);
-  }
-}
-
-/* Animación Dramática de Scroll (Entrada y Salida) */
-@keyframes dramaticScroll {
-  0% {
-    opacity: 0;
-    letter-spacing: -0.5em;
-    transform: translateY(100px) scale(0.8);
-    filter: blur(0);
-  }
-  20%, 80% {
-    opacity: 1;
-    letter-spacing: normal;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-100px) scale(1.1);
-    filter: blur(10px);
-  }
-}
-
-/* ============================================================
-   NUEVAS ANIMACIONES DE SCROLL MÁS DINÁMICAS (NÍTIDAS)
-   ============================================================ */
-
-/* 🎭 TÍTULO PRINCIPAL: Movimiento Dramático y Nitidez Total */
-@keyframes highEnergyDramaticScroll {
-  /* Entrada (cuando asoma por abajo) */
-  0% {
-    opacity: 0;
-    transform: translateY(150px) scale(0.6); /* Más lejos y más pequeño */
-  }
-  
-  /* Punto Central (Nítido y visible en el centro) */
-  25%, 75% {
-    opacity: 1;
-    transform: translateY(0) scale(1); /* Perfecto */
-  }
-  
-  /* Salida (cuando se va por arriba) */
-  100% {
-    opacity: 0;
-    transform: translateY(-150px) scale(1.4); /* Más lejos y más grande */
-  }
-}
-
-
-@keyframes elasticTitle {
-  0% {
-    opacity: 0;
-    transform: translateY(100px) scale(0.7);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-100px) scale(1.2);
-  }
-}
-
-@keyframes elasticTitle {
-  0% {
-    opacity: 0;
-    transform: translateY(100px) scale(0.7);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-100px) scale(1.2);
-  }
-}
-
-@keyframes slideInLeftDrammatic {
-  0% {
-    opacity: 0;
-    transform: translateX(-150px) scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
-}
-
-/* Entrada desde la derecha */
-@keyframes slideInRightDrammatic {
-  0% {
-    opacity: 0;
-    transform: translateX(150px) scale(0.8);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
-}
-
-@keyframes cinematicSlide {
-  0% {
-    opacity: 0;
-    transform: translateY(150px) scale(0.7) rotateX(-10deg);
-  }
-  /* Estado perfecto cuando el elemento está en el centro de la pantalla */
-  50% {
-    opacity: 1;
-    transform: translateY(0) scale(1) rotateX(0deg);
-  }
-  /* Se va hacia arriba */
-  100% {
-    opacity: 0;
-    transform: translateY(-150px) scale(1.1) rotateX(10deg);
-  }
-}
-
-/* Aplicamos la línea de tiempo de scroll */
-.scroll-dynamic-move {
-  /* Esto activa el modo ida y vuelta sincronizado con el scroll */
-  view-timeline-name: --revealer;
-  view-timeline-axis: block;
-  
-  animation: cinematicSlide linear both;
-  animation-timeline: --revealer;
-  
-  /* Ajustamos el rango para que se note mucho el movimiento */
+.scroll-title-dramatic {
+  animation: superDramaticScale linear both;
+  animation-timeline: view();
   animation-range: entry 0% exit 100%;
-}
-
-/* Para que no se vea nada antes de que empiece la animación */
-.scroll-dynamic-move {
-  will-change: transform, opacity;
 }

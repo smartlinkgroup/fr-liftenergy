@@ -1,4 +1,4 @@
-<div class="relative min-h-screen bg-transparent pt-32 pb-20 text-black dark:text-white font-sans overflow-hidden transition-colors duration-700">
+<div class="relative min-h-screen bg-transparent pt-32 pb-20 text-white font-sans overflow-hidden transition-colors duration-700">
   
   <div class="absolute inset-0 z-0 opacity-10 dark:opacity-20 pointer-events-none">
     <app-energy-grid></app-energy-grid>
@@ -6,28 +6,28 @@
 
   <div class="container mx-auto px-6 relative z-10">
     <div class="max-w-2xl mx-auto text-center mb-24">
-      <span class="text-lime-700 dark:text-lime-400 text-[10px] font-black uppercase tracking-[0.4em] mb-4 block italic">
+      <span class="text-lime-400 text-[10px] font-black uppercase tracking-[0.4em] mb-4 block italic">
         {{ 'CAREERS.SUBTITLE' | translate }}
       </span>
-      <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6">
+      <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6 text-white">
         {{ 'CAREERS.TITLE' | translate }} 
-        <span class="text-transparent border-stroke-light dark:border-stroke-dark" style="-webkit-text-stroke: 1.5px currentColor;">Lift</span>
+        <span class="text-transparent" style="-webkit-text-stroke: 1.5px white;">Lift</span>
       </h1>
-      <p class="text-gray-600 dark:text-gray-500 font-medium dark:font-light">{{ 'CAREERS.DESC' | translate }}</p>
+      <p class="text-white/70 font-medium dark:font-light">{{ 'CAREERS.DESC' | translate }}</p>
     </div>
 
     <div class="max-w-4xl mx-auto space-y-6">
-      <div *ngFor="let job of vacantes" class="relative group p-[1px] rounded-[2rem] overflow-hidden bg-gradient-to-b from-black/10 dark:from-white/10 to-transparent">
-        <div class="bg-white/80 dark:bg-[#0a0a0a]/90 backdrop-blur-xl p-8 rounded-[2rem] flex flex-col md:flex-row justify-between items-center gap-6 shadow-xl dark:shadow-none border border-black/5 dark:border-none">
+      <div *ngFor="let job of vacantes" class="relative group p-[1px] rounded-[2rem] overflow-hidden bg-white/10">
+        <div class="bg-white/5 backdrop-blur-xl p-8 rounded-[2rem] flex flex-col md:flex-row justify-between items-center gap-6 shadow-2xl border border-white/10">
           <div class="text-center md:text-left">
-            <h3 class="text-2xl font-bold uppercase tracking-tight text-black dark:text-white group-hover:text-lime-600 dark:group-hover:text-lime-400 transition-colors duration-500">
+            <h3 class="text-2xl font-bold uppercase tracking-tight text-white group-hover:text-lime-400 transition-colors duration-500">
               {{ job.titulo | translate }}
             </h3>
-            <p class="text-gray-500 dark:text-gray-400 text-xs font-medium dark:font-light tracking-widest mt-1">
+            <p class="text-white/50 text-xs font-medium tracking-widest mt-1">
               {{ job.ubicacion | translate }}
             </p>
           </div>
-          <button (click)="openModal(job)" class="px-8 py-3 rounded-full bg-black dark:bg-white text-white dark:text-black font-bold uppercase text-xs tracking-widest hover:bg-lime-500 hover:text-black transition-all">
+          <button (click)="openModal(job)" class="px-8 py-3 rounded-full bg-white text-black font-bold uppercase text-xs tracking-widest hover:bg-lime-500 hover:text-black transition-all cursor-pointer">
             <span>{{ 'CAREERS.SEE_DETAILS' | translate }}</span>
           </button>
         </div>
@@ -35,40 +35,39 @@
     </div>
   </div>
 
-  <!-- MODAL -->
-  <div *ngIf="isModalOpen" class="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-white/80 dark:bg-black/95 backdrop-blur-md">
-    <div class="relative bg-white dark:bg-[#0d0d0d] border border-black/10 dark:border-white/10 w-full max-w-2xl rounded-[3rem] overflow-hidden shadow-2xl animate-modal-in">
+  <div *ngIf="isModalOpen" class="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/80 backdrop-blur-md">
+    <div class="relative bg-white/10 backdrop-blur-2xl border border-white/20 w-full max-w-2xl rounded-[3rem] overflow-hidden shadow-2xl animate-modal-in">
       
-      <button (click)="closeModal()" class="absolute top-10 right-10 text-black/40 dark:text-white/20 hover:text-black dark:hover:text-white transition-colors z-20 cursor-pointer">
+      <button (click)="closeModal()" class="absolute top-10 right-10 text-white/20 hover:text-white transition-colors z-20 cursor-pointer">
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
 
       <div class="p-10 md:p-16 relative z-10">
-        <span class="text-lime-700 dark:text-lime-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4 block italic">
+        <span class="text-lime-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4 block italic">
           {{ 'CAREERS.MODAL_INFO' | translate }}
         </span>
-        <h2 class="text-4xl font-black text-black dark:text-white uppercase tracking-tighter mb-10">
+        <h2 class="text-4xl font-black text-white uppercase tracking-tighter mb-10">
           {{ selectedJob?.titulo | translate }}
         </h2>
 
         <div class="space-y-10">
           <div>
-            <h4 class="text-black dark:text-white text-[10px] font-black uppercase tracking-widest opacity-60 mb-3">
+            <h4 class="text-white text-[10px] font-black uppercase tracking-widest opacity-60 mb-3">
               {{ 'CAREERS.ROLE_DESC' | translate }}
             </h4>
-            <p class="text-gray-700 dark:text-gray-400 text-lg leading-relaxed font-medium dark:font-light">
+            <p class="text-white/80 text-lg leading-relaxed font-medium">
               {{ selectedJob?.descripcion | translate }}
             </p>
           </div>
 
           <div>
-            <h4 class="text-black dark:text-white text-[10px] font-black uppercase tracking-widest opacity-60 mb-5">
+            <h4 class="text-white text-[10px] font-black uppercase tracking-widest opacity-60 mb-5">
               {{ 'CAREERS.WHAT_LOOKING' | translate }}
             </h4>
             <ul class="grid grid-cols-1 gap-4">
-              <li *ngFor="let item of selectedJob?.buscamos" class="flex items-center gap-4 text-gray-700 dark:text-gray-400">
-                <div class="w-1.5 h-1.5 rounded-full bg-lime-500 dark:bg-lime-400 shadow-[0_0_10px_#a3e635]"></div>
-                <span class="text-sm font-medium dark:font-light tracking-wide">{{ item | translate }}</span>
+              <li *ngFor="let item of selectedJob?.buscamos" class="flex items-center gap-4 text-white/70">
+                <div class="w-1.5 h-1.5 rounded-full bg-lime-400 shadow-[0_0_10px_#a3e635]"></div>
+                <span class="text-sm font-medium tracking-wide">{{ item | translate }}</span>
               </li>
             </ul>
           </div>
@@ -77,9 +76,6 @@
             <button class="w-full py-6 bg-lime-500 hover:bg-lime-400 text-black font-black uppercase text-xs tracking-[0.3em] rounded-2xl transition-all duration-500 shadow-xl cursor-pointer">
               {{ 'CAREERS.POSTULAR' | translate }}
             </button>
-            <p class="text-[8px] text-gray-500 text-center mt-6 uppercase tracking-widest italic font-bold dark:font-light">
-              {{ 'CAREERS.REDIRECT_MSG' | translate }}
-            </p>
           </div>
         </div>
       </div>

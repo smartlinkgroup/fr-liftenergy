@@ -44,9 +44,9 @@ export class HomeComponent implements AfterViewInit {
     this.showScrollButton = yOffset > 500;
   }
 
-  scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
   ngAfterViewInit() {
     if (this.videoElement) {
