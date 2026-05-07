@@ -30,10 +30,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #a3e635;
+  background: var(--color-accent);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #bef264;
+  background: var(--color-accent-soft);
 }

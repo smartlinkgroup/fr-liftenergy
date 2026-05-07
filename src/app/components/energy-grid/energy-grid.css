@@ -14,12 +14,12 @@
 .particle {
   position: absolute;
   bottom: -100px; 
-  background: #a3e635;
+  background: var(--color-accent-soft);
   border-radius: 50%;
   opacity: 0.9; /* Más sólidas */
   animation: floatUp linear infinite;
   /* Brillo neón más intenso */
-  box-shadow: 0 0 10px #a3e635, 0 0 20px rgba(163, 230, 53, 0.8);
+  box-shadow: 0 0 10px var(--color-accent-soft), 0 0 20px var(--color-accent-glow);
 }
 
 @keyframes floatUp {

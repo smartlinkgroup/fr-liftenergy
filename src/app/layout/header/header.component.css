@@ -8,10 +8,10 @@
 .energy-line {
   width: 2px;
   height: 100px;
-  background: linear-gradient(to bottom, transparent, #a3e635, transparent);
+  background: linear-gradient(to bottom, transparent, var(--color-accent-soft), transparent);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(163, 230, 53, 0.3);
+  box-shadow: 0 0 10px var(--color-accent-glow);
 }
 
 /* El efecto de corriente eléctrica que baja */
@@ -31,12 +31,12 @@
 .energy-pulse-node {
   width: 6px;
   height: 6px;
-  background: #a3e635;
+  background: var(--color-accent-soft);
   border-radius: 50%;
   position: absolute;
   bottom: 0;
   left: -2px;
-  box-shadow: 0 0 15px #a3e635, 0 0 30px #a3e635;
+  box-shadow: 0 0 15px var(--color-accent-soft), 0 0 30px var(--color-accent-soft);
   animation: pulse-glow 2s infinite ease-in-out;
 }
 
@@ -52,10 +52,10 @@
 .energy-connector {
   width: 2px;
   height: 128px; /* El h-32 que tenías antes */
-  background: linear-gradient(to bottom, #a3e635, transparent);
+  background: linear-gradient(to bottom, var(--color-accent-soft), transparent);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(163, 230, 53, 0.2);
+  box-shadow: 0 0 10px var(--color-accent-glow);
 }
 
 /* El efecto de rayo láser bajando */
@@ -74,12 +74,12 @@
 .energy-node {
   width: 6px;
   height: 6px;
-  background: #a3e635;
+  background: var(--color-accent-soft);
   border-radius: 50%;
   position: absolute;
   bottom: 0;
   left: -2px;
-  box-shadow: 0 0 15px #a3e635, 0 0 30px rgba(163, 230, 53, 0.5);
+  box-shadow: 0 0 15px var(--color-accent-soft), 0 0 30px var(--color-accent-glow);
   animation: pulse-glow 2s infinite ease-in-out;
 }
 

@@ -11,11 +11,11 @@
    * Los colores por defecto de Tailwind (lime/gray/white) siguen disponibles;
    * estas variables cubren únicamente los neutros personalizados del proyecto.
    */
-  --color-canvas: #0e120d;
-  --color-canvas-raised: #181d17;
-  --color-canvas-deep: #090b08;
-  --color-canvas-soft: #141913;
-  --color-canvas-glow: #1b211a;
+  --color-canvas: #072409;
+  --color-canvas-raised: #103412;
+  --color-canvas-deep: #041405;
+  --color-canvas-soft: #143817;
+  --color-canvas-glow: #1d4720;
 
   /*
    * Elevated dark surfaces.
@@ -27,10 +27,10 @@
    * Pensadas para tarjetas, secciones destacadas y paneles tipo 'glass' que
    * deben reposar sobre el canvas sin pasar a un fondo brillante.
    */
-  --color-panel-top: #191e18;
-  --color-panel-mid: #10140f;
-  --color-panel-bottom: #171c16;
-  --color-panel-card: #121712;
+  --color-panel-top: #173919;
+  --color-panel-mid: #0a220c;
+  --color-panel-bottom: #133315;
+  --color-panel-card: #0f2a11;
 
   /*
    * Text helpers for custom surfaces.
@@ -42,8 +42,8 @@
    * Prefiere `text-white`/`text-gray-*` de Tailwind cuando baste; usa estas
    * variables cuando el diseño necesite tonos neutrales específicos del proyecto.
    */
-  --color-copy-strong: #f5f7f0;
-  --color-copy-muted: #40453f;
+  --color-copy-strong: #f5f8f1;
+  --color-copy-muted: #a9b9a6;
 
   /*
    * Soft contrasting surfaces.
@@ -55,12 +55,34 @@
    * Útiles para etiquetas, soportes de medios y áreas sutilmente claras que
    * deben integrarse con la paleta oscura.
    */
-  --color-surface-soft: #eef1eb;
-  --color-surface-soft-start: #f1f2ef;
-  --color-surface-soft-mid: #dfe3dc;
-  --color-surface-soft-end: #cfd5cd;
+  --color-surface-soft: #edf3ec;
+  --color-surface-soft-start: #f4f8f3;
+  --color-surface-soft-mid: #dbe7da;
+  --color-surface-soft-end: #c5d7c3;
+
+  /*
+   * Brand accent scale derived from the primary deep green.
+   * Keep these bright enough for calls to action while preserving the new
+   * forest-green identity across Tailwind utilities already in use.
+   *
+   * ES:
+   * Escala de acentos derivada del verde principal.
+   * Se mantiene con suficiente brillo para CTAs sin perder la identidad
+   * verde bosque en las utilidades Tailwind existentes.
+   */
+  --color-accent-soft: #9acb93;
+  --color-accent: #6fa56a;
+  --color-accent-strong: #4f854c;
+  --color-accent-deep: #2d5c2d;
+  --color-accent-contrast: #041105;
+  --color-accent-glow: rgba(154, 203, 147, 0.42);
+
+  --color-lime-400: var(--color-accent-soft);
+  --color-lime-500: var(--color-accent);
+  --color-lime-600: var(--color-accent-strong);
+  --color-lime-700: var(--color-accent-deep);
 
   /* Scrollbar track neutral aligned with the darkest canvas tone.
    * ES: Track de scrollbar neutral alineado con el tono más oscuro del canvas. */
-  --color-scroll-track: #0b0f0a;
+  --color-scroll-track: #061106;
 }
