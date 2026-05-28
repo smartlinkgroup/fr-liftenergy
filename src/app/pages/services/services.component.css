@@ -1,113 +1,39 @@
-.services-shell {
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--color-accent-soft) 12%, transparent),
-    rgba(255, 255, 255, 0.06) 38%,
-    transparent 72%
-  );
-}
-
-.services-shell__inner {
-  background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 42%),
-    linear-gradient(
-      145deg,
-      color-mix(in srgb, var(--color-panel-top) 92%, black) 0%,
-      color-mix(in srgb, var(--color-panel-mid) 96%, black) 48%,
-      color-mix(in srgb, var(--color-panel-bottom) 94%, black) 100%
-    );
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.04),
-    0 28px 80px rgba(0, 0, 0, 0.24);
-}
-
-.services-shell__orb {
-  opacity: 0.7;
-  filter: blur(120px);
-}
-
-.services-shell__orb--top {
-  background: color-mix(in srgb, var(--color-accent) 18%, transparent);
-}
-
-.services-shell__orb--side {
-  background: color-mix(in srgb, var(--color-canvas-glow) 32%, transparent);
-}
-
-.workflow-shell {
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.04),
-    transparent 32%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
-}
-
-.workflow-shell__inner {
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--color-panel-top) 86%, black) 0%,
-      color-mix(in srgb, var(--color-panel-mid) 94%, black) 56%,
-      color-mix(in srgb, var(--color-panel-bottom) 92%, black) 100%
-    );
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.04),
-    0 20px 48px rgba(0, 0, 0, 0.18);
-}
-
-.workflow-shell__orb {
-  opacity: 0.6;
-  filter: blur(110px);
-  background: color-mix(in srgb, var(--color-accent-soft) 14%, transparent);
-}
-
 /* Contenedor principal de la tarjeta */
 .service-card {
   display: flex;
   flex-direction: column;
   padding: 2.5rem;
   border-radius: 2rem;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.08),
-    rgba(255, 255, 255, 0.04)
-  );
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(12px); /* El efecto de desenfoque */
   transition: all 0.4s ease;
   height: 100%;
   position: relative;
   overflow: hidden;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 /* Efecto al pasar el mouse */
 .service-card:hover {
   transform: translateY(-10px);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.12),
-    rgba(255, 255, 255, 0.05)
-  );
-  border-color: color-mix(in srgb, var(--color-accent-soft) 40%, transparent);
+  background: rgba(255, 255, 255, 0.11);
+  border-color: rgba(163, 230, 53, 0.4);
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.18),
-    0 0 20px color-mix(in srgb, var(--color-accent-soft) 18%, transparent);
+    0 0 20px rgba(163, 230, 53, 0.1);
 }
 
 /* Estilo de los Iconos */
 .icon-container {
   width: 56px;
   height: 56px;
-  background: var(--color-accent-soft);
+  background: #a3e635; /* Tu verde lima */
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  box-shadow: 0 0 15px var(--color-accent-glow);
+  box-shadow: 0 0 15px rgba(163, 230, 53, 0.3);
 }
 
 /* Botones dentro de las tarjetas */
@@ -116,8 +42,8 @@
   padding: 0.8rem 1.5rem;
   border-radius: 12px;
   background: transparent;
-  border: 1px solid color-mix(in srgb, var(--color-accent) 55%, transparent);
-  color: var(--color-accent-soft);
+  border: 1px solid rgba(163, 230, 53, 0.5);
+  color: #a3e635;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -128,13 +54,13 @@
 }
 
 .service-btn:hover {
-  background: var(--color-accent);
-  color: var(--color-accent-contrast);
-  box-shadow: 0 0 20px var(--color-accent-glow);
+  background: #a3e635;
+  color: #000;
+  box-shadow: 0 0 20px rgba(163, 230, 53, 0.4);
 }
 
 /* Ajuste para los checks (palomitas) */
 .flex.items-start.text-sm span {
-  color: var(--color-accent-soft);
+  color: #a3e635;
   font-weight: bold;
 }

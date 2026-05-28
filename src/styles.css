@@ -30,13 +30,22 @@ section, .bg-main-theme {
   background-image: none !important;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--color-accent);
-  border-radius: 10px;
+/* --- 3. REGLA MAESTRA PARA EL HOVER DEL HEADER --- */
+/* Esto permite que el color verde #a3e635 gane cuando pasas el mouse */
+.hover\:text-\[\#a3e635\]:hover, 
+.group:hover .group-hover\:text-\[\#a3e635\] {
+  color: #283611 !important;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent-soft);
+/* --- 4. PROFUNDIDAD Y DISEÑO --- */
+.shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important; }
+.backdrop-blur-2xl { backdrop-filter: blur(40px) !important; }
+
+/* --- 5. ANIMACIONES --- */
+@keyframes superDramaticScale {
+  0% { opacity: 0; transform: translateY(150px) scale(0.5); }
+  50% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-150px) scale(1.2); }
 }
 .scroll-title-dramatic {
   animation: superDramaticScale linear both;

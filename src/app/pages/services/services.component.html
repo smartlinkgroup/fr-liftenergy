@@ -1,8 +1,12 @@
-<section id="services" class="relative py-24">
-  <div class="container mx-auto px-6">
-    <h2 class="text-5xl md:text-7xl font-black text-center mb-20 text-white tracking-tighter">
+<section
+  class="py-24 relative overflow-hidden rounded-[2.5rem] border border-white/20 dark:border-white/10 bg-transparent backdrop-blur-md shadow-xl transition-all duration-700"
+>
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-lime-700/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <h2 class="text-5xl md:text-7xl font-black text-center mb-20 text-black dark:text-white tracking-tighter transition-all duration-700">
       {{ "SERVICES_PAGE.TITLE_CORE" | translate }}
-      <span class="text-lime-400">{{ "SERVICES_PAGE.TITLE_SERVICES" | translate }}</span>
+      <span class="text-lime-800 dark:text-lime-800">{{ "SERVICES_PAGE.TITLE_SERVICES" | translate }}</span>
     </h2>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -85,9 +89,11 @@
   </div>
 </section>
 
-<section class="relative mt-10 py-24">
+<section
+  class="mt-10 py-24 rounded-[2.5rem] border border-white/20 dark:border-white/10 bg-transparent shadow-2xl backdrop-blur-xl transition-all duration-700"
+>
   <div class="container mx-auto px-6">
-    <h2 class="text-4xl font-black text-center mb-20 text-white tracking-[0.2em] uppercase opacity-70">
+    <h2 class="text-4xl font-black text-center mb-20 text-black dark:text-white tracking-[0.2em] uppercase opacity-70">
       {{ "SERVICES_PAGE.WORKFLOW_TITLE" | translate }}
     </h2>
 
