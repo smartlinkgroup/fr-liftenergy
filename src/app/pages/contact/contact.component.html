@@ -1,104 +1,124 @@
 <section
-  class="relative min-h-screen bg-transparent flex items-center justify-center py-20 px-6 overflow-hidden"
->
-  <div class="absolute inset-0 z-0 opacity-15 pointer-events-none">
-    <app-energy-grid></app-energy-grid>
-  </div>
-
-  <div class="container max-w-5xl mx-auto relative z-10">
-    <div class="text-center mb-16">
-      <h2
-        class="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter italic"
-      >
-        {{ "CONTACT_PAGE.TITLE" | translate }}
-        <span class="text-lime-400">{{
-          "CONTACT_PAGE.TITLE_HIGHLIGHT" | translate
-        }}</span>
-      </h2>
-      <p class="text-gray-500 text-sm tracking-[0.3em] uppercase mt-2">
-        Lift Energy Group
-      </p>
+  class="relative min-h-screen bg-transparent flex flex-col items-center justify-center py-20 px-6 overflow-hidden">
+  <div class="flex flex-col">
+    <div class="absolute inset-0 z-0 opacity-15 pointer-events-none">
+      <app-energy-grid></app-energy-grid>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-      <div class="lg:col-span-4 space-y-4">
-        <div
-          class="bg-white/8 border border-white/12 p-6 rounded-2xl backdrop-blur-md hover:border-lime-500/30 transition-all shadow-[0_18px_40px_rgba(0,0,0,0.12)]"
-        >
-          <h3
-            class="text-lime-500 text-[10px] font-black uppercase tracking-widest mb-2"
-          >
-            {{ "CONTACT_PAGE.OFFICE_TITLE" | translate }}
-          </h3>
-          <p class="text-gray-300 text-sm font-light leading-relaxed">
-            {{ "CONTACT_PAGE.ADDRESS" | translate }}
-          </p>
-        </div>
-
-        <div
-          class="bg-white/8 border border-white/12 p-6 rounded-2xl backdrop-blur-md hover:border-lime-500/30 transition-all shadow-[0_18px_40px_rgba(0,0,0,0.12)]"
-        >
-          <h3
-            class="text-lime-500 text-[10px] font-black uppercase tracking-widest mb-2"
-          >
-            {{ "CONTACT_PAGE.CONTACT_TITLE" | translate }}
-          </h3>
-          <p class="text-white text-base font-medium">info@lift.energy</p>
-          <p class="text-white text-base font-medium">+58 424-606-1052</p>
-          <p class="text-white text-base font-medium">+1 (305)-744-6687</p>
-        </div>
+    <div class="container max-w-5xl mx-auto relative z-10">
+      <div class="text-center mb-16">
+        <h2
+          class="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter italic">
+          {{ "CONTACT_PAGE.TITLE" | translate }}
+          <span class="text-lime-400">{{
+            "CONTACT_PAGE.TITLE_HIGHLIGHT" | translate
+            }}</span>
+        </h2>
+        <p class="text-gray-500 text-sm tracking-[0.3em] uppercase mt-2">
+          Lift Energy Group
+        </p>
       </div>
-      <div class="lg:col-span-8">
-        <div
-          class="bg-white/7 border border-white/12 p-8 md:p-10 rounded-4xl backdrop-blur-xl shadow-2xl"
-        >
-          <form class="space-y-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 contact-equal-height">
+        <div class="lg:col-span-4 space-y-4">
+          <div
+            class="bg-white/8 border border-white/12 p-6 rounded-2xl backdrop-blur-md hover:border-lime-500/30 transition-all shadow-[0_18px_40px_rgba(0,0,0,0.12)]">
+            <h3
+              class="text-lime-500 text-[10px] font-black uppercase tracking-widest mb-2">
+              {{ "CONTACT_PAGE.OFFICE_TITLE" | translate }}
+            </h3>
+            <p class="text-gray-300 text-sm font-light leading-relaxed">
+              {{ "CONTACT_PAGE.ADDRESS" | translate }}
+            </p>
+          </div>
+
+          <div
+            class="bg-white/8 border border-white/12 p-6 rounded-2xl backdrop-blur-md hover:border-lime-500/30 transition-all shadow-[0_18px_40px_rgba(0,0,0,0.12)]">
+            <h3
+              class="text-lime-500 text-[10px] font-black uppercase tracking-widest mb-2">
+              {{ "CONTACT_PAGE.CONTACT_TITLE" | translate }}
+            </h3>
+            <p class="text-white text-base font-medium">info@lift.energy</p>
+            <p class="text-white text-base font-medium">+58 424-606-1052</p>
+            <p class="text-white text-base font-medium">+1 (305)-744-6687</p>
+          </div>
+        </div>
+        <div class="lg:col-span-8">
+          <div
+            class="bg-white/7 border border-white/12 p-8 md:p-10 rounded-4xl backdrop-blur-xl shadow-2xl h-full flex items-center">
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label
+                    class="text-[10px] text-gray-500 font-bold uppercase tracking-widest ml-2">{{
+                    "CONTACT_PAGE.LABEL_NAME" | translate }}</label>
+                  <input
+                    type="text"
+                    [placeholder]="'CONTACT_PAGE.PLACEHOLDER_NAME' | translate"
+                    class="w-full bg-white/8 border border-white/10 rounded-xl py-3 px-5 text-white text-sm outline-none focus:border-lime-500/50 transition-all placeholder:text-white/25" />
+                </div>
+                <div class="space-y-2">
+                  <label
+                    class="text-[10px] text-gray-500 font-bold uppercase tracking-widest ml-2">{{
+                    "CONTACT_PAGE.LABEL_EMAIL" | translate }}</label>
+                  <input
+                    type="email"
+                    [placeholder]="'CONTACT_PAGE.PLACEHOLDER_EMAIL' | translate"
+                    class="w-full bg-white/8 border border-white/10 rounded-xl py-3 px-5 text-white text-sm outline-none focus:border-lime-500/50 transition-all placeholder:text-white/25" />
+                </div>
+              </div>
+
               <div class="space-y-2">
                 <label
-                  class="text-[10px] text-gray-500 font-bold uppercase tracking-widest ml-2"
-                  >{{ "CONTACT_PAGE.LABEL_NAME" | translate }}</label
-                >
-                <input
-                  type="text"
-                  [placeholder]="'CONTACT_PAGE.PLACEHOLDER_NAME' | translate"
-                  class="w-full bg-white/8 border border-white/10 rounded-xl py-3 px-5 text-white text-sm outline-none focus:border-lime-500/50 transition-all placeholder:text-white/25"
-                />
+                  class="text-[10px] text-gray-500 font-bold uppercase tracking-widest ml-2">{{
+                  "CONTACT_PAGE.LABEL_MESSAGE" | translate }}</label>
+                <textarea
+                  rows="4"
+                  [placeholder]="'CONTACT_PAGE.PLACEHOLDER_MESSAGE' | translate"
+                  class="w-full bg-white/8 border border-white/10 rounded-xl py-4 px-5 text-white text-sm outline-none focus:border-lime-500/50 transition-all placeholder:text-white/25 resize-none"></textarea>
               </div>
-              <div class="space-y-2">
-                <label
-                  class="text-[10px] text-gray-500 font-bold uppercase tracking-widest ml-2"
-                  >{{ "CONTACT_PAGE.LABEL_EMAIL" | translate }}</label
-                >
-                <input
-                  type="email"
-                  [placeholder]="'CONTACT_PAGE.PLACEHOLDER_EMAIL' | translate"
-                  class="w-full bg-white/8 border border-white/10 rounded-xl py-3 px-5 text-white text-sm outline-none focus:border-lime-500/50 transition-all placeholder:text-white/25"
-                />
-              </div>
-            </div>
 
-            <div class="space-y-2">
-              <label
-                class="text-[10px] text-gray-500 font-bold uppercase tracking-widest ml-2"
-                >{{ "CONTACT_PAGE.LABEL_MESSAGE" | translate }}</label
-              >
-              <textarea
-                rows="4"
-                [placeholder]="'CONTACT_PAGE.PLACEHOLDER_MESSAGE' | translate"
-                class="w-full bg-white/8 border border-white/10 rounded-xl py-4 px-5 text-white text-sm outline-none focus:border-lime-500/50 transition-all placeholder:text-white/25 resize-none"
-              ></textarea>
-            </div>
-
-            <button
-              type="button"
-              class="w-full bg-lime-500 hover:bg-lime-400 text-black font-black uppercase text-[11px] tracking-[0.3em] py-4 rounded-xl shadow-[0_10px_20px_rgba(154,203,147,0.2)] hover:shadow-[0_15px_30px_rgba(154,203,147,0.35)] hover:-translate-y-1 transition-all duration-300 cursor-pointer"
-            >
-              {{ "CONTACT_PAGE.BTN_SEND" | translate }}
-            </button>
-          </form>
+              <button
+                type="button"
+                class="w-full bg-lime-500 hover:bg-lime-400 text-black font-black uppercase text-[11px] tracking-[0.3em] py-4 rounded-xl shadow-[0_10px_20px_rgba(154,203,147,0.2)] hover:shadow-[0_15px_30px_rgba(154,203,147,0.35)] hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                {{ "CONTACT_PAGE.BTN_SEND" | translate }}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <section class="container mx-auto max-w-5xl py-20 relative z-10">
+    <div
+      class=" w-full relative bg-white/7 border border-white/12 backdrop-blur-xl p-12 rounded-4xl overflow-hidden group shadow-2xl">
+      <div
+        class="absolute -right-20 -top-20 w-64 h-64 bg-lime-500/10 blur-[100px] group-hover:bg-lime-500/20 transition-all duration-700"></div>
+
+      <div
+        class="absolute inset-0 bg-linear-to-r from-white/3 via-transparent to-lime-500/6 opacity-70 pointer-events-none"></div>
+
+      <div
+        class="flex h-full flex-col md:flex-row justify-between items-center gap-8 relative z-10">
+        <div class="text-center md:text-left">
+          <h2
+            class="text-3xl md:text-4xl font-black text-white uppercase tracking-tighter mb-2">
+            ¿Quieres ser parte de <span
+              class="text-lime-400 font-italic">Lift</span>?
+          </h2>
+          <p class="text-gray-400 font-light">Buscamos talento en Ingeniería y
+            Software para revolucionar el sector energético.</p>
+        </div>
+        <a 
+          [href]="vacanciesHref"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-10 py-4 cursor-pointer bg-lime-500 text-black font-bold uppercase tracking-widest rounded-full hover:bg-lime-400 hover:scale-105 transition-all duration-300 shadow-[0_10px_20px_rgba(154,203,147,0.2)] hover:shadow-[0_15px_30px_rgba(154,203,147,0.35)]">
+          Ver Vacantes
+        </a>
+      </div>
+    </div>
+  </section>
+
 </section>

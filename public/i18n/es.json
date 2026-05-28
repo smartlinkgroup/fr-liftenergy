@@ -74,7 +74,11 @@
     "CARD5_TITLE": "Control Operativo Remoto",
     "CARD5_DESC": "Ejecute acciones directamente desde la interfaz de forma segura.",
     "CARD6_TITLE": "Soluciones e Integraciones a Medida",
-    "CARD6_DESC": "¿Necesita una función específica? Nuestra plataforma es flexible."
+    "CARD6_DESC": "¿Necesita una función específica? Nuestra plataforma es flexible.",
+    "DINAI_BADGE": "Power by Dinai",
+    "DINAI_TITLE_1": "Análisis de",
+    "DINAI_TITLE_2": "Dinagrafías",
+    "DINAI_DESC": "Visualización precisa de los estados de carga y comportamiento del pozo mediante diagramas de superficie y fondo en tiempo real."
   },
   "SERVICES_PAGE": {
     "TITLE_CORE": "Servicios",
