@@ -1,9 +1,9 @@
 import { Component, DestroyRef, OnInit, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { EnergyGridComponent } from '../../components/energy-grid/energy-grid';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -17,54 +17,18 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent implements OnInit {
-  private readonly http = inject(HttpClient);
   private readonly translate = inject(TranslateService);
   private readonly destroyRef = inject(DestroyRef);
 
-  private vacanciesBaseUrl = 'http://localhost:3000/';
+  private readonly vacanciesBaseUrl = environment.vacanciesUrl;
   public vacanciesHref = this.buildVacanciesUrl(this.vacanciesBaseUrl, this.getActiveLang());
 
   ngOnInit(): void {
-    this.loadVacanciesUrl();
-
     this.translate.onLangChange
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe(({ lang }) => {
         this.vacanciesHref = this.buildVacanciesUrl(this.vacanciesBaseUrl, this.normalizeLang(lang));
       });
-  }
-
-  private loadVacanciesUrl(): void {
-    this.http
-      .get('/.env', { responseType: 'text' })
-      .pipe(takeUntilDestroyed(this.destroyRef))
-      .subscribe({
-        next: (content) => {
-          const envUrl = this.readEnvValue(content, 'VACANCIES_URL');
-
-          if (envUrl) {
-            this.vacanciesBaseUrl = envUrl;
-          }
-
-          this.vacanciesHref = this.buildVacanciesUrl(this.vacanciesBaseUrl, this.getActiveLang());
-        },
-        error: () => {
-          this.vacanciesHref = this.buildVacanciesUrl(this.vacanciesBaseUrl, this.getActiveLang());
-        }
-      });
-  }
-
-  private readEnvValue(content: string, key: string): string | null {
-    const envLine = content
-      .split(/\r?\n/)
-      .map((line) => line.trim())
-      .find((line) => line.startsWith(`${key}=`));
-
-    if (!envLine) {
-      return null;
-    }
-
-    return envLine.slice(key.length + 1).trim().replace(/^['"]|['"]$/g, '');
   }
 
   private getActiveLang(): 'en' | 'es' {
@@ -83,7 +47,7 @@ export class ContactComponent implements OnInit {
       url.searchParams.set('lang', lang);
       return url.toString();
     } catch {
-      return `http://localhost:3000/?lang=${lang}`;
+      return `${environment.vacanciesUrl}?lang=${lang}`;
     }
   }
 }
