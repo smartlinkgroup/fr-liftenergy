@@ -1,8 +1,6 @@
 import { Component, inject, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-
-// 🌟 AGREGADO: Importaciones del traductor
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -24,6 +22,9 @@ export class HeaderComponent {
   // Nueva variable para controlar el efecto de vidrio
   public isScrolled: boolean = false;
 
+  // 🌟 AGREGADO: Variable para controlar el modo oscuro (inicia en true)
+  public isDarkMode: boolean = true;
+
   // 🌟 AGREGADO: Constructor para inicializar el idioma por defecto
   constructor() {
     this.translate.use(this.currentLang);
@@ -33,6 +34,17 @@ export class HeaderComponent {
   switchLanguage(lang: string) {
     this.currentLang = lang;
     this.translate.use(lang);
+  }
+
+  // 🌟 AGREGADO: Función para alternar el modo claro/oscuro
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    
+    if (this.isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   }
 
   // Escuchamos el scroll para activar el efecto visual
@@ -46,7 +58,7 @@ export class HeaderComponent {
     this.menu = !this.menu;
   }
 
-  // Mantenemos tu lógica de scroll a secciones
+  // Mantenemos lógica de scroll a secciones
   scrollToSection(sectionId: string) {
     if (this.router.url !== '/') {
       this.router.navigate(['/']).then(() => {
@@ -62,7 +74,7 @@ export class HeaderComponent {
     setTimeout(() => {
       const element = document.getElementById(id);
       if (element) {
-        // Ajustamos un poco el scroll para que no tape el título si el header es fijo
+      
         const headerOffset = 80;
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;

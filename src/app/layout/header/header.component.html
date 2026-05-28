@@ -8,10 +8,8 @@
   class="site-header fixed top-0 left-0 w-full z-100 border-b border-white/15 transition-all duration-500 px-4 sm:px-6"
 >
   <div class="container mx-auto flex justify-between items-center">
-    <div
-      class="flex items-center gap-3 cursor-pointer group transition-transform duration-300 active:scale-95"
-      (click)="scrollToSection('top')"
-    >
+    
+    <div class="flex items-center gap-3 cursor-pointer group" (click)="scrollToSection('top')">
       <div
         class="transition-all duration-500 bg-white group-hover:bg-lime-400 group-hover:drop-shadow-[0_0_12px_rgba(154,203,147,0.9)]"
         [class.w-8]="isScrolled"
@@ -36,40 +34,33 @@
       </h3>
     </div>
 
-    <div class="hidden md:flex gap-8 lg:gap-10 text-white items-center">
-      <button
-        class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]"
-        (click)="scrollToSection('top')"
-      >
-        {{ "NAV.WELCOME" | translate }}
-      </button>
-      <button
-        class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]"
-        (click)="scrollToSection('services')"
-      >
-        {{ "NAV.SERVICES" | translate }}
-      </button>
-      <button
-        class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]"
-        (click)="scrollToSection('projects')"
-      >
-        {{ "NAV.PROJECTS" | translate }}
-      </button>
-      <button
-        class="hover:text-lime-400 transition-all cursor-pointer text-[11px] font-light uppercase tracking-[0.3em]"
-        (click)="scrollToSection('aboutus')"
-      >
-        {{ "NAV.ABOUT" | translate }}
-      </button>
+    <div class="hidden md:flex items-center gap-8">
+      <ul class="flex gap-8 text-[13px] font-bold uppercase tracking-widest text-black dark:text-white">
+        <li>
+          <button (click)="scrollToSection('top')" class="cursor-pointer transition-colors duration-500 hover:text-[#a3e635]">
+            {{ "NAV.WELCOME" | translate }}
+          </button>
+        </li>
+        <li>
+          <button (click)="scrollToSection('services')" class="cursor-pointer transition-colors duration-500 hover:text-[#a3e635]">
+            {{ "NAV.SERVICES" | translate }}
+          </button>
+        </li>
+        <li>
+          <button (click)="scrollToSection('projects')" class="cursor-pointer transition-colors duration-500 hover:text-[#a3e635]">
+            {{ "NAV.PROJECTS" | translate }}
+          </button>
+        </li>
+        <li>
+          <button (click)="scrollToSection('aboutus')" class="cursor-pointer transition-colors duration-500 hover:text-[#a3e635]">
+            {{ "NAV.ABOUT" | translate }}
+          </button>
+        </li>
+      </ul>
 
       <button
-        [class.bg-lime-500]="isScrolled"
-        [class.text-black]="isScrolled"
-        [class.border-lime-500]="isScrolled"
-        [class.border-white/30]="!isScrolled"
-        [class.bg-white/10]="!isScrolled"
-        class="border hover:border-lime-400 hover:bg-lime-400 hover:text-black px-6 py-2 rounded-full transition-all duration-500 cursor-pointer text-[11px] font-bold uppercase tracking-[0.3em] backdrop-blur-sm"
         (click)="scrollToSection('contact')"
+        class="px-6 py-2 rounded-full border border-black dark:border-white text-black dark:text-white font-black text-[12px] uppercase tracking-widest hover:bg-[#a3e635] hover:border-[#a3e635] hover:text-black transition-all duration-500 cursor-pointer"
       >
         {{ "NAV.CONTACT" | translate }}
       </button>
@@ -182,28 +173,22 @@
       {{ "NAV.CONTACT" | translate }}
     </button>
 
-    <div
-      class="flex items-center gap-4 mt-6 pt-6 border-t border-white/10 w-32 justify-center"
-    >
-      <button
-        (click)="switchLanguage('en'); menu = false"
-        class="text-sm font-mono tracking-widest transition-all duration-300"
-        [ngClass]="
-          currentLang === 'en' ? 'text-lime-400 font-bold' : 'text-gray-500'
-        "
-      >
-        EN
-      </button>
-      <span class="text-gray-700 text-sm">/</span>
-      <button
-        (click)="switchLanguage('es'); menu = false"
-        class="text-sm font-mono tracking-widest transition-all duration-300"
-        [ngClass]="
-          currentLang === 'es' ? 'text-lime-400 font-bold' : 'text-gray-500'
-        "
-      >
-        ES
-      </button>
+        <div class="flex gap-2 text-[11px] font-bold">
+          <button (click)="switchLanguage('en')" 
+            [class.text-[#a3e635]]="currentLang === 'en'" 
+            class="text-black/40 dark:text-white/40 hover:text-[#a3e635] uppercase transition-colors duration-500 cursor-pointer">
+            EN
+          </button>
+          
+          <span class="text-black/20 dark:text-white/20">/</span>
+          
+          <button (click)="switchLanguage('es')" 
+            [class.text-[#a3e635]]="currentLang === 'es'" 
+            class="text-black/40 dark:text-white/40 hover:text-[#a3e635] uppercase transition-colors duration-500 cursor-pointer">
+            ES
+          </button>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</nav>

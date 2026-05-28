@@ -1,32 +1,33 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 @import "./styles/tailwind-theme.css";
 
-/* EFECTO DE SCROLL SUAVE GLOBAL */
-html {
-  scroll-behavior: smooth;
-  background-color: var(--color-canvas);
+/* --- 1. TU PANEL DE CONTROL --- */
+:root {
+  --bg-claro: #8c948ad2;    
+  --bg-oscuro: #080f08;   
 }
+
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 32%),
-    linear-gradient(
-      180deg,
-      var(--color-canvas-raised) 0%,
-      var(--color-canvas) 45%,
-      var(--color-canvas-deep) 100%
-    );
-  color: var(--color-copy-strong);
+  /* Color base blanco, pero sin !important para que el hover funcione */
+  color: white; 
+  background-color: var(--bg-claro) !important;
+  transition: background-color 0.5s ease;
 }
 
-/* Personaliza la barra de scroll lateral */
-::-webkit-scrollbar {
-  width: 8px;
+.dark body {
+  background-color: var(--bg-oscuro) !important;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--color-scroll-track);
+/* --- 2. FORZAR TRANSPARENCIA DE COMPONENTES --- */
+app-about-us, app-services, app-projects, app-contact, 
+app-innovation-well, app-energy-grid, app-smartlink,
+section, .bg-main-theme {
+  background-color: transparent !important;
+  background-image: none !important;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -36,4 +37,9 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-accent-soft);
+}
+.scroll-title-dramatic {
+  animation: superDramaticScale linear both;
+  animation-timeline: view();
+  animation-range: entry 0% exit 100%;
 }
