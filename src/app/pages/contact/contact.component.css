@@ -1,0 +1,5 @@
+@media (max-width: 1023px) {
+	.contact-equal-height {
+		min-height: auto;
+	}
+}

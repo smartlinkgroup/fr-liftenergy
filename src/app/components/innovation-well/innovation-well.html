@@ -28,12 +28,9 @@
 
   <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3">
     @for (slide of slides; track slide.image; let i = $index) {
-      <button (click)="goToSlide(i)"
+            <button (click)="goToSlide(i)"
               class="h-1 rounded-full transition-all duration-500 cursor-pointer"
-              [ngClass]="{
-                'w-12 bg-lime-500 dark:bg-lime-400 shadow-[0_0_10px_rgba(132,204,22,0.8)] dark:shadow-[0_0_10px_rgba(163,230,53,0.6)]': currentSlide === i, 
-                'w-6 bg-black/30 hover:bg-black/50 dark:bg-white/30 dark:hover:bg-white/60': currentSlide !== i
-              }">
+              [ngClass]="{'w-12 bg-lime-400 shadow-[0_0_10px_rgba(154,203,147,0.55)]': currentSlide === i, 'w-6 bg-white/30 hover:bg-white/60': currentSlide !== i}">
       </button>
     }
   </div>
