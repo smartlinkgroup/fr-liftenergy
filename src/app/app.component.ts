@@ -3,14 +3,14 @@ import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { slideInAnimation } from './slideInRoute';
-import { Engine } from 'tsparticles-engine';
-import {NgParticlesModule,} from 'ng-particles';
-import {loadSlim} from 'tsparticles-slim';
+import { Engine } from '@tsparticles/engine';
+import { NgxParticlesModule } from '@tsparticles/angular';
+import { loadSlim } from '@tsparticles/slim';
 
 @Component({
   standalone: true,
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent,NgParticlesModule],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, NgxParticlesModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   animations: [slideInAnimation]
