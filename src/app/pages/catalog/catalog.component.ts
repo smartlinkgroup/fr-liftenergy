@@ -71,7 +71,7 @@ export class CatalogComponent {
   }
 
   checkoutWhatsapp() {
-    const phoneNumber = '584140000000'; 
+    const phoneNumber = '17867251004'; 
     let message = '¡Hola! Vengo de la web y quiero generar una orden de compra para estos equipos:%0A%0A';
 
     this.cart.forEach(item => {
@@ -80,7 +80,7 @@ export class CatalogComponent {
 
     message += `%0A*Total estimado:* $${this.cartTotal}`;
 
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    const whatsappUrl = `https://w.app/liftenergygroup?text=${message}`;
     window.open(whatsappUrl, '_blank');
   }
 }
