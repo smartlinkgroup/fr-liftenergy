@@ -4,7 +4,8 @@
     "SERVICES": "SERVICIOS",
     "PROJECTS": "PROYECTOS",
     "ABOUT": "NOSOTROS",
-    "CONTACT": "CONTACTO"
+    "CONTACT": "CONTACTO",
+    "PRODUCTS": "Products"
   },
   "HERO": {
     "TITLE_1": "Soluciones",
@@ -112,15 +113,18 @@
       "BTN": "Más Información"
     },
     "WORK": {
-      "T1": "Análisis Inicial",
-      "D1": "Evaluamos sus necesidades y metas futuras.",
-      "T2": "Diseño y Planificación",
-      "D2": "Creamos un plan detallado con especificaciones.",
-      "T3": "Implementación",
-      "D3": "Realizamos la instalación con mínima interrupción.",
-      "T4": "Soporte Continuo",
-      "D4": "Brindamos mantenimiento y soporte técnico."
-    }
+        "T1": "Análisis Inicial",
+        "D1": "Evaluamos tus necesidades y metas a futuro.",
+        "T2": "Diseño y Planificación",
+        "D2": "Creamos un plan detallado con especificaciones técnicas.",
+        "T3": "Implementación",
+        "D3": "Llevamos a cabo la instalación con la mínima interrupción.",
+        "T4": "Soporte Continuo",
+        "D4": "Brindamos mantenimiento y soporte técnico."
+      },
+      "PRODUCTS_TITLE": "Equipos y Componentes",
+      "PRODUCTS_DESC": "Explora nuestro catálogo de productos."
+
   },
   "STAFF_ROLES": {
     "LEO_CARGO": "CEO y Fundador",

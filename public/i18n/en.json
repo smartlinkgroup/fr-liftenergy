@@ -4,7 +4,8 @@
     "SERVICES": "SERVICES",
     "PROJECTS": "PROJECTS",
     "ABOUT": "ABOUT US",
-    "CONTACT": "CONTACT"
+    "CONTACT": "CONTACT",
+    "PRODUCTS": "Productos"
   },
   "HERO": {
     "TITLE_1": "Automated",
@@ -111,16 +112,18 @@
       "L4": "SCADA and HMI",
       "BTN": "More Information"
     },
-    "WORK": {
-      "T1": "Initial Analysis",
-      "D1": "We evaluate your needs and future goals.",
-      "T2": "Design and Planning",
-      "D2": "We create a detailed plan with technical specifications.",
-      "T3": "Implementation",
-      "D3": "We carry out installation with minimal disruption.",
-      "T4": "Ongoing Support",
-      "D4": "We provide maintenance and technical support."
-    }
+   "WORK": {
+        "T1": "Initial Analysis",
+        "D1": "We evaluate your needs and future goals.",
+        "T2": "Design and Planning",
+        "D2": "We create a detailed plan with technical specifications.",
+        "T3": "Implementation",
+        "D3": "We carry out installation with minimal disruption.",
+        "T4": "Ongoing Support",
+        "D4": "We provide maintenance and technical support."
+      },
+      "PRODUCTS_TITLE": "Equipment & Components",
+      "PRODUCTS_DESC": "Explore our product catalog."
   },
   "STAFF_ROLES": {
     "LEO_CARGO": "CEO & Founder",
