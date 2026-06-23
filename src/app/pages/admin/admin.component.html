@@ -1,0 +1,68 @@
+<div class="min-h-screen bg-[#1c2a1f] pt-32 pb-12">
+  
+  <div class="container mx-auto px-6 max-w-7xl">
+    
+    <!-- HEADER INTEGRADO -->
+    <div class="flex justify-between items-end mb-12">
+      <div>
+        <p class="text-lime-500 font-bold tracking-widest uppercase text-[10px] mb-1">Administrador</p>
+        <h1 class="text-3xl font-black text-white">Panel de Control</h1>
+      </div>
+      
+      <!-- BOTÓN AGREGAR (Con la función original) -->
+      <button (click)="openAddModal()" class="bg-lime-500 hover:bg-lime-400 text-black px-6 py-3 rounded-xl font-bold shadow-lg transition-all flex items-center gap-2">
+        + Agregar Nuevo Producto
+      </button>
+    </div>
+
+    <!-- TABLA CON ACCIONES -->
+    <div class="bg-black/20 backdrop-blur-md rounded-3xl shadow-xl border border-white/5 overflow-hidden">
+      <table class="w-full text-left text-white">
+        <thead class="text-[10px] uppercase text-gray-400 tracking-widest border-b border-white/5">
+          <tr>
+            <th class="p-6">Imagen</th>
+            <th class="p-6">Nombre</th>
+            <th class="p-6">Precio</th>
+            <th class="p-6 text-right">Acciones</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-white/5">
+          <!-- Bucle de productos -->
+          <tr *ngFor="let p of products" class="hover:bg-white/5 transition-colors">
+            <td class="p-4"><img [src]="'/img/' + p.image" class="w-14 h-14 object-contain bg-white/5 rounded-xl border border-white/10 p-1"></td>
+            <td class="p-6 font-bold text-lg">{{p.name}}</td>
+            <td class="p-6 font-black text-lime-400 text-lg">${{p.price}}</td>
+            <td class="p-6 text-right space-x-4">
+              <!-- BOTONES DE ACCIÓN -->
+              <button (click)="editProduct(p)" class="text-gray-400 hover:text-blue-400 font-bold text-sm">Editar</button>
+              <button (click)="deleteProduct(p.id)" class="text-gray-400 hover:text-red-400 font-bold text-sm">Borrar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CERRAR SESIÓN -->
+  <div class="mt-16 text-center">
+    <button routerLink="/productos" class="text-[10px] font-bold text-white/20 hover:text-red-400 uppercase tracking-widest transition-all">
+      Cerrar Sesión
+    </button>
+  </div>
+</div>
+
+<!-- MODAL DE EDICIÓN / CREACIÓN -->
+<div *ngIf="isModalOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+  <div class="bg-[#1c2a1f] border border-white/10 p-8 rounded-3xl w-full max-w-md shadow-2xl">
+    <h2 class="text-2xl font-black text-white mb-6">{{isEditing ? 'Editar Producto' : 'Nuevo Producto'}}</h2>
+    
+    <input [(ngModel)]="currentProduct.name" placeholder="Nombre" class="w-full bg-white/5 border border-white/10 text-white p-4 rounded-xl mb-3 focus:border-lime-500 outline-none">
+    <input [(ngModel)]="currentProduct.price" type="number" placeholder="Precio ($)" class="w-full bg-white/5 border border-white/10 text-white p-4 rounded-xl mb-3 focus:border-lime-500 outline-none">
+    <textarea [(ngModel)]="currentProduct.description" placeholder="Descripción" class="w-full bg-white/5 border border-white/10 text-white p-4 rounded-xl mb-3 focus:border-lime-500 outline-none h-24"></textarea>
+    
+    <div class="flex gap-4 mt-6">
+      <button (click)="isModalOpen = false" class="flex-1 py-4 bg-white/5 text-white rounded-xl font-bold hover:bg-white/10">Cancelar</button>
+      <button (click)="saveProduct()" class="flex-1 bg-lime-500 text-black py-4 rounded-xl font-black hover:bg-lime-400">Guardar Cambios</button>
+    </div>
+  </div>
+</div>

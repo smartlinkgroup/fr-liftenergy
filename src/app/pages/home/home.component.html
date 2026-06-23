@@ -16,10 +16,13 @@
       <source src="/video.MP4" type="video/MP4" />
     </video>
     <div
-      class="absolute inset-0 bg-linear-to-b from-canvas-deep/74 via-canvas-raised/22 to-canvas/84"
+      class="absolute inset-0 bg-linear-to-b from-black/36 via-scroll-track/26 to-[#030504]/78"
     ></div>
     <div
-      class="absolute inset-x-0 bottom-0 h-48 bg-linear-to-t from-white/8 to-transparent"
+      class="absolute inset-x-0 bottom-0 h-[42%] bg-linear-to-t from-[#010201]/96 via-[#041005]/78 via-55% to-transparent"
+    ></div>
+    <div
+      class="absolute inset-x-0 bottom-0 h-56 bg-linear-to-t from-[#020403] via-[#071408]/68 to-transparent"
     ></div>
   </div>
 
@@ -50,7 +53,7 @@
       <div class="flex flex-wrap gap-6 items-center pt-6">
         <button
           (click)="navigateTo('/contact')"
-          class="px-10 py-4 bg-lime-500 hover:bg-lime-400 text-black font-bold rounded-full transition-all hover:scale-105 shadow-[0_0_20px_rgba(163,230,53,0.4)] cursor-pointer"
+          class="px-10 py-4 bg-lime-500 hover:bg-lime-400 text-black font-bold rounded-full transition-all hover:scale-105 shadow-[0_0_20px_rgba(154,203,147,0.35)] cursor-pointer"
         >
           {{ "HERO.BTN_START" | translate }}
         </button>
@@ -80,8 +83,14 @@
 </section>
 
 <div
-  class="relative w-full bg-linear-to-b from-canvas-raised via-canvas to-canvas-deep"
+  class="relative w-full bg-linear-to-b from-[#020403] via-[#071408] to-canvas-deep"
 >
+  <div
+    class="absolute inset-x-0 top-0 h-72 bg-linear-to-b from-[#010201] via-[#020403]/96 via-25% via-[#071408]/78 to-transparent z-0 pointer-events-none"
+  ></div>
+  <div
+    class="absolute inset-x-0 top-0 h-[30rem] bg-linear-to-b from-black/48 via-[#041005]/42 to-transparent z-0 pointer-events-none"
+  ></div>
   <div class="absolute inset-0 z-0 pointer-events-none opacity-50">
     <app-energy-grid></app-energy-grid>
   </div>

@@ -1,4 +1,4 @@
-<footer class="relative bg-canvas pt-20 pb-8 overflow-hidden">
+<footer class="relative bg-[var(--color-footer)] pt-20 pb-8 overflow-hidden">
   <div
     class="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/12 to-transparent"
   ></div>
@@ -19,12 +19,14 @@
       </span>
     </div>
 
-    <div class="w-full pt-6 border-t border-white/10 flex justify-center">
-      <p
-        class="text-[9px] text-gray-500 font-mono tracking-[0.2em] uppercase text-center"
-      >
-        {{ "FOOTER.RIGHTS" | translate }}
+   <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      
+      <p class="text-gray-500 text-sm">
+        {{ 'FOOTER.RIGHTS' | translate }}
       </p>
+      
+    
+
     </div>
   </div>
 </footer>

@@ -13,6 +13,6 @@
   top: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(to bottom, transparent, rgba(163, 230, 53, 0.2), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(154, 203, 147, 0.2), transparent);
   z-index: 1;
 }

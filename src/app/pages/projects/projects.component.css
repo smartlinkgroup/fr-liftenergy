@@ -12,8 +12,8 @@
 
 /* Brillo interno constante que pulsa en la esquina */
 @keyframes internalGlow {
-  0%, 100% { background-color: rgba(163, 230, 53, 0.05); filter: blur(40px); }
-  50% { background-color: rgba(163, 230, 53, 0.15); filter: blur(50px); }
+  0%, 100% { background-color: color-mix(in srgb, var(--color-accent-soft) 8%, transparent); filter: blur(40px); }
+  50% { background-color: color-mix(in srgb, var(--color-accent-soft) 18%, transparent); filter: blur(50px); }
 }
 .card-glowing-point {
   animation: internalGlow 4s ease-in-out infinite;
@@ -42,7 +42,7 @@
   position: absolute;
   top: -150px; /* Inician escondidos arriba */
   animation: rainDown linear infinite;
-  color: #a3e635; /* Color verde lima de Tailwind */
+  color: var(--color-accent-soft);
   z-index: 1; /* Detrás de las tarjetas */
 }
 

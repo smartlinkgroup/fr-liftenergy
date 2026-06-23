@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-
-
-
+import { CatalogComponent } from './pages/catalog/catalog.component';
+import { LoginComponent } from './pages/login/login.component';
+import { AdminComponent } from './pages/admin/admin.component';
 export const routes: Routes = [
   
   {
@@ -10,16 +10,18 @@ export const routes: Routes = [
     component: HomeComponent,
     data: { animation: 'home' }
   },
+  { path: 'productos', component: CatalogComponent },
+  { path: 'login', component: LoginComponent },
   {
     path: 'welcome',
     component: HomeComponent,
     data: { animation: 'welcome' }
   },
+  { path: 'admin', component: AdminComponent },
 
   // --- Rutas con Lazy Loading ---
   {
     path: 'aboutus',
-    // Se cambia 'component' por 'loadComponent' usando import() dinámico
     loadComponent: () => import('./pages/about-us/about-us.component').then(m => m.AboutUsComponent),
     data: { animation: 'aboutus' }
   },

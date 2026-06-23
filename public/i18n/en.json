@@ -4,7 +4,8 @@
     "SERVICES": "SERVICES",
     "PROJECTS": "PROJECTS",
     "ABOUT": "ABOUT US",
-    "CONTACT": "CONTACT"
+    "CONTACT": "CONTACT",
+    "PRODUCTS": "Productos"
   },
   "HERO": {
     "TITLE_1": "Automated",
@@ -74,7 +75,11 @@
     "CARD5_TITLE": "Remote Operational Control",
     "CARD5_DESC": "Execute actions directly from the interface securely and with authorization.",
     "CARD6_TITLE": "Custom Solutions & Integrations",
-    "CARD6_DESC": "Need a specific feature? Our platform is built to be flexible."
+    "CARD6_DESC": "Need a specific feature? Our platform is built to be flexible.",
+    "DINAI_BADGE": "Power by Dinai",
+    "DINAI_TITLE_1": "Analysis of",
+    "DINAI_TITLE_2": "Dynagraphs",
+    "DINAI_DESC": "Precise visualization of load states and well behavior through real-time surface and downhole diagrams."
   },
   "SERVICES_PAGE": {
     "TITLE_CORE": "Core",
@@ -116,7 +121,9 @@
       "D3": "We carry out installation with minimal disruption.",
       "T4": "Ongoing Support",
       "D4": "We provide maintenance and technical support."
-    }
+    },
+    "PRODUCTS_TITLE": "Equipment & Components",
+    "PRODUCTS_DESC": "Explore our product catalog."
   },
   "STAFF_ROLES": {
     "LEO_CARGO": "CEO & Founder",
@@ -198,5 +205,34 @@
         "REQ4": "Proactive attitude for working in multidisciplinary teams."
       }
     }
+  },
+  "PRODUCTS": {
+    "VARIADOR_NAME": "15HP Frequency Inverter",
+    "VARIADOR_DESC": "Three-phase speed controller ideal for industrial pumping systems.",
+    "VARIADOR_LONG": "This 15HP frequency inverter offers exceptional torque control and energy efficiency for three-phase motors. It includes an intuitive control panel, overload and short-circuit protection, and is easily integrated using industrial communication protocols.",
+    "CABLE_NAME": "Subsea Power Cable",
+    "CABLE_DESC": "100m roll. Resistant to high pressures and corrosive environments.",
+    "CABLE_LONG": "100-meter roll of power cable specifically designed for deep submersion. Its special reinforced polymer coating guarantees zero leakage and extreme resistance to corrosive elements."
+  },
+  "CATALOG": {
+    "PAGE_TITLE_1": "Equipment",
+    "PAGE_TITLE_2": "Catalog",
+    "PAGE_SUBTITLE": "Explore our high-end components for the industry. Select items and easily generate your purchase order via WhatsApp.",
+    "IN_STOCK": "In Stock",
+    "SEE_DETAILS": "View details",
+    "REF_PRICE": "Ref. Price",
+    "ADD": "Add",
+    "TECHNICAL_DESC": "Technical Description",
+    "TOTAL_PRICE": "Total Price",
+    "BUY": "Buy"
+  },
+  "CART": {
+    "TITLE": "Your Order",
+    "EMPTY_MSG": "Your order is empty",
+    "BACK_TO_CATALOG": "Back to catalog",
+    "QTY": "Qty",
+    "ESTIMATED_TOTAL": "Estimated Total",
+    "CHECKOUT": "Complete Order",
+    "CHECKOUT_NOTE": "By continuing, WhatsApp will open with our advisor."
   }
 }
